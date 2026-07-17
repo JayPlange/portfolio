@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justice Edwin Mensah Plange: Forward Deployed Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F131A;
+    --panel:#161B24;
+    --panel-2:#1B212C;
+    --line:rgba(255,255,255,0.08);
+    --line-strong:rgba(255,255,255,0.14);
+    --text:#E7EAEE;
+    --muted:#8A93A3;
+    --muted-2:#5C6577;
+    --signal:#33D6C0;
+    --signal-dim:rgba(51,214,192,0.12);
+    --amber:#F0A63D;
+    --amber-dim:rgba(240,166,61,0.12);
+    --mono:'IBM Plex Mono', ui-monospace, monospace;
+    --sans:'IBM Plex Sans', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:var(--sans); line-height:1.6; font-size:15px;
+    -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  body::before{
+    content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    -webkit-mask-image: radial-gradient(ellipse 900px 600px at 50% 0%, #000 40%, transparent 85%);
+            mask-image: radial-gradient(ellipse 900px 600px at 50% 0%, #000 40%, transparent 85%);
+  }
+  ::selection{background:var(--signal-dim); color:var(--signal);}
+  a{color:var(--signal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--signal); outline-offset:2px;}
+
+  .container{max-width:920px; margin:0 auto; padding:0 24px;}
+
+  /* ── Status ticker ───────────────────────── */
+  .ticker-wrap{
+    border-bottom:1px solid var(--line);
+    background:var(--panel);
+    overflow:hidden; white-space:nowrap;
+    padding:9px 0;
+  }
+  .ticker{
+    display:inline-flex; gap:36px; padding-left:100%;
+    animation:scroll 26s linear infinite;
+    font-family:var(--mono); font-size:11.5px; letter-spacing:0.04em; color:var(--muted);
+  }
+  .ticker span{display:inline-flex; align-items:center; gap:8px; white-space:nowrap;}
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--signal); box-shadow:0 0 0 3px var(--signal-dim); flex:none;}
+  .dot.amber{background:var(--amber); box-shadow:0 0 0 3px var(--amber-dim);}
+  @keyframes scroll{ to{ transform:translateX(-100%); } }
+  @media (prefers-reduced-motion:reduce){ .ticker{ animation:none; padding-left:24px; } }
+
+  /* ── Uptime pulse line ────────────────────── */
+  .pulse-line{
+    border-bottom:1px solid var(--line); background:var(--bg);
+    height:30px; overflow:hidden; position:relative;
+  }
+  .pulse-line::before{
+    content:''; position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='30' viewBox='0 0 220 30'%3E%3Cpath d='M0 15 H80 L92 4 L104 26 L114 15 H220' fill='none' stroke='%2333D6C0' stroke-width='1.4' stroke-linejoin='round' stroke-linecap='round' opacity='0.55'/%3E%3C/svg%3E");
+    background-repeat:repeat-x; background-size:220px 30px;
+    animation: pulseScroll 5.5s linear infinite;
+  }
+  @keyframes pulseScroll{ from{ background-position-x:0; } to{ background-position-x:-220px; } }
+  @media (prefers-reduced-motion:reduce){ .pulse-line::before{ animation:none; } }
+
+  /* ── Hero ─────────────────────────────────── */
+  .hero{ padding:72px 0 48px; border-bottom:1px solid var(--line); }
+  .eyebrow{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:0.12em; color:var(--signal);
+    text-transform:uppercase; margin:0 0 18px;
+  }
+  h1{
+    font-size:clamp(32px,5vw,46px); font-weight:600; margin:0 0 10px; letter-spacing:-0.01em;
+    font-family:var(--sans);
+  }
+  .role{ font-family:var(--mono); font-size:15px; color:var(--muted); margin:0 0 22px; }
+  .thesis{ max-width:600px; color:var(--text); font-size:16px; margin:0 0 28px; }
+  .thesis b{ color:var(--signal); font-weight:600; }
+  .links{ display:flex; gap:18px; flex-wrap:wrap; font-family:var(--mono); font-size:13px; margin-bottom:40px;}
+  .links a{ color:var(--muted); border-bottom:1px solid transparent; }
+  .links a:hover{ color:var(--signal); text-decoration:none; border-bottom-color:var(--signal); }
+
+  .stat-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:8px; overflow:hidden;
+  }
+  .stat{ padding:16px 18px; border-right:1px solid var(--line); background:var(--panel); }
+  .stat:last-child{ border-right:none; }
+  .stat-num{ font-family:var(--mono); font-size:22px; font-weight:600; color:var(--text); }
+  .stat-num em{ font-style:normal; color:var(--signal); }
+  .stat-label{ font-size:11.5px; color:var(--muted-2); margin-top:4px; }
+  @media (max-width:700px){
+    .stat-grid{ grid-template-columns:repeat(2,1fr); }
+    .stat{ border-bottom:1px solid var(--line); }
+  }
+
+  /* ── Section shell ────────────────────────── */
+  section{ padding:56px 0; border-bottom:1px solid var(--line); }
+  .section-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .section-index{ font-family:var(--mono); font-size:12px; color:var(--muted-2); }
+  .section-title{ font-size:13px; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin:0; }
+  .section-sub{ color:var(--muted); font-size:14.5px; max-width:560px; margin:6px 0 32px; }
+
+  /* Live demo: contact switcher */
+  .demo-section{ padding:56px 0 60px; border-bottom:1px solid var(--line); }
+  .demo-shell{
+    display:grid; grid-template-columns:1fr; gap:32px;
+    border:1px solid var(--line); border-radius:14px; background:var(--panel);
+    padding:32px; align-items:center;
+  }
+  @media (min-width:800px){ .demo-shell{ grid-template-columns:0.9fr 1.1fr; padding:36px 40px; } }
+  .demo-kicker{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--signal); margin:0 0 12px;
+  }
+  .demo-lede{ font-size:19px; font-weight:600; line-height:1.4; margin:0 0 14px; max-width:380px; }
+  .demo-note{ font-size:13.5px; color:var(--muted); max-width:360px; }
+
+  .demo-tabs{ display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
+  .demo-tab{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.02em; color:var(--muted);
+    background:var(--panel-2); border:1px solid var(--line); border-radius:100px;
+    padding:8px 15px; cursor:pointer; transition:all .18s ease;
+  }
+  .demo-tab:hover{ color:var(--text); border-color:var(--line-strong); }
+  .demo-tab.active{ color:var(--bg); background:var(--signal); border-color:var(--signal); font-weight:600; }
+
+  .demo-phone{
+    background:var(--panel-2); border:1px solid var(--line); border-radius:12px; overflow:hidden;
+  }
+  .demo-chat-header{
+    display:flex; align-items:center; gap:12px; padding:14px 16px; border-bottom:1px solid var(--line);
+  }
+  .demo-avatar{ width:44px; height:44px; flex:none; border-radius:50%; overflow:hidden; transition:opacity .2s ease; }
+  .demo-avatar svg{ display:block; width:100%; height:100%; }
+  .demo-chat-meta{ flex:1; min-width:0; transition:opacity .2s ease; }
+  .demo-chat-name{ font-size:14.5px; font-weight:600; }
+  .demo-chat-sub{ font-family:var(--mono); font-size:11px; color:var(--muted-2); margin-top:1px; }
+  .demo-signal{
+    font-family:var(--mono); font-size:10.5px; color:var(--signal); display:flex; align-items:center; gap:5px;
+    white-space:nowrap;
+  }
+  .demo-bubble-row{ padding:18px 16px 20px; }
+  .demo-bubble{
+    display:inline-block; background:var(--signal-dim); color:var(--text); border:1px solid rgba(51,214,192,0.25);
+    border-radius:14px 14px 14px 4px; padding:10px 14px; font-size:13.5px; max-width:90%;
+    transition:opacity .2s ease;
+  }
+  .demo-fade{ opacity:0; }
+
+  /* ── Case study card ──────────────────────── */
+  .case{
+    border:1px solid var(--line); border-radius:10px; background:var(--panel);
+    overflow:hidden; margin-bottom:28px;
+    transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .case:hover{
+    transform:translateY(-3px); border-color:rgba(51,214,192,0.35);
+    box-shadow:0 12px 28px rgba(0,0,0,0.28);
+  }
+  .case-head{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
+    padding:22px 24px; border-bottom:1px solid var(--line); flex-wrap:wrap;
+  }
+  .case-name{ font-size:20px; font-weight:600; margin:0 0 4px; }
+  .case-tag{ font-family:var(--mono); font-size:12.5px; color:var(--muted); }
+  .status-pill{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
+    padding:5px 10px; border-radius:20px; white-space:nowrap; height:fit-content;
+    display:inline-flex; align-items:center; gap:6px;
+    background:var(--signal-dim); color:var(--signal); border:1px solid rgba(51,214,192,0.3);
+  }
+  .status-pill.build{ background:var(--amber-dim); color:var(--amber); border-color:rgba(240,166,61,0.3); }
+  .case-body{ padding:24px; }
+  .case-body p{ margin:0 0 16px; color:var(--text); font-size:14.5px; }
+  .log{ list-style:none; margin:0 0 20px; padding:0; }
+  .log li{
+    display:grid; grid-template-columns:120px 1fr; gap:16px;
+    padding:12px 0; border-top:1px solid var(--line); font-size:14px;
+  }
+  .log li:first-child{ border-top:none; }
+  .log-tag{ font-family:var(--mono); font-size:11px; color:var(--muted-2); text-transform:uppercase; letter-spacing:0.05em; padding-top:2px; }
+  .log-text b{ color:var(--text); }
+  .log-text{ color:var(--muted); }
+  @media (max-width:640px){ .log li{ grid-template-columns:1fr; gap:4px; } }
+
+  .metric-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+  .metric{
+    font-family:var(--mono); font-size:12px; color:var(--muted); background:var(--panel-2);
+    border:1px solid var(--line); border-radius:6px; padding:8px 12px;
+  }
+  .metric b{ color:var(--signal); }
+
+  .case-footer{
+    padding:14px 24px; border-top:1px solid var(--line); background:var(--panel-2);
+    font-family:var(--mono); font-size:12.5px; color:var(--muted);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+
+  /* ── Systems log / timeline ───────────────── */
+  .timeline{ list-style:none; margin:0; padding:0; border-left:2px solid var(--line); }
+  .timeline li{ position:relative; padding:0 0 30px 26px; }
+  .timeline li:last-child{ padding-bottom:0; }
+  .timeline li::before{
+    content:''; position:absolute; left:-6px; top:4px; width:10px; height:10px; border-radius:50%;
+    background:var(--bg); border:2px solid var(--signal);
+  }
+  .tl-when{ font-family:var(--mono); font-size:11.5px; color:var(--muted-2); text-transform:uppercase; letter-spacing:0.05em; }
+  .tl-role{ font-size:15.5px; font-weight:600; margin:4px 0 3px; }
+  .tl-org{ font-size:13px; color:var(--muted); margin-bottom:8px; }
+  .tl-desc{ font-size:14px; color:var(--muted); max-width:600px; }
+
+  /* ── Skills ───────────────────────────────── */
+  .skill-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .skill-cell{ background:var(--panel); padding:18px 20px; }
+  .skill-cat{ font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--signal); margin-bottom:8px; }
+  .skill-list{ color:var(--muted); font-size:13.5px; }
+  @media (max-width:700px){ .skill-grid{ grid-template-columns:1fr; } }
+
+  footer{ padding:48px 0 80px; text-align:center; }
+  footer .eyebrow{ justify-content:center; }
+  .contact-links{ display:flex; gap:24px; justify-content:center; margin-top:18px; font-family:var(--mono); font-size:14px; flex-wrap:wrap;}
+
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span><span class="dot"></span>DUALPROFILE · LIVE · CHROME WEB STORE</span>
+      <span><span class="dot"></span>US 82% · JAPAN 10% · SPAIN 5%</span>
+      <span><span class="dot amber"></span>KASAFLOW · GPT-4.1-MINI · /PROCESS ONLINE</span>
+      <span><span class="dot"></span>3 SME SYSTEMS IN ACTIVE SUPPORT · WEBBLABS</span>
+      <span><span class="dot"></span>16 REGIONS FIELD-ASSESSED · GNAT / KPMG</span>
+      <span><span class="dot"></span>DUALPROFILE · LIVE · CHROME WEB STORE</span>
+      <span><span class="dot"></span>US 82% · JAPAN 10% · SPAIN 5%</span>
+      <span><span class="dot amber"></span>KASAFLOW · GPT-4.1-MINI · /PROCESS ONLINE</span>
+      <span><span class="dot"></span>3 SME SYSTEMS IN ACTIVE SUPPORT · WEBBLABS</span>
+      <span><span class="dot"></span>16 REGIONS FIELD-ASSESSED · GNAT / KPMG</span>
+    </div>
+  </div>
+
+  <div class="pulse-line"></div>
+
+  <div class="container">
+    <section class="hero">
+      <p class="eyebrow">Systems status: Justice Edwin Mensah Plange</p>
+      <h1>I ship the systems I'd have to page myself for.</h1>
+      <p class="role">Forward Deployed Engineer · Applied AI Engineer</p>
+      <p class="thesis">
+        Before I wrote software, I watched telecom infrastructure at 2am and answered for its uptime.
+        Now I build the products <b>and</b> carry the pager: architecture, deployment, and the debugging
+        that starts once real users show up.
+      </p>
+      <div class="links">
+        <a href="mailto:justiceplange@gmail.com">justiceplange@gmail.com</a>
+        <a href="https://linkedin.com/in/edwin-plange">linkedin.com/in/edwin-plange</a>
+        <a href="https://github.com/JayPlange">github.com/JayPlange</a>
+        <a href="https://x.com/JusticePlange">x.com/JusticePlange</a>
+      </div>
+      <div class="stat-grid">
+        <div class="stat"><div class="stat-num"><em>2</em></div><div class="stat-label">Live systems shipped &amp; operated solo</div></div>
+        <div class="stat"><div class="stat-num"><em>3</em></div><div class="stat-label">Countries with paying users</div></div>
+        <div class="stat"><div class="stat-num"><em>16</em></div><div class="stat-label">Regions field-assessed, KPMG/GNAT</div></div>
+        <div class="stat"><div class="stat-num"><em>3+</em></div><div class="stat-label">Years on infra uptime before AI</div></div>
+      </div>
+    </section>
+
+    <!-- LIVE DEMO: CONTACT SWITCHER -->
+    <section class="demo-section">
+      <div class="demo-shell reveal">
+        <div>
+          <p class="demo-kicker">Try it: this is the whole product</p>
+          <p class="demo-lede">You already talk differently to your boss than your best friend.</p>
+          <p class="demo-note">Tap a contact. This is what <em>they</em> see when you message them, same you, different photo, switched automatically.</p>
+        </div>
+        <div>
+          <div class="demo-tabs" role="tablist" aria-label="Preview a contact">
+            <button class="demo-tab active" data-c="boss" role="tab" aria-selected="true">Boss</button>
+            <button class="demo-tab" data-c="friend" role="tab" aria-selected="false">Best friend</button>
+            <button class="demo-tab" data-c="mum" role="tab" aria-selected="false">Mum</button>
+          </div>
+          <div class="demo-phone">
+            <div class="demo-chat-header">
+              <div class="demo-avatar" id="demoAvatar"></div>
+              <div class="demo-chat-meta" id="demoMeta">
+                <div class="demo-chat-name" id="demoName">Boss</div>
+                <div class="demo-chat-sub" id="demoSub">sees your professional photo</div>
+              </div>
+              <div class="demo-signal"><span class="dot"></span>synced</div>
+            </div>
+            <div class="demo-bubble-row">
+              <div class="demo-bubble" id="demoBubble">Sure, I'll have the report by EOD.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY 01: DUALPROFILE -->
+    <section id="dualprofile">
+      <div class="section-head reveal">
+        <span class="section-index">01</span>
+        <p class="section-title">Case study: shipped &amp; owned end to end</p>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <div>
+            <p class="case-name">DualProfile</p>
+            <p class="case-tag">Chrome extension SaaS · vivaup.org · Manifest V3 + Convex</p>
+          </div>
+          <span class="status-pill"><span class="dot"></span>Live, paying users</span>
+        </div>
+        <div class="case-body">
+          <p>
+            WhatsApp Web renders one profile photo to everyone in your contact list. DualProfile lets a
+            user assign a different photo per contact, visible only to that person, with mutual
+            detection running on hashed phone-number lookup between two installs.
+          </p>
+
+          <ul class="log">
+            <li><span class="log-tag">Problem</span><span class="log-text">I don't control WhatsApp Web's DOM, and it changes under me without warning.</span></li>
+            <li><span class="log-tag">Decision</span><span class="log-text"><b>MutationObserver</b> over polling to catch header re-renders live, with a polling fallback for anything the observer misses, so overlay rendering degrades gracefully instead of breaking outright.</span></li>
+            <li><span class="log-tag">Incident</span><span class="log-text">Selector drift under real users when WhatsApp shifted its DOM structure. Treated each break as a signal to harden the targeting logic, not just patch the symptom.</span></li>
+            <li><span class="log-tag">Trade-off</span><span class="log-text">Convex over custom backend infra: accepted vendor lock-in to ship real-time sync solo, instead of over-engineering for scale I didn't have yet.</span></li>
+            <li><span class="log-tag">Monetisation</span><span class="log-text">Per-feature tier entitlements (Free/Pro/Annual/Lifetime) driven by webhook metadata, not one binary paid flag, so features gate and price independently as the product grows.</span></li>
+          </ul>
+
+          <div class="metric-row">
+            <div class="metric">Region: <b>US 82%</b> · Japan 10% · Spain 5%</div>
+            <div class="metric">Language: <b>EN 63%</b> · ES 25% · ZH 13%</div>
+            <div class="metric">Growth: <b>organic</b>, Reddit + word of mouth</div>
+          </div>
+        </div>
+        <div class="case-footer">
+          <span>Stack: Manifest V3 · TypeScript (Convex) · Lemon Squeezy · Next.js/React (landing)</span>
+          <a href="https://chromewebstore.google.com/detail/dualprofile/mdlhdncmaeepcejdbpnjpjlmagmmpkpc">View on Chrome Web Store →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDY 02: KASAFLOW -->
+    <section id="kasaflow">
+      <div class="section-head reveal">
+        <span class="section-index">02</span>
+        <p class="section-title">Case study: applied AI systems architecture</p>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <div>
+            <p class="case-name">KasaFlow</p>
+            <p class="case-tag">AI Customer Workflow Engine · Python / FastAPI · OpenAI Responses API</p>
+          </div>
+          <span class="status-pill build"><span class="dot amber"></span>In production</span>
+        </div>
+        <div class="case-body">
+          <p>
+            A modular AI workflow engine that combines FastAPI, Python, and OpenAI's Responses API to
+            process customer requests using structured LLM outputs and deterministic business tools,
+            not a single script wired to one model call.
+          </p>
+
+          <ul class="log">
+            <li><span class="log-tag">V1</span><span class="log-text">Deterministic, rule-based routing. Predictable, but brittle against real customer phrasing.</span></li>
+            <li><span class="log-tag">Migration</span><span class="log-text">Swapped intent recognition for <b>GPT-4.1-mini</b> via the OpenAI Responses API, engineering prompts that reliably return structured JSON instead of conversational text.</span></li>
+            <li><span class="log-tag">Orchestration</span><span class="log-text">API, LLM, routing logic, and business services split into independent modules, so the contract stays stable no matter what's doing the work underneath.</span></li>
+            <li><span class="log-tag">Tool layer</span><span class="log-text">Built a <b>Tool Registry</b> and generic <b>Tool Executor</b> that dynamically dispatch AI-selected tools (pricing, delivery) based on structured LLM output, backed by external JSON datasets kept separate from application logic.</span></li>
+            <li><span class="log-tag">Routing</span><span class="log-text">Evolved from deterministic rule-based routing to LLM-driven tool selection as the system matured.</span></li>
+          </ul>
+
+          <div class="metric-row">
+            <div class="metric">Output: <b>structured JSON</b>, not raw model text</div>
+            <div class="metric">Config: API keys via python-dotenv</div>
+          </div>
+        </div>
+        <div class="case-footer">
+          <span>Stack: Python · FastAPI · OpenAI Responses API · REST APIs · JSON · python-dotenv</span>
+          <span>Contract-stable migration: V1 rules to GPT-4.1-mini</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEMS LOG: CAREER TIMELINE -->
+    <section id="log">
+      <div class="section-head reveal">
+        <span class="section-index">03</span>
+        <p class="section-title">Systems log, chronological</p>
+      </div>
+      <p class="section-sub reveal">Ops discipline first, applied to software once it existed to apply it to.</p>
+
+      <ul class="timeline reveal">
+        <li>
+          <div class="tl-when">2025 – Present</div>
+          <div class="tl-role">Co-Founder, Client Systems &amp; Requirements</div>
+          <div class="tl-org">Webblabs · Remote</div>
+          <div class="tl-desc">Discovery and requirements engineering for SME systems: jewellery, pharmacy, and medical-related deployments, actively supported post-launch.</div>
+        </li>
+        <li>
+          <div class="tl-when">2024 – 2025</div>
+          <div class="tl-role">Automation Systems Engineer</div>
+          <div class="tl-org">Independent Client Project</div>
+          <div class="tl-desc">Multi-step AI agent pipeline in n8n, unifying audio/image/text input with structured failure recovery under real API constraints.</div>
+        </li>
+        <li>
+          <div class="tl-when">Feb – May 2023</div>
+          <div class="tl-role">IT Compliance Associate</div>
+          <div class="tl-org">KPMG Ghana · GNAT National Cloud Migration</div>
+          <div class="tl-desc">On-site stakeholder assessments across nearly all 16 regions of Ghana, feeding field findings into national migration risk documentation.</div>
+        </li>
+        <li>
+          <div class="tl-when">Nov 2021 – Jan 2023</div>
+          <div class="tl-role">Network Operations Engineer</div>
+          <div class="tl-org">Geoquaye Company Ltd · Ghana</div>
+          <div class="tl-desc">Live telecom infrastructure monitoring, incident escalation under uptime SLAs.</div>
+        </li>
+        <li>
+          <div class="tl-when">Oct 2020 – Sep 2021</div>
+          <div class="tl-role">NOC Engineer</div>
+          <div class="tl-org">American Tower Corporation Ghana · Remote</div>
+          <div class="tl-desc">Multi-site incident resolution, coordinating technical and non-technical teams during outages.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-head reveal">
+        <span class="section-index">04</span>
+        <p class="section-title">Working set</p>
+      </div>
+      <div class="skill-grid reveal">
+        <div class="skill-cell">
+          <div class="skill-cat">Applied AI</div>
+          <div class="skill-list">LLM application architecture · Agentic workflow design · Prompt engineering · Structured JSON extraction · Guardrails &amp; fallback logic</div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-cat">Software Engineering</div>
+          <div class="skill-list">React · TypeScript · Node.js · Python (FastAPI) · REST APIs</div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-cat">Browser Engineering</div>
+          <div class="skill-list">Chrome Extension APIs (Manifest V3) · DOM manipulation · Mutation observers</div>
+        </div>
+        <div class="skill-cell">
+          <div class="skill-cat">Delivery &amp; Ops</div>
+          <div class="skill-list">Customer discovery · Requirements engineering · Production debugging · Post-launch iteration</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="eyebrow">End of transmission</p>
+      <h2 style="margin:0; font-size:22px;">Let's talk about what breaks in production.</h2>
+      <div class="contact-links">
+        <a href="mailto:justiceplange@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/edwin-plange">LinkedIn</a>
+        <a href="https://github.com/JayPlange">GitHub</a>
+        <a href="https://x.com/JusticePlange">X</a>
+      </div>
+    </footer>
+  </div>
+
+<script>
+  const items = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  items.forEach(i => io.observe(i));
+
+  // ── Contact-switcher demo ──────────────────
+  const DEMO = {
+    boss: {
+      name: 'Boss', sub: 'sees your professional photo',
+      bubble: "Sure, I'll have the report by EOD.",
+      bg: '#1E2733', fg: '#7A8494',
+      accessory: '<path d="M29 38l3 5 3-5-3 12-3-12z" fill="#5C6577"/>'
+    },
+    friend: {
+      name: 'Best friend', sub: 'sees the real you',
+      bubble: "bro that's actually wild 😂",
+      bg: '#123833', fg: '#33D6C0',
+      accessory: '<path d="M24 40q8 7 16 0" stroke="#0F131A" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
+    },
+    mum: {
+      name: 'Mum', sub: 'sees whichever photo you choose',
+      bubble: 'Yes I ate. Don\u2019t worry \u2764\ufe0f',
+      bg: '#3A2A14', fg: '#F0A63D',
+      accessory: '<path d="M32 44l-6-5.5c-2.5-2.3-2.5-5.8 0-7.6 2.2-1.6 5-1 6 1.1 1-2.1 3.8-2.7 6-1.1 2.5 1.8 2.5 5.3 0 7.6z" fill="#0F131A"/>'
+    }
+  };
+
+  function avatarSVG(c){
+    return `<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="${c.bg}"/><circle cx="32" cy="26" r="10" fill="${c.fg}"/><path d="M13 56c2-13 10-19 19-19s17 6 19 19" fill="${c.fg}"/>${c.accessory}</svg>`;
+  }
+
+  const demoAvatar = document.getElementById('demoAvatar');
+  const demoName = document.getElementById('demoName');
+  const demoSub = document.getElementById('demoSub');
+  const demoBubble = document.getElementById('demoBubble');
+  const demoMeta = document.getElementById('demoMeta');
+  const tabs = document.querySelectorAll('.demo-tab');
+
+  if (demoAvatar) demoAvatar.innerHTML = avatarSVG(DEMO.boss);
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      if (tab.classList.contains('active')) return;
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active'); tab.setAttribute('aria-selected','true');
+
+      const c = DEMO[tab.dataset.c];
+      [demoAvatar, demoMeta, demoBubble].forEach(el => el.classList.add('demo-fade'));
+
+      setTimeout(() => {
+        demoAvatar.innerHTML = avatarSVG(c);
+        demoName.textContent = c.name;
+        demoSub.textContent = c.sub;
+        demoBubble.textContent = c.bubble;
+        [demoAvatar, demoMeta, demoBubble].forEach(el => el.classList.remove('demo-fade'));
+      }, 180);
+    });
+  });
+</script>
+
+</body>
+</html>
