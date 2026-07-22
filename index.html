@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Justice Edwin Mensah Plange: Forward Deployed Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https:/sni/fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -337,7 +337,7 @@
           <ul class="log">
             <li><span class="log-tag">Problem</span><span class="log-text">I don't control WhatsApp Web's DOM, and it changes under me without warning.</span></li>
             <li><span class="log-tag">Decision</span><span class="log-text"><b>MutationObserver</b> over polling to catch header re-renders live, with a polling fallback for anything the observer misses, so overlay rendering degrades gracefully instead of breaking outright.</span></li>
-            <li><span class="log-tag">Incident</span><span class="log-text">Selector drift under real users when WhatsApp shifted its DOM structure. Treated each break as a signal to harden the targeting logic, not just patch the symptom.</span></li>
+            <li><span class="log-tag">Incident</span><span class="log-text">Chrome and Edge on the same machine share one <b>extensionId</b>. Using it as the unique user key meant both browsers silently overwrote a single Convex record, breaking P2P lookups for one device. Fixed by keying on <b>phoneHash</b> (SHA-256 of the phone number) instead.</span></li>
             <li><span class="log-tag">Trade-off</span><span class="log-text">Convex over custom backend infra: accepted vendor lock-in to ship real-time sync solo, instead of over-engineering for scale I didn't have yet.</span></li>
             <li><span class="log-tag">Monetisation</span><span class="log-text">Per-feature tier entitlements (Free/Pro/Annual/Lifetime) driven by webhook metadata, not one binary paid flag, so features gate and price independently as the product grows.</span></li>
           </ul>
@@ -368,7 +368,7 @@
             <p class="case-name">KasaFlow</p>
             <p class="case-tag">AI Customer Workflow Engine · Python / FastAPI · OpenAI Responses API</p>
           </div>
-          <span class="status-pill build"><span class="dot amber"></span>In production</span>
+          <span class="status-pill build"><span class="dot amber"></span>Self-directed · hardened</span>
         </div>
         <div class="case-body">
           <p>
@@ -381,8 +381,10 @@
             <li><span class="log-tag">V1</span><span class="log-text">Deterministic, rule-based routing. Predictable, but brittle against real customer phrasing.</span></li>
             <li><span class="log-tag">Migration</span><span class="log-text">Swapped intent recognition for <b>GPT-4.1-mini</b> via the OpenAI Responses API, engineering prompts that reliably return structured JSON instead of conversational text.</span></li>
             <li><span class="log-tag">Orchestration</span><span class="log-text">API, LLM, routing logic, and business services split into independent modules, so the contract stays stable no matter what's doing the work underneath.</span></li>
-            <li><span class="log-tag">Tool layer</span><span class="log-text">Built a <b>Tool Registry</b> and generic <b>Tool Executor</b> that dynamically dispatch AI-selected tools (pricing, delivery) based on structured LLM output, backed by external JSON datasets kept separate from application logic.</span></li>
+            <li><span class="log-tag">Tool layer</span><span class="log-text">Built a <b>Tool Registry</b> and generic <b>Tool Executor</b> that dynamically dispatch AI-selected tools (pricing, delivery, quote generation, product recommendation) based on structured LLM output, backed by external JSON datasets kept separate from application logic.</span></li>
             <li><span class="log-tag">Routing</span><span class="log-text">Evolved from deterministic rule-based routing to LLM-driven tool selection as the system matured.</span></li>
+            <li><span class="log-tag">Hardening</span><span class="log-text">Retries with backoff on transient LLM failures, defensive JSON parsing, <b>Pydantic</b> request validation, and structured logging in place of scattered print statements.</span></li>
+            <li><span class="log-tag">Testing</span><span class="log-text">30+ test suite spanning unit, integration, and prompt regression tests, kept fast and free by gating real-API regression tests behind an opt-in flag.</span></li>
           </ul>
 
           <div class="metric-row">
@@ -391,7 +393,7 @@
           </div>
         </div>
         <div class="case-footer">
-          <span>Stack: Python · FastAPI · OpenAI Responses API · REST APIs · JSON · python-dotenv</span>
+          <span>Stack: Python · FastAPI · OpenAI Responses API · REST APIs · JSON · python-dotenv · pytest</span>
           <span>Contract-stable migration: V1 rules to GPT-4.1-mini</span>
         </div>
       </div>
