@@ -337,9 +337,9 @@
           <ul class="log">
             <li><span class="log-tag">Problem</span><span class="log-text">I don't control WhatsApp Web's DOM, and it changes under me without warning.</span></li>
             <li><span class="log-tag">Decision</span><span class="log-text"><b>MutationObserver</b> over polling to catch header re-renders live, with a polling fallback for anything the observer misses, so overlay rendering degrades gracefully instead of breaking outright.</span></li>
-            <li><span class="log-tag">Incident</span><span class="log-text">Chrome and Edge on the same machine share one <b>extensionId</b>. Using it as the unique user key meant both browsers silently overwrote a single Convex record, breaking P2P lookups for one device. Fixed by keying on <b>phoneHash</b> (SHA-256 of the phone number) instead.</span></li>
+            <li><span class="log-tag">Incident</span><span class="log-text">A <b>device-auth</b> migration silently forked live accounts: registering a device before its phone number was known created a second Convex user sharing that phone hash, orphaning existing photos and assignments. Root-caused by diffing server truth against client state across two live installs, repaired in place with a <b>dry-run-first migration</b> — then patched again when the same gap resurfaced through a second code path.</span></li>
             <li><span class="log-tag">Trade-off</span><span class="log-text">Convex over custom backend infra: accepted vendor lock-in to ship real-time sync solo, instead of over-engineering for scale I didn't have yet.</span></li>
-            <li><span class="log-tag">Monetisation</span><span class="log-text">Per-feature tier entitlements (Free/Pro/Annual/Lifetime) driven by webhook metadata, not one binary paid flag, so features gate and price independently as the product grows.</span></li>
+            <li><span class="log-tag">Monetisation</span><span class="log-text">Collapsed a four-tier Free/Pro/Annual/Lifetime structure down to <b>Free/Pro</b> after data showed the middle tiers weren't converting. Limits are still enforced inside the same <b>Convex mutation</b> that writes the assignment, not the client, so entitlement can't be bypassed by editing the extension.</span></li>
           </ul>
 
           <div class="metric-row">
