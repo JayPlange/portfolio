@@ -471,14 +471,16 @@
             <li><span class="log-tag">Voice</span><span class="log-text">Integrated Khaya AI's ASR and TTS for Twi voice notes, the way most customers actually reach the pilot business. Confirmed the real API host, auth header, and request/response shapes against live calls first, not documentation alone, then rewrote the wrapper against what was actually true.</span></li>
             <li><span class="log-tag">Commerce</span><span class="log-text">Synced the pilot business's real WooCommerce catalogue and wired the WhatsApp Cloud API in, extending the engine from a text-in/JSON-out service into a customer-facing WhatsApp assistant, image replies included when a matched product has a photo.</span></li>
             <li><span class="log-tag">Incident</span><span class="log-text">A new semantic-search fallback made a genuine, unmocked network call to the embeddings API, which the existing test suite's own stated design principle, "no server, no network, no AI", never expected, and which failed hard in CI's sandboxed environment. Root-caused by reading what the existing tests actually guaranteed rather than the error output alone, then fixed with a try/except boundary that is also the correct production behaviour, not just a test workaround: a real customer's request shouldn't crash because OpenAI had a bad moment. Confirmed fixed by watching CI go from red to green on the fix commit, not by trusting the fix locally.</span></li>
+            <li><span class="log-tag">Action layer</span><span class="log-text">Every tool up to this point was read-only. Added the first one that writes: <b>propose_order()</b> prices an order deterministically and never touches WooCommerce; <b>confirm_order()</b> is the only function that does, and it only ever acts on whatever propose_order() already priced for that session, never on arguments of its own — a second, session-scoped confirmation gate on top of the existing LLM-decides/code-executes split, added specifically because this is the first tool with a real, hard-to-undo side effect. Orders land as WooCommerce's <b>on-hold</b> status; payment collection is a deliberately separate, not-yet-built problem.</span></li>
+            <li><span class="log-tag">Idempotency</span><span class="log-text">WooCommerce's REST API has no idempotency-key support. Considered a reconciliation job and a WooCommerce-side plugin, rejected both as heavier than the actual failure mode warranted, and shipped the narrower fix: on a timed-out order-create, look the order up by a token embedded in its own metadata before deciding whether to retry, instead of risking a duplicate. Event-driven WooCommerce webhooks noted as the more correct long-term replacement, deferred until payment confirmation is built.</span></li>
           </ul>
 
           <div class="metric-row">
             <div class="metric">Output: <b>structured JSON</b>, not raw model text</div>
             <div class="metric">Catalogue: <b>3,918 products</b>, synced live from WooCommerce</div>
-            <div class="metric">Config: API keys via python-dotenv</div>
+            <div class="metric">Tools: <b>7</b> — 5 read-only, 2 forming the new action layer</div>
           </div>
-          <p class="metric-note">Verified against the live repository and a real sync run, 7 Aug 2026</p>
+          <p class="metric-note">Verified against the live repository, 11 Aug 2026. Order creation is code-complete and test-covered (149 passed); not yet exercised end to end against live WhatsApp, pending API credentials.</p>
         </div>
         <div class="case-footer">
           <span>Stack: Python · FastAPI · OpenAI Responses API · WooCommerce REST API · WhatsApp Cloud API · Khaya AI · pytest</span>
