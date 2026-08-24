@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Justice Edwin Mensah Plange: Forward Deployed Engineer</title>
-<link rel="preconnect" href="https:/sni/fonts.googleapis.com">
+<title>Justice Edwin Mensah Plange — Forward Deployed Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -20,8 +20,6 @@
     --signal-dim:rgba(51,214,192,0.12);
     --amber:#F0A63D;
     --amber-dim:rgba(240,166,61,0.12);
-    --red:#E5484D;
-    --red-dim:rgba(229,72,77,0.14);
     --mono:'IBM Plex Mono', ui-monospace, monospace;
     --sans:'IBM Plex Sans', -apple-system, sans-serif;
   }
@@ -116,7 +114,7 @@
   .section-title{ font-size:13px; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin:0; }
   .section-sub{ color:var(--muted); font-size:14.5px; max-width:560px; margin:6px 0 32px; }
 
-  /* Live demo: contact switcher */
+  /* ── Live demo — contact switcher ─────────── */
   .demo-section{ padding:56px 0 60px; border-bottom:1px solid var(--line); }
   .demo-shell{
     display:grid; grid-template-columns:1fr; gap:32px;
@@ -139,52 +137,6 @@
   }
   .demo-tab:hover{ color:var(--text); border-color:var(--line-strong); }
   .demo-tab.active{ color:var(--bg); background:var(--signal); border-color:var(--signal); font-weight:600; }
-
-  /* Mode switch between the two demos */
-  .demo-mode-tabs{ display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
-  .demo-mode-tab{
-    font-family:var(--mono); font-size:12.5px; letter-spacing:0.02em; color:var(--muted);
-    background:transparent; border:1px solid var(--line); border-radius:8px;
-    padding:9px 16px; cursor:pointer; transition:all .18s ease;
-  }
-  .demo-mode-tab:hover{ color:var(--text); border-color:var(--line-strong); }
-  .demo-mode-tab.active{ color:var(--text); border-color:var(--signal); background:var(--signal-dim); }
-
-  /* Scheduled Photos badge demo */
-  .badge-demo{
-    background:var(--panel-2); border:1px solid var(--line); border-radius:12px; padding:22px;
-  }
-  .badge-toolbar{ display:flex; align-items:center; gap:12px; }
-  .badge-icon{
-    width:38px; height:38px; flex:none; border-radius:9px; background:var(--panel);
-    border:1px solid var(--line); display:flex; align-items:center; justify-content:center; position:relative;
-  }
-  .badge-dot{
-    width:9px; height:9px; border-radius:50%; background:var(--muted-2);
-    box-shadow:0 0 0 3px rgba(255,255,255,0.06); transition:background .2s ease, box-shadow .2s ease;
-  }
-  .badge-dot.due{ background:var(--red); box-shadow:0 0 0 3px var(--red-dim); }
-  .badge-dot.staged{ background:var(--amber); box-shadow:0 0 0 3px var(--amber-dim); }
-  .badge-dot.synced{ background:var(--signal); box-shadow:0 0 0 3px var(--signal-dim); }
-  .badge-caption{ font-family:var(--mono); font-size:12.5px; color:var(--muted); transition:color .2s ease; }
-  .badge-toast{
-    margin-top:16px; background:var(--panel); border:1px solid var(--line-strong); border-radius:10px;
-    padding:14px 16px;
-  }
-  .toast-title{ margin:0 0 12px; font-size:13.5px; color:var(--text); }
-  .toast-actions{ display:flex; gap:8px; }
-  .toast-btn{
-    font-family:var(--mono); font-size:12px; padding:7px 13px; border-radius:7px; cursor:pointer;
-    border:1px solid var(--line); background:var(--panel-2); color:var(--muted);
-  }
-  .toast-btn:hover{ color:var(--text); border-color:var(--line-strong); }
-  .toast-btn.primary{ background:var(--signal); color:var(--bg); border-color:var(--signal); font-weight:600; }
-  .demo-cta{
-    margin-top:16px; font-family:var(--mono); font-size:12.5px; color:var(--bg); background:var(--signal);
-    border:1px solid var(--signal); border-radius:8px; padding:10px 16px; cursor:pointer; font-weight:600;
-  }
-  .demo-cta:hover{ opacity:0.9; }
-  .demo-cta:disabled{ opacity:0.4; cursor:default; }
 
   .demo-phone{
     background:var(--panel-2); border:1px solid var(--line); border-radius:12px; overflow:hidden;
@@ -251,10 +203,6 @@
     border:1px solid var(--line); border-radius:6px; padding:8px 12px;
   }
   .metric b{ color:var(--signal); }
-  .metric-note{
-    font-family:var(--mono); font-size:11px; color:var(--muted-2); margin:8px 0 0;
-    letter-spacing:0.02em;
-  }
 
   .case-footer{
     padding:14px 24px; border-top:1px solid var(--line); background:var(--panel-2);
@@ -294,16 +242,16 @@
 
   <div class="ticker-wrap">
     <div class="ticker">
-      <span><span class="dot"></span>DUALPROFILE · LIVE · CHROME WEB STORE</span>
-      <span><span class="dot"></span>US ~90% · GHANA &amp; BRAZIL NEXT-LARGEST</span>
-      <span><span class="dot amber"></span>KASAFLOW · GPT-4.1-MINI · WHATSAPP LIVE</span>
-      <span><span class="dot"></span>3 SME SYSTEMS IN ACTIVE SUPPORT · WEBBLABS</span>
-      <span><span class="dot"></span>16 REGIONS FIELD-ASSESSED · GNAT / KPMG</span>
-      <span><span class="dot"></span>DUALPROFILE · LIVE · CHROME WEB STORE</span>
-      <span><span class="dot"></span>US ~90% · GHANA &amp; BRAZIL NEXT-LARGEST</span>
-      <span><span class="dot amber"></span>KASAFLOW · GPT-4.1-MINI · WHATSAPP LIVE</span>
-      <span><span class="dot"></span>3 SME SYSTEMS IN ACTIVE SUPPORT · WEBBLABS</span>
-      <span><span class="dot"></span>16 REGIONS FIELD-ASSESSED · GNAT / KPMG</span>
+      <span><span class="dot"></span>DUALPROFILE — LIVE — CHROME WEB STORE</span>
+      <span><span class="dot"></span>US 82% · JAPAN 10% · SPAIN 5%</span>
+      <span><span class="dot amber"></span>KASAFLOW — GPT-4.1-MINI — /PROCESS ONLINE</span>
+      <span><span class="dot"></span>3 SME SYSTEMS IN ACTIVE SUPPORT — WEBBLABS</span>
+      <span><span class="dot"></span>16 REGIONS FIELD-ASSESSED — GNAT / KPMG</span>
+      <span><span class="dot"></span>DUALPROFILE — LIVE — CHROME WEB STORE</span>
+      <span><span class="dot"></span>US 82% · JAPAN 10% · SPAIN 5%</span>
+      <span><span class="dot amber"></span>KASAFLOW — GPT-4.1-MINI — /PROCESS ONLINE</span>
+      <span><span class="dot"></span>3 SME SYSTEMS IN ACTIVE SUPPORT — WEBBLABS</span>
+      <span><span class="dot"></span>16 REGIONS FIELD-ASSESSED — GNAT / KPMG</span>
     </div>
   </div>
 
@@ -311,12 +259,12 @@
 
   <div class="container">
     <section class="hero">
-      <p class="eyebrow">Systems status: Justice Edwin Mensah Plange</p>
+      <p class="eyebrow">Systems status — Justice Edwin Mensah Plange</p>
       <h1>I ship the systems I'd have to page myself for.</h1>
       <p class="role">Forward Deployed Engineer · Applied AI Engineer</p>
       <p class="thesis">
         Before I wrote software, I watched telecom infrastructure at 2am and answered for its uptime.
-        Now I build the products <b>and</b> carry the pager: architecture, deployment, and the debugging
+        Now I build the products <b>and</b> carry the pager — architecture, deployment, and the debugging
         that starts once real users show up.
       </p>
       <div class="links">
@@ -327,24 +275,19 @@
       </div>
       <div class="stat-grid">
         <div class="stat"><div class="stat-num"><em>2</em></div><div class="stat-label">Live systems shipped &amp; operated solo</div></div>
-        <div class="stat"><div class="stat-num"><em>8+</em></div><div class="stat-label">Countries with real installs</div></div>
+        <div class="stat"><div class="stat-num"><em>3</em></div><div class="stat-label">Countries with paying users</div></div>
         <div class="stat"><div class="stat-num"><em>16</em></div><div class="stat-label">Regions field-assessed, KPMG/GNAT</div></div>
         <div class="stat"><div class="stat-num"><em>3+</em></div><div class="stat-label">Years on infra uptime before AI</div></div>
       </div>
     </section>
 
-    <!-- LIVE DEMO: CONTACT SWITCHER + SCHEDULED PHOTOS -->
+    <!-- LIVE DEMO — CONTACT SWITCHER -->
     <section class="demo-section">
-      <div class="demo-mode-tabs reveal" role="tablist" aria-label="Choose which DualProfile feature to try">
-        <button class="demo-mode-tab active" data-mode="contact" role="tab" aria-selected="true">Per-contact photos</button>
-        <button class="demo-mode-tab" data-mode="scheduled" role="tab" aria-selected="false">Scheduled Photos</button>
-      </div>
-
-      <div class="demo-shell reveal" id="demoContactShell">
+      <div class="demo-shell reveal">
         <div>
-          <p class="demo-kicker">Try it: this is the whole product</p>
+          <p class="demo-kicker">Try it — this is the whole product</p>
           <p class="demo-lede">You already talk differently to your boss than your best friend.</p>
-          <p class="demo-note">Tap a contact. This is what <em>they</em> see when you message them, same you, different photo, switched automatically.</p>
+          <p class="demo-note">Tap a contact. This is what <em>they</em> see when you message them — same you, different photo, switched automatically.</p>
         </div>
         <div>
           <div class="demo-tabs" role="tablist" aria-label="Preview a contact">
@@ -362,42 +305,18 @@
               <div class="demo-signal"><span class="dot"></span>synced</div>
             </div>
             <div class="demo-bubble-row">
-              <div class="demo-bubble" id="demoBubble">Sure, I'll have the report by EOD.</div>
+              <div class="demo-bubble" id="demoBubble">Sure — I'll have the report by EOD.</div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="demo-shell reveal" id="demoScheduledShell" style="display:none;">
-        <div>
-          <p class="demo-kicker">Try it: the other half of the product</p>
-          <p class="demo-lede">Your real photo, on a schedule, everywhere, one tap to confirm.</p>
-          <p class="demo-note">This is the toolbar and toast a user actually sees. Step through what happens when a scheduled switch comes due, deliberately never fully automated, see why in the KasaFlow case study's neighbour below.</p>
-        </div>
-        <div>
-          <div class="badge-demo">
-            <div class="badge-toolbar">
-              <div class="badge-icon"><span class="badge-dot" id="badgeDot"></span></div>
-              <div class="badge-caption" id="badgeCaption">Idle &mdash; next switch at 18:00</div>
-            </div>
-            <div class="badge-toast" id="badgeToast" style="display:none;">
-              <p class="toast-title">Switch to <b>Personal</b> photo?</p>
-              <div class="toast-actions">
-                <button class="toast-btn primary" id="toastSwitch">Switch now</button>
-                <button class="toast-btn" id="toastLater">Not now</button>
-              </div>
-            </div>
-            <button class="demo-cta" id="badgeSimulate">Simulate 18:00</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CASE STUDY 01: DUALPROFILE -->
+    <!-- CASE STUDY 01 — DUALPROFILE -->
     <section id="dualprofile">
       <div class="section-head reveal">
         <span class="section-index">01</span>
-        <p class="section-title">Case study: shipped &amp; owned end to end</p>
+        <p class="section-title">Case study — shipped &amp; owned end to end</p>
       </div>
 
       <div class="case reveal">
@@ -406,131 +325,116 @@
             <p class="case-name">DualProfile</p>
             <p class="case-tag">Chrome extension SaaS · vivaup.org · Manifest V3 + Convex</p>
           </div>
-          <span class="status-pill"><span class="dot"></span>Live, paying users</span>
+          <span class="status-pill"><span class="dot"></span>Live — paying users</span>
         </div>
         <div class="case-body">
           <p>
             WhatsApp Web renders one profile photo to everyone in your contact list. DualProfile lets a
-            user assign a different photo per contact, visible only to that person, with mutual
+            user assign a different photo per contact — visible only to that person — with mutual
             detection running on hashed phone-number lookup between two installs.
           </p>
 
           <ul class="log">
             <li><span class="log-tag">Problem</span><span class="log-text">I don't control WhatsApp Web's DOM, and it changes under me without warning.</span></li>
-            <li><span class="log-tag">Decision</span><span class="log-text"><b>MutationObserver</b> over polling to catch header re-renders live, with a polling fallback for anything the observer misses, so overlay rendering degrades gracefully instead of breaking outright.</span></li>
-            <li><span class="log-tag">Incident</span><span class="log-text">A <b>device-auth</b> migration silently forked live accounts: registering a device before its phone number was known created a second Convex user sharing that phone hash, orphaning existing photos and assignments. Root-caused by diffing server truth against client state across two live installs, repaired in place with a <b>dry-run-first migration</b> — then patched again when the same gap resurfaced through a second code path.</span></li>
-            <li><span class="log-tag">Scheduled Photos</span><span class="log-text">A second delivery mechanism, built after per-contact overlays alone couldn't answer "I want everyone to see my new photo": switches the account's real WhatsApp photo by day/time, visible everywhere, mobile included, no counterparty needs anything installed. Scripted clicks on the final confirm step proved unreliable under real testing, including one black-photo incident before the fix, so I deliberately rejected full automation. <b>A human taps the last confirm, every time</b> — the one action that reaches WhatsApp's own servers; everything else in DualProfile is a pure browser-side overlay that never touches them.</span></li>
-            <li><span class="log-tag">Trade-off</span><span class="log-text">Convex over custom backend infra: accepted vendor lock-in to ship real-time sync solo, instead of over-engineering for scale I didn't have yet.</span></li>
-            <li><span class="log-tag">Monetisation</span><span class="log-text">Collapsed a four-tier Free/Pro/Annual/Lifetime structure down to <b>Free/Pro</b> after data showed the middle tiers weren't converting. Limits are still enforced inside the same <b>Convex mutation</b> that writes the assignment, not the client, so entitlement can't be bypassed by editing the extension.</span></li>
+            <li><span class="log-tag">Decision</span><span class="log-text"><b>MutationObserver</b> over polling to catch header re-renders live, with a polling fallback for anything the observer misses — overlay rendering degrades gracefully instead of breaking outright.</span></li>
+            <li><span class="log-tag">Incident</span><span class="log-text">Selector drift under real users when WhatsApp shifted its DOM structure. Treated each break as a signal to harden the targeting logic, not just patch the symptom.</span></li>
+            <li><span class="log-tag">Trade-off</span><span class="log-text">Convex over custom backend infra — accepted vendor lock-in to ship real-time sync solo, instead of over-engineering for scale I didn't have yet.</span></li>
+            <li><span class="log-tag">Monetisation</span><span class="log-text">Per-feature tier entitlements (Free/Pro/Annual/Lifetime) driven by webhook metadata, not one binary paid flag — features gate and price independently as the product grows.</span></li>
           </ul>
 
           <div class="metric-row">
-            <div class="metric">Region: <b>US ~90%</b> · Ghana &amp; Brazil next-largest</div>
-            <div class="metric">Language: <b>English 83%</b> · Portuguese 17%</div>
-            <div class="metric">Growth: <b>organic</b>, Reddit + word of mouth</div>
+            <div class="metric">Region — <b>US 82%</b> · Japan 10% · Spain 5%</div>
+            <div class="metric">Language — <b>EN 63%</b> · ES 25% · ZH 13%</div>
+            <div class="metric">Growth — <b>organic</b>, Reddit + word of mouth</div>
           </div>
-          <p class="metric-note">Region/language shift month to month on a small install base &mdash; from real Chrome Web Store analytics, 7 Aug 2026, not a stable long-term figure</p>
         </div>
         <div class="case-footer">
-          <span>Stack: Manifest V3 · TypeScript (Convex) · Cloudinary · Lemon Squeezy · Next.js/React (landing)</span>
+          <span>Stack: Manifest V3 · TypeScript (Convex) · Lemon Squeezy · Next.js/React (landing)</span>
           <a href="https://chromewebstore.google.com/detail/dualprofile/mdlhdncmaeepcejdbpnjpjlmagmmpkpc">View on Chrome Web Store →</a>
         </div>
       </div>
     </section>
 
-    <!-- CASE STUDY 02: KASAFLOW -->
+    <!-- CASE STUDY 02 — KASAFLOW -->
     <section id="kasaflow">
       <div class="section-head reveal">
         <span class="section-index">02</span>
-        <p class="section-title">Case study: applied AI systems architecture</p>
+        <p class="section-title">Case study — applied AI systems architecture</p>
       </div>
 
       <div class="case reveal">
         <div class="case-head">
           <div>
             <p class="case-name">KasaFlow</p>
-            <p class="case-tag">AI Customer Workflow Engine · Python / FastAPI · OpenAI Responses API</p>
+            <p class="case-tag">AI backend · Python / FastAPI · OpenAI Responses API</p>
           </div>
-          <span class="status-pill build"><span class="dot amber"></span>Self-directed · hardened</span>
+          <span class="status-pill build"><span class="dot amber"></span>In production</span>
         </div>
         <div class="case-body">
           <p>
-            A modular AI workflow engine that combines FastAPI, Python, and OpenAI's Responses API to
-            process customer requests using structured LLM outputs and deterministic business tools,
-            not a single script wired to one model call.
+            A backend service that takes a customer's natural-language message and returns structured,
+            machine-readable business data — intent, product, material, language, confidence — for
+            downstream workflows to act on without parsing raw text.
           </p>
 
           <ul class="log">
-            <li><span class="log-tag">V1</span><span class="log-text">Deterministic, rule-based routing. Predictable, but brittle against real customer phrasing.</span></li>
-            <li><span class="log-tag">Migration</span><span class="log-text">Swapped intent recognition for <b>GPT-4.1-mini</b> via the OpenAI Responses API, engineering prompts that reliably return structured JSON instead of conversational text.</span></li>
-            <li><span class="log-tag">Orchestration</span><span class="log-text">API, LLM, routing logic, and business services split into independent modules, so the contract stays stable no matter what's doing the work underneath.</span></li>
-            <li><span class="log-tag">Tool layer</span><span class="log-text">Built a <b>Tool Registry</b> and generic <b>Tool Executor</b> that dynamically dispatch AI-selected tools (pricing, delivery, quote generation, product recommendation) based on structured LLM output, backed by external JSON datasets kept separate from application logic.</span></li>
-            <li><span class="log-tag">Routing</span><span class="log-text">Evolved from deterministic rule-based routing to LLM-driven tool selection as the system matured.</span></li>
-            <li><span class="log-tag">Hardening</span><span class="log-text">Retries with backoff on transient LLM failures, defensive JSON parsing, <b>Pydantic</b> request validation, and structured logging in place of scattered print statements.</span></li>
-            <li><span class="log-tag">Testing</span><span class="log-text"><b>285-passing / 17-gated test suite</b> spanning unit, integration, and prompt regression tests, kept fast and free by gating real-API regression tests behind an opt-in flag.</span></li>
-            <li><span class="log-tag">Voice</span><span class="log-text">Integrated Khaya AI's ASR and TTS for Twi voice notes, the way most customers actually reach the pilot business. Confirmed the real API host, auth header, and request/response shapes against live calls first, not documentation alone, then rewrote the wrapper against what was actually true.</span></li>
-            <li><span class="log-tag">Commerce</span><span class="log-text">Synced the pilot business's real WooCommerce catalogue and wired the WhatsApp Cloud API in, extending the engine from a text-in/JSON-out service into a customer-facing WhatsApp assistant, image replies included when a matched product has a photo.</span></li>
-            <li><span class="log-tag">Incident</span><span class="log-text">A new semantic-search fallback made a genuine, unmocked network call to the embeddings API, which the existing test suite's own stated design principle, "no server, no network, no AI", never expected, and which failed hard in CI's sandboxed environment. Root-caused by reading what the existing tests actually guaranteed rather than the error output alone, then fixed with a try/except boundary that is also the correct production behaviour, not just a test workaround: a real customer's request shouldn't crash because OpenAI had a bad moment. Confirmed fixed by watching CI go from red to green on the fix commit, not by trusting the fix locally.</span></li>
-            <li><span class="log-tag">Action layer</span><span class="log-text">Every tool up to this point was read-only. Added the first one that writes: <b>propose_order()</b> prices an order deterministically and never touches WooCommerce; <b>confirm_order()</b> is the only function that does, and it only ever acts on whatever propose_order() already priced for that session, never on arguments of its own — a second, session-scoped confirmation gate on top of the existing LLM-decides/code-executes split, added specifically because this is the first tool with a real, hard-to-undo side effect. Orders land as WooCommerce's <b>on-hold</b> status; payment collection is a deliberately separate, not-yet-built problem.</span></li>
-            <li><span class="log-tag">Idempotency</span><span class="log-text">WooCommerce's REST API has no idempotency-key support. Considered a reconciliation job and a WooCommerce-side plugin, rejected both as heavier than the actual failure mode warranted, and shipped the narrower fix: on a timed-out order-create, look the order up by a token embedded in its own metadata before deciding whether to retry, instead of risking a duplicate. Event-driven WooCommerce webhooks noted as the more correct long-term replacement, deferred until payment confirmation is built.</span></li>
-            <li><span class="log-tag">Live verification</span><span class="log-text">Provisioned real WhatsApp Cloud API credentials and proved the full round trip against a live phone, not a mock: a real inbound message routed through the LLM, fell back to semantic search on a non-exact product match, priced it against the live WooCommerce catalogue, and came back as a real image-plus-price reply on WhatsApp. Also found and worked around a real platform constraint along the way -- Meta withholds real inbound webhook delivery entirely from an unpublished app, confirmed by direct A/B test rather than assumed from docs, so a webhook-shaped payload gets POSTed straight to the local endpoint for development instead of waiting on business verification.</span></li>
-            <li><span class="log-tag">Conversational layer</span><span class="log-text">Live testing surfaced a real gap: pure social messages ("oh wow", "sigh") were being forced through business tools that had nothing to do with them. Added an eighth LLM outcome, <b>converse</b>, scoped so the router short-circuits it before it can touch order, product, or memory state -- confirmed with dedicated isolation tests that a stray aside can't silently clear a pending lookup or overwrite an in-progress order.</span></li>
-            <li><span class="log-tag">State tracking</span><span class="log-text">Closed a second gap from the same live run: the assistant had no memory of *why* its own last action had just failed, so a customer asking "why?" got a generic non-answer. Added <b>pending_intent</b> (an unresolved product lookup) and <b>last_action_outcome</b> (a genuine, unrecoverable business-action failure, deliberately distinct from "still gathering info") to session memory, each cleared by its own stricter success check so a failure can't be wiped out by the very call that just recorded it.</span></li>
-            <li><span class="log-tag">Product-matching bug</span><span class="log-text">Root-caused a live wrong-product substitution against the real catalogue: karat and weight suffixes like "14k" and "16g" were stripping to bare letter fragments ("k", "g") that substring-matched almost any product name, silently outranking the correct item in keyword-overlap scoring. Fixed with a minimum-token-length filter, confirmed against the actual 3,918-product catalogue -- the wrong product's score dropped from 7 to 4, the correct product's held at 5 -- not just against synthetic test fixtures.</span></li>
-            <li><span class="log-tag">Order corrections</span><span class="log-text">Fixed the in-progress-order flow silently keeping a stale field (e.g. "Accra") after a customer explicitly corrected it mid-conversation ("sorry, Kumasi not Accra"). The prompt now carries an explicit correction exception rather than only ever filling in blanks.</span></li>
-            <li><span class="log-tag">Live order</span><span class="log-text">The missing write-scoped WooCommerce credential flagged as the open item in the previous update was provisioned. A real order landed in the live store on the first attempt, confirming the root cause diagnosed earlier was the actual, and only, blocker.</span></li>
-            <li><span class="log-tag">Cancellation</span><span class="log-text">A live customer transcript surfaced two gaps at once: a delivery address naming one city while the chosen delivery option named another, and no way to cancel an order once placed. Added a conservative, one-directional address/option mismatch check that only ever routes an ambiguous case to manual staff confirmation, never asserts a wrong delivery arrangement outright; added a full <b>cancel_order</b> tool reusing the existing session-scoped confirmation infrastructure, preferring an explicit order number with a last-confirmed-order fallback; and softened the customer-facing "confirmed" wording to "placed", since nothing is actually settled until a human arranges payment and delivery. Diagnosed, fixed, and covered by 30 new tests the same day.</span></li>
+            <li><span class="log-tag">V1</span><span class="log-text">Rule-based intent recognition engine. Predictable, but brittle against real customer phrasing.</span></li>
+            <li><span class="log-tag">Migration</span><span class="log-text">Swapped the extraction engine for <b>GPT-4.1-mini</b> via the OpenAI Responses API — without changing the public API contract consumers already depended on.</span></li>
+            <li><span class="log-tag">Architecture</span><span class="log-text">Dedicated LLM service layer sits behind the API — the contract stays stable no matter what's doing the extraction underneath.</span></li>
+            <li><span class="log-tag">Output</span><span class="log-text">Structured JSON schema (intent · product · material · language · confidence) instead of raw model text, so downstream systems get something they can trust.</span></li>
+            <li><span class="log-tag">Reliability</span><span class="log-text">Deterministic bypass layer resolves narrow follow-up answers — delivery zone, material, quantity, confirmation, karat options — without a second LLM round-trip, and enforces price/variant invariants no prompt is trusted to hold on its own.</span></li>
+            <li><span class="log-tag">Coverage</span><span class="log-text">Google Geocoding integration resolves delivery zones across all 16 regions of Ghana, falling back to a curated Accra/Kumasi neighbourhood list when no key is configured — plus order-status lookup and cancellation. Extended after a 50-turn live audit surfaced real gaps: exact-catalogue lookups no longer silently degrade to fuzzy search, and known local landmarks resolve to the right delivery zone.</span></li>
+            <li><span class="log-tag">Humanization</span><span class="log-text">Started work on a bounded acknowledgment layer and pushback/tone classification, so corrections read as "sorry, updated that" rather than a robotic re-ask — with custom orders and anything needing judgement handed to a human, not the model.</span></li>
           </ul>
 
           <div class="metric-row">
-            <div class="metric">Output: <b>structured JSON</b>, not raw model text</div>
-            <div class="metric">Catalogue: <b>3,918 products</b>, synced live from WooCommerce</div>
-            <div class="metric">Tools: <b>8</b> — 5 read-only, 3 forming the action layer</div>
+            <div class="metric">Endpoint — <b>/process</b>, documented with Swagger</div>
+            <div class="metric">Config — API keys via environment variables</div>
+            <div class="metric">Coverage — <b>640+</b> automated tests, TDD on every fix</div>
           </div>
-          <p class="metric-note">Verified against the live repository, 16 Aug 2026. The quote/pricing path is confirmed working end to end against the real WhatsApp API and real catalogue data. Order creation is now confirmed live too: the write-scoped WooCommerce credential flagged as the open item in the previous update was provisioned, and a real order was created against the live store on the first attempt. That same live conversation surfaced a delivery-address/option contradiction and a missing cancellation path; both are fixed and covered by the current 285-passing test suite.</p>
         </div>
         <div class="case-footer">
-          <span>Stack: Python · FastAPI · OpenAI Responses API · WooCommerce REST API · WhatsApp Cloud API · Khaya AI · pytest</span>
-          <a href="https://github.com/JayPlange/Kasaflow">View on GitHub →</a>
+          <span>Stack: FastAPI · OpenAI Responses API · Python</span>
+          <span>Contract-stable migration: V1 rules → GPT-4.1-mini</span>
         </div>
       </div>
     </section>
 
-    <!-- SYSTEMS LOG: CAREER TIMELINE -->
+    <!-- SYSTEMS LOG — CAREER TIMELINE -->
     <section id="log">
       <div class="section-head reveal">
         <span class="section-index">03</span>
-        <p class="section-title">Systems log, chronological</p>
+        <p class="section-title">Systems log — chronological</p>
       </div>
       <p class="section-sub reveal">Ops discipline first, applied to software once it existed to apply it to.</p>
 
       <ul class="timeline reveal">
         <li>
-          <div class="tl-when">2025 – Present</div>
+          <div class="tl-when">2025 — Present</div>
           <div class="tl-role">Co-Founder, Client Systems &amp; Requirements</div>
           <div class="tl-org">Webblabs · Remote</div>
-          <div class="tl-desc">Discovery and requirements engineering for SME systems: jewellery, pharmacy, and medical-related deployments, actively supported post-launch.</div>
+          <div class="tl-desc">Discovery and requirements engineering for SME systems — jewellery, pharmacy, and medical-related deployments, actively supported post-launch.</div>
         </li>
         <li>
-          <div class="tl-when">2024 – 2025</div>
+          <div class="tl-when">2024 — 2025</div>
           <div class="tl-role">Automation Systems Engineer</div>
           <div class="tl-org">Independent Client Project</div>
           <div class="tl-desc">Multi-step AI agent pipeline in n8n, unifying audio/image/text input with structured failure recovery under real API constraints.</div>
         </li>
         <li>
-          <div class="tl-when">Feb – May 2023</div>
+          <div class="tl-when">Feb — May 2023</div>
           <div class="tl-role">IT Compliance Associate</div>
           <div class="tl-org">KPMG Ghana · GNAT National Cloud Migration</div>
           <div class="tl-desc">On-site stakeholder assessments across nearly all 16 regions of Ghana, feeding field findings into national migration risk documentation.</div>
         </li>
         <li>
-          <div class="tl-when">Nov 2021 – Jan 2023</div>
+          <div class="tl-when">Nov 2021 — Jan 2023</div>
           <div class="tl-role">Network Operations Engineer</div>
           <div class="tl-org">Geoquaye Company Ltd · Ghana</div>
           <div class="tl-desc">Live telecom infrastructure monitoring, incident escalation under uptime SLAs.</div>
         </li>
         <li>
-          <div class="tl-when">Oct 2020 – Sep 2021</div>
+          <div class="tl-when">Oct 2020 — Sep 2021</div>
           <div class="tl-role">NOC Engineer</div>
           <div class="tl-org">American Tower Corporation Ghana · Remote</div>
           <div class="tl-desc">Multi-site incident resolution, coordinating technical and non-technical teams during outages.</div>
@@ -587,7 +491,7 @@
   const DEMO = {
     boss: {
       name: 'Boss', sub: 'sees your professional photo',
-      bubble: "Sure, I'll have the report by EOD.",
+      bubble: "Sure — I'll have the report by EOD.",
       bg: '#1E2733', fg: '#7A8494',
       accessory: '<path d="M29 38l3 5 3-5-3 12-3-12z" fill="#5C6577"/>'
     },
@@ -636,67 +540,6 @@
       }, 180);
     });
   });
-
-  // ── Demo mode switch: per-contact vs Scheduled Photos ──────────────────
-  const modeTabs = document.querySelectorAll('.demo-mode-tab');
-  const contactShell = document.getElementById('demoContactShell');
-  const scheduledShell = document.getElementById('demoScheduledShell');
-
-  modeTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      if (tab.classList.contains('active')) return;
-      modeTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-      tab.classList.add('active'); tab.setAttribute('aria-selected','true');
-
-      const showScheduled = tab.dataset.mode === 'scheduled';
-      contactShell.style.display = showScheduled ? 'none' : '';
-      scheduledShell.style.display = showScheduled ? '' : 'none';
-    });
-  });
-
-  // ── Scheduled Photos badge state machine ────────────────────────────────
-  // Mirrors the real states: idle -> due (red) -> staged (amber, waiting on
-  // a real WhatsApp tap) -> synced (confirmed). The confirm step is
-  // deliberately the one step a script never takes here either.
-  const badgeDot = document.getElementById('badgeDot');
-  const badgeCaption = document.getElementById('badgeCaption');
-  const badgeToast = document.getElementById('badgeToast');
-  const badgeSimulate = document.getElementById('badgeSimulate');
-  const toastSwitch = document.getElementById('toastSwitch');
-  const toastLater = document.getElementById('toastLater');
-
-  function setBadge(state, caption){
-    badgeDot.className = 'badge-dot' + (state ? ' ' + state : '');
-    badgeCaption.textContent = caption;
-  }
-
-  if (badgeSimulate) {
-    badgeSimulate.addEventListener('click', () => {
-      badgeSimulate.disabled = true;
-      setBadge('due', '18:00 — time to switch to Personal');
-      badgeToast.style.display = '';
-    });
-
-    toastSwitch.addEventListener('click', () => {
-      badgeToast.style.display = 'none';
-      setBadge('staged', 'Staged — waiting on your tap inside WhatsApp');
-      setTimeout(() => {
-        setBadge('synced', 'Switched — confirmed, synced on every device');
-        setTimeout(() => {
-          badgeSimulate.disabled = false;
-          badgeSimulate.textContent = 'Run it again';
-          setBadge('', 'Idle — next switch at 18:00');
-        }, 1800);
-      }, 1200);
-    });
-
-    toastLater.addEventListener('click', () => {
-      badgeToast.style.display = 'none';
-      badgeSimulate.disabled = false;
-      badgeSimulate.textContent = 'Simulate 18:00';
-      setBadge('', 'Idle — next switch at 18:00');
-    });
-  }
 </script>
 
 </body>
