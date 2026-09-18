@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Justice Edwin Mensah Plange: Forward Deployed Engineer</title>
+<title>Justice Edwin Mensah Plange — Software Engineer &amp; Founder</title>
 <link rel="preconnect" href="https:/sni/fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -275,19 +275,47 @@
   .tl-org{ font-size:13px; color:var(--muted); margin-bottom:8px; }
   .tl-desc{ font-size:14px; color:var(--muted); max-width:600px; }
 
-  /* ── Skills ───────────────────────────────── */
-  .skill-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
-  .skill-cell{ background:var(--panel); padding:18px 20px; }
-  .skill-cat{ font-family:var(--mono); font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--signal); margin-bottom:8px; }
-  .skill-list{ color:var(--muted); font-size:13.5px; }
-  @media (max-width:700px){ .skill-grid{ grid-template-columns:1fr; } }
-
   footer{ padding:48px 0 80px; text-align:center; }
   footer .eyebrow{ justify-content:center; }
   .contact-links{ display:flex; gap:24px; justify-content:center; margin-top:18px; font-family:var(--mono); font-size:14px; flex-wrap:wrap;}
 
   .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
   .reveal.in{ opacity:1; transform:none; }
+
+  /* ── Case subheads (Problem / System / Decisions / Result) ── */
+  .case-subhead{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em;
+    color:var(--signal); margin:22px 0 10px;
+  }
+  .case-subhead:first-of-type{ margin-top:4px; }
+  .case-body > p.case-intro{ margin-bottom:22px; }
+
+  /* ── Capabilities grid ─────────────────────── */
+  .cap-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .cap-cell{ background:var(--panel); padding:22px 24px; }
+  .cap-cat{ font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--signal); margin-bottom:10px; }
+  .cap-list{ color:var(--muted); font-size:14px; }
+  @media (max-width:700px){ .cap-grid{ grid-template-columns:1fr; } }
+
+  /* ── Engineering decisions ─────────────────── */
+  .decision{
+    border:1px solid var(--line); border-radius:10px; background:var(--panel);
+    padding:20px 24px; margin-bottom:16px;
+  }
+  .decision:last-child{ margin-bottom:0; }
+  .decision-principle{ font-size:15.5px; font-weight:600; margin:0 0 8px; }
+  .decision-body{ color:var(--muted); font-size:14px; margin:0; }
+  .decision-body b{ color:var(--text); }
+
+  /* ── How I work ────────────────────────────── */
+  .flow{ display:grid; grid-template-columns:repeat(6,1fr); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .flow-step{ padding:18px 16px; border-right:1px solid var(--line); background:var(--panel); }
+  .flow-step:last-child{ border-right:none; }
+  .flow-num{ font-family:var(--mono); font-size:11px; color:var(--muted-2); }
+  .flow-title{ font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--signal); margin:6px 0 8px; }
+  .flow-desc{ font-size:13px; color:var(--muted); }
+  @media (max-width:900px){ .flow{ grid-template-columns:repeat(3,1fr); } .flow-step{ border-bottom:1px solid var(--line); } }
+  @media (max-width:560px){ .flow{ grid-template-columns:repeat(2,1fr); } }
 </style>
 </head>
 <body>
@@ -313,11 +341,12 @@
     <section class="hero">
       <p class="eyebrow">Systems status: Justice Edwin Mensah Plange</p>
       <h1>I ship the systems I'd have to page myself for.</h1>
-      <p class="role">Forward Deployed Engineer · Applied AI Engineer</p>
+      <p class="role">Software Engineer &amp; Founder — Product, Applied AI, Systems</p>
       <p class="thesis">
+        I'm an engineer and founder working across product engineering, applied AI, and systems.
         Before I wrote software, I watched telecom infrastructure at 2am and answered for its uptime.
-        Now I build the products <b>and</b> carry the pager: architecture, deployment, and the debugging
-        that starts once real users show up.
+        Now I take ambiguous problems from understanding the workflow through implementation,
+        deployment, and the debugging that starts once real users show up.
       </p>
       <div class="links">
         <a href="mailto:justiceplange@gmail.com">justiceplange@gmail.com</a>
@@ -329,7 +358,7 @@
         <div class="stat"><div class="stat-num"><em>2</em></div><div class="stat-label">Live systems shipped &amp; operated solo</div></div>
         <div class="stat"><div class="stat-num"><em>8+</em></div><div class="stat-label">Countries with real installs</div></div>
         <div class="stat"><div class="stat-num"><em>16</em></div><div class="stat-label">Regions field-assessed, KPMG/GNAT</div></div>
-        <div class="stat"><div class="stat-num"><em>3+</em></div><div class="stat-label">Years on infra uptime before AI</div></div>
+        <div class="stat"><div class="stat-num"><em>2+</em></div><div class="stat-label">Years on infra &amp; ops before software</div></div>
       </div>
     </section>
 
@@ -372,7 +401,7 @@
         <div>
           <p class="demo-kicker">Try it: the other half of the product</p>
           <p class="demo-lede">Your real photo, on a schedule, everywhere, one tap to confirm.</p>
-          <p class="demo-note">This is the toolbar and toast a user actually sees. Step through what happens when a scheduled switch comes due, deliberately never fully automated, see why in the KasaFlow case study's neighbour below.</p>
+          <p class="demo-note">This is the toolbar and toast a user actually sees. Step through what happens when a scheduled switch comes due, deliberately never fully automated, see why in the DualProfile case study below.</p>
         </div>
         <div>
           <div class="badge-demo">
@@ -393,104 +422,94 @@
       </div>
     </section>
 
-    <!-- CASE STUDY 01: DUALPROFILE -->
-    <section id="dualprofile">
+    <!-- CAPABILITIES -->
+    <section id="capabilities">
       <div class="section-head reveal">
         <span class="section-index">01</span>
-        <p class="section-title">Case study: shipped &amp; owned end to end</p>
+        <p class="section-title">What I build</p>
       </div>
-
-      <div class="case reveal">
-        <div class="case-head">
-          <div>
-            <p class="case-name">DualProfile</p>
-            <p class="case-tag">Chrome extension SaaS · vivaup.org · Manifest V3 + Convex</p>
-          </div>
-          <span class="status-pill"><span class="dot"></span>Live, paying users</span>
+      <div class="cap-grid reveal">
+        <div class="cap-cell">
+          <div class="cap-cat">Product Engineering</div>
+          <div class="cap-list">Web applications · APIs · Integrations · Browser systems</div>
         </div>
-        <div class="case-body">
-          <p>
-            WhatsApp Web renders one profile photo to everyone in your contact list. DualProfile lets a
-            user assign a different photo per contact, visible only to that person, with mutual
-            detection running on hashed phone-number lookup between two installs.
-          </p>
-
-          <ul class="log">
-            <li><span class="log-tag">Problem</span><span class="log-text">I don't control WhatsApp Web's DOM, and it changes under me without warning.</span></li>
-            <li><span class="log-tag">Decision</span><span class="log-text"><b>MutationObserver</b> over polling to catch header re-renders live, with a polling fallback for anything the observer misses, so overlay rendering degrades gracefully instead of breaking outright.</span></li>
-            <li><span class="log-tag">Incident</span><span class="log-text">A <b>device-auth</b> migration silently forked live accounts: registering a device before its phone number was known created a second Convex user sharing that phone hash, orphaning existing photos and assignments. Root-caused by diffing server truth against client state across two live installs, repaired in place with a <b>dry-run-first migration</b> — then patched again when the same gap resurfaced through a second code path.</span></li>
-            <li><span class="log-tag">Scheduled Photos</span><span class="log-text">A second delivery mechanism, built after per-contact overlays alone couldn't answer "I want everyone to see my new photo": switches the account's real WhatsApp photo by day/time, visible everywhere, mobile included, no counterparty needs anything installed. Scripted clicks on the final confirm step proved unreliable under real testing, including one black-photo incident before the fix, so I deliberately rejected full automation. <b>A human taps the last confirm, every time</b> — the one action that reaches WhatsApp's own servers; everything else in DualProfile is a pure browser-side overlay that never touches them.</span></li>
-            <li><span class="log-tag">Trade-off</span><span class="log-text">Convex over custom backend infra: accepted vendor lock-in to ship real-time sync solo, instead of over-engineering for scale I didn't have yet.</span></li>
-            <li><span class="log-tag">Monetisation</span><span class="log-text">Collapsed a four-tier Free/Pro/Annual/Lifetime structure down to <b>Free/Pro</b> after data showed the middle tiers weren't converting. Limits are still enforced inside the same <b>Convex mutation</b> that writes the assignment, not the client, so entitlement can't be bypassed by editing the extension.</span></li>
-            <li><span class="log-tag">Repricing</span><span class="log-text">Cut the single Pro tier from £29 to £9.99, reusing the existing Lemon Squeezy variant rather than creating a new one so the checkout URL, webhook mapping, and existing customers' entitlement stayed untouched. The reprice surfaced a real bug in the process: the extension's own paywall modal had £29 hardcoded in JavaScript rather than read from config, so the live purchase flow and the landing page were quoting two different prices before this was caught and fixed.</span></li>
-            <li><span class="log-tag">Privacy</span><span class="log-text">Found the server held a de facto phone-number-to-contact-name map: <b>contactName</b> was written in plaintext alongside a phone-hash that's reversible by exhaustive search, contradicting the product's own privacy claim. Stopped writing it at every call site, made the schema field optional rather than deleting it outright so existing rows still pass validation, and shipped a dry-run-first, re-runnable migration to scrub what was already stored. Contact names never needed to leave the client in the first place — the server field was pure unused liability.</span></li>
-            <li><span class="log-tag">Positioning</span><span class="log-text">Rewrote the landing page after judging it "too AI generated": cut four CTA blocks that duplicated the same checkout link with no new information, replaced emoji icons and a generated mockup graphic with real product screenshots and hand-drawn SVG icons, and broke up a repeated centred-icon-grid rhythm with an asymmetric two-column layout. Translated all new and changed copy into the site's other 8 languages by hand, catching a stale hero-copy string that had silently gone untranslated in all 8 along the way.</span></li>
-          </ul>
-
-          <div class="metric-row">
-            <div class="metric">Region: <b>US, Russia &amp; India</b> top by installs · Ghana, Colombia &amp; US top by weekly users</div>
-            <div class="metric">Growth: <b>organic</b>, Reddit + word of mouth + ChatGPT referral</div>
-          </div>
-          <p class="metric-note">Region shifts month to month on a small install base &mdash; from real Chrome Web Store analytics, 8 Sep 2026, not a stable long-term figure</p>
+        <div class="cap-cell">
+          <div class="cap-cat">Applied AI</div>
+          <div class="cap-list">LLM workflows · Tool calling · Structured outputs · Evaluation · Workflow automation</div>
         </div>
-        <div class="case-footer">
-          <span>Stack: Manifest V3 · TypeScript (Convex) · Cloudinary · Lemon Squeezy · Next.js/React (landing)</span>
-          <a href="https://chromewebstore.google.com/detail/dualprofile/mdlhdncmaeepcejdbpnjpjlmagmmpkpc">View on Chrome Web Store →</a>
+        <div class="cap-cell">
+          <div class="cap-cat">Systems</div>
+          <div class="cap-list">Reliability · State · External integrations · Debugging · Operational tooling</div>
+        </div>
+        <div class="cap-cell">
+          <div class="cap-cat">Product</div>
+          <div class="cap-list">Customer discovery · Workflow modelling · Requirements · Shipping · Iteration</div>
         </div>
       </div>
     </section>
 
-    <!-- CASE STUDY 02: KASAFLOW -->
+    <!-- CASE STUDY 01: KASAFLOW -->
     <section id="kasaflow">
       <div class="section-head reveal">
         <span class="section-index">02</span>
-        <p class="section-title">Case study: applied AI systems architecture</p>
+        <p class="section-title">Selected work: AI operator for local businesses</p>
       </div>
 
       <div class="case reveal">
         <div class="case-head">
           <div>
             <p class="case-name">KasaFlow</p>
-            <p class="case-tag">AI Customer Workflow Engine · Python / FastAPI · OpenAI Responses API</p>
+            <p class="case-tag">AI operator for local businesses · Python / FastAPI · OpenAI Responses API</p>
           </div>
           <span class="status-pill build"><span class="dot amber"></span>Self-directed · hardened</span>
         </div>
         <div class="case-body">
-          <p>
+          <p class="case-intro">
             A modular AI workflow engine that combines FastAPI, Python, and OpenAI's Responses API to
-            process customer requests using structured LLM outputs and deterministic business tools,
-            not a single script wired to one model call.
+            turn a real customer's WhatsApp conversation into business actions, structured LLM outputs
+            and deterministic business tools, not a single script wired to one model call.
           </p>
 
+          <p class="case-subhead">Problem</p>
+          <p>Rule-based routing was predictable but brittle against real customer phrasing, and pure social messages ("oh wow", "sigh") were being forced through business tools that had nothing to do with them.</p>
+
+          <p class="case-subhead">System</p>
           <ul class="log">
-            <li><span class="log-tag">V1</span><span class="log-text">Deterministic, rule-based routing. Predictable, but brittle against real customer phrasing.</span></li>
             <li><span class="log-tag">Migration</span><span class="log-text">Swapped intent recognition for <b>GPT-4.1-mini</b> via the OpenAI Responses API, engineering prompts that reliably return structured JSON instead of conversational text.</span></li>
             <li><span class="log-tag">Orchestration</span><span class="log-text">API, LLM, routing logic, and business services split into independent modules, so the contract stays stable no matter what's doing the work underneath.</span></li>
             <li><span class="log-tag">Tool layer</span><span class="log-text">Built a <b>Tool Registry</b> and generic <b>Tool Executor</b> that dynamically dispatch AI-selected tools (pricing, delivery, quote generation, product recommendation) based on structured LLM output, backed by external JSON datasets kept separate from application logic.</span></li>
-            <li><span class="log-tag">Routing</span><span class="log-text">Evolved from deterministic rule-based routing to LLM-driven tool selection as the system matured.</span></li>
             <li><span class="log-tag">Hardening</span><span class="log-text">Retries with backoff on transient LLM failures, defensive JSON parsing, <b>Pydantic</b> request validation, and structured logging in place of scattered print statements.</span></li>
-            <li><span class="log-tag">Testing</span><span class="log-text"><b>798-passing / 29-gated test suite</b> spanning unit, integration, and prompt regression tests, kept fast and free by gating real-API regression tests behind an opt-in flag.</span></li>
             <li><span class="log-tag">Voice</span><span class="log-text">Integrated Khaya AI's ASR and TTS for Twi voice notes, the way most customers actually reach the pilot business. Confirmed the real API host, auth header, and request/response shapes against live calls first, not documentation alone, then rewrote the wrapper against what was actually true.</span></li>
             <li><span class="log-tag">Commerce</span><span class="log-text">Synced the pilot business's real WooCommerce catalogue and wired the WhatsApp Cloud API in, extending the engine from a text-in/JSON-out service into a customer-facing WhatsApp assistant, image replies included when a matched product has a photo.</span></li>
-            <li><span class="log-tag">Incident</span><span class="log-text">A new semantic-search fallback made a genuine, unmocked network call to the embeddings API, which the existing test suite's own stated design principle, "no server, no network, no AI", never expected, and which failed hard in CI's sandboxed environment. Root-caused by reading what the existing tests actually guaranteed rather than the error output alone, then fixed with a try/except boundary that is also the correct production behaviour, not just a test workaround: a real customer's request shouldn't crash because OpenAI had a bad moment. Confirmed fixed by watching CI go from red to green on the fix commit, not by trusting the fix locally.</span></li>
-            <li><span class="log-tag">Action layer</span><span class="log-text">Every tool up to this point was read-only. Added the first one that writes: <b>propose_order()</b> prices an order deterministically and never touches WooCommerce; <b>confirm_order()</b> is the only function that does, and it only ever acts on whatever propose_order() already priced for that session, never on arguments of its own — a second, session-scoped confirmation gate on top of the existing LLM-decides/code-executes split, added specifically because this is the first tool with a real, hard-to-undo side effect. Orders land as WooCommerce's <b>on-hold</b> status; payment collection is a deliberately separate, not-yet-built problem.</span></li>
-            <li><span class="log-tag">Idempotency</span><span class="log-text">WooCommerce's REST API has no idempotency-key support. Considered a reconciliation job and a WooCommerce-side plugin, rejected both as heavier than the actual failure mode warranted, and shipped the narrower fix: on a timed-out order-create, look the order up by a token embedded in its own metadata before deciding whether to retry, instead of risking a duplicate. Event-driven WooCommerce webhooks noted as the more correct long-term replacement, deferred until payment confirmation is built.</span></li>
-            <li><span class="log-tag">Live verification</span><span class="log-text">Provisioned real WhatsApp Cloud API credentials and proved the full round trip against a live phone, not a mock: a real inbound message routed through the LLM, fell back to semantic search on a non-exact product match, priced it against the live WooCommerce catalogue, and came back as a real image-plus-price reply on WhatsApp. Also found and worked around a real platform constraint along the way -- Meta withholds real inbound webhook delivery entirely from an unpublished app, confirmed by direct A/B test rather than assumed from docs, so a webhook-shaped payload gets POSTed straight to the local endpoint for development instead of waiting on business verification.</span></li>
-            <li><span class="log-tag">Conversational layer</span><span class="log-text">Live testing surfaced a real gap: pure social messages ("oh wow", "sigh") were being forced through business tools that had nothing to do with them. Added an eighth LLM outcome, <b>converse</b>, scoped so the router short-circuits it before it can touch order, product, or memory state -- confirmed with dedicated isolation tests that a stray aside can't silently clear a pending lookup or overwrite an in-progress order.</span></li>
-            <li><span class="log-tag">State tracking</span><span class="log-text">Closed a second gap from the same live run: the assistant had no memory of *why* its own last action had just failed, so a customer asking "why?" got a generic non-answer. Added <b>pending_intent</b> (an unresolved product lookup) and <b>last_action_outcome</b> (a genuine, unrecoverable business-action failure, deliberately distinct from "still gathering info") to session memory, each cleared by its own stricter success check so a failure can't be wiped out by the very call that just recorded it.</span></li>
-            <li><span class="log-tag">Product-matching bug</span><span class="log-text">Root-caused a live wrong-product substitution against the real catalogue: karat and weight suffixes like "14k" and "16g" were stripping to bare letter fragments ("k", "g") that substring-matched almost any product name, silently outranking the correct item in keyword-overlap scoring. Fixed with a minimum-token-length filter, confirmed against the actual 3,918-product catalogue -- the wrong product's score dropped from 7 to 4, the correct product's held at 5 -- not just against synthetic test fixtures.</span></li>
-            <li><span class="log-tag">Order corrections</span><span class="log-text">Fixed the in-progress-order flow silently keeping a stale field (e.g. "Accra") after a customer explicitly corrected it mid-conversation ("sorry, Kumasi not Accra"). The prompt now carries an explicit correction exception rather than only ever filling in blanks.</span></li>
-            <li><span class="log-tag">Live order</span><span class="log-text">The missing write-scoped WooCommerce credential flagged as the open item in the previous update was provisioned. A real order landed in the live store on the first attempt, confirming the root cause diagnosed earlier was the actual, and only, blocker.</span></li>
-            <li><span class="log-tag">Cancellation</span><span class="log-text">A live customer transcript surfaced two gaps at once: a delivery address naming one city while the chosen delivery option named another, and no way to cancel an order once placed. Added a conservative, one-directional address/option mismatch check that only ever routes an ambiguous case to manual staff confirmation, never asserts a wrong delivery arrangement outright; added a full <b>cancel_order</b> tool reusing the existing session-scoped confirmation infrastructure, preferring an explicit order number with a last-confirmed-order fallback; and softened the customer-facing "confirmed" wording to "placed", since nothing is actually settled until a human arranges payment and delivery. Diagnosed, fixed, and covered by 30 new tests the same day.</span></li>
-            <li><span class="log-tag">Ambiguity guard</span><span class="log-text">A live evaluator run surfaced a real gap: a bare reference back to a just-shown product list ("the ring", "that one") could get silently resolved to the wrong item, or, in the safer but still poor case, correctly decline to guess and fall through to a generic "couldn't find that" reply that threw away the fact a list had just been shown at all. Built a deterministic, post-hoc guard that steps in only when a genuine multi-item ambiguity exists, with clarification wording that scales to how many items are actually ambiguous, plus a stash that carries other details already stated in the same breath (a karat, a quantity) through to the turn the customer actually answers. Fixing it surfaced a second, separate bug: the stashed field was being forwarded to whatever tool the follow-up resolved to regardless of whether that tool's own function signature accepted it, an order quantity reaching a plain price-lookup call that has no such parameter at all. Both fixed and confirmed against the full test suite the same day, with the live evaluator scenario passing 6/6 on repeat runs afterwards.</span></li>
+            <li><span class="log-tag">Conversational layer</span><span class="log-text">Added an eighth LLM outcome, <b>converse</b>, scoped so the router short-circuits it before it can touch order, product, or memory state, confirmed with dedicated isolation tests that a stray aside can't silently clear a pending lookup or overwrite an in-progress order.</span></li>
           </ul>
 
+          <p class="case-subhead">Engineering decisions</p>
+          <ul class="log">
+            <li><span class="log-tag">Action layer</span><span class="log-text">Every tool up to this point was read-only. Added the first one that writes: <b>propose_order()</b> prices an order deterministically and never touches WooCommerce; <b>confirm_order()</b> is the only function that does, and it only ever acts on whatever propose_order() already priced for that session, never on arguments of its own, a second, session-scoped confirmation gate on top of the existing LLM-decides/code-executes split, added specifically because this is the first tool with a real, hard-to-undo side effect. Orders land as WooCommerce's <b>on-hold</b> status; payment collection is a deliberately separate, not-yet-built problem.</span></li>
+            <li><span class="log-tag">Idempotency</span><span class="log-text">WooCommerce's REST API has no idempotency-key support. Considered a reconciliation job and a WooCommerce-side plugin, rejected both as heavier than the actual failure mode warranted, and shipped the narrower fix: on a timed-out order-create, look the order up by a token embedded in its own metadata before deciding whether to retry, instead of risking a duplicate. Event-driven WooCommerce webhooks noted as the more correct long-term replacement, deferred until payment confirmation is built.</span></li>
+            <li><span class="log-tag">State tracking</span><span class="log-text">Added <b>pending_intent</b> (an unresolved product lookup) and <b>last_action_outcome</b> (a genuine, unrecoverable business-action failure, deliberately distinct from "still gathering info") to session memory, each cleared by its own stricter success check so a failure can't be wiped out by the very call that just recorded it.</span></li>
+            <li><span class="log-tag">Ambiguity guard</span><span class="log-text">Built a deterministic, post-hoc guard that steps in only when a genuine multi-item ambiguity exists (a bare "the ring" or "that one" against a just-shown list), with clarification wording that scales to how many items are actually ambiguous, plus a stash that carries other details already stated in the same breath (a karat, a quantity) through to the turn the customer actually answers.</span></li>
+          </ul>
+
+          <p class="case-subhead">Failure &amp; what changed</p>
+          <ul class="log">
+            <li><span class="log-tag">CI incident</span><span class="log-text">A new semantic-search fallback made a genuine, unmocked network call to the embeddings API, which the existing test suite's own stated design principle, "no server, no network, no AI", never expected, and which failed hard in CI's sandboxed environment. Root-caused by reading what the existing tests actually guaranteed rather than the error output alone, then fixed with a try/except boundary that is also the correct production behaviour: a real customer's request shouldn't crash because OpenAI had a bad moment. Confirmed fixed by watching CI go from red to green on the fix commit, not by trusting the fix locally.</span></li>
+            <li><span class="log-tag">Product-matching bug</span><span class="log-text">Root-caused a live wrong-product substitution against the real catalogue: karat and weight suffixes like "14k" and "16g" were stripping to bare letter fragments ("k", "g") that substring-matched almost any product name, silently outranking the correct item in keyword-overlap scoring. Fixed with a minimum-token-length filter, confirmed against the actual 3,918-product catalogue: the wrong product's score dropped from 7 to 4, the correct product's held at 5, not just against synthetic test fixtures.</span></li>
+            <li><span class="log-tag">Order corrections</span><span class="log-text">Fixed the in-progress-order flow silently keeping a stale field (e.g. "Accra") after a customer explicitly corrected it mid-conversation ("sorry, Kumasi not Accra"). The prompt now carries an explicit correction exception rather than only ever filling in blanks.</span></li>
+            <li><span class="log-tag">Cancellation</span><span class="log-text">A live customer transcript surfaced two gaps at once: a delivery address naming one city while the chosen delivery option named another, and no way to cancel an order once placed. Added a conservative, one-directional address/option mismatch check that only ever routes an ambiguous case to manual staff confirmation, never asserts a wrong delivery arrangement outright; added a full <b>cancel_order</b> tool reusing the existing session-scoped confirmation infrastructure; and softened the customer-facing "confirmed" wording to "placed", since nothing is actually settled until a human arranges payment and delivery. Diagnosed, fixed, and covered by 30 new tests the same day.</span></li>
+            <li><span class="log-tag">Live order</span><span class="log-text">The missing write-scoped WooCommerce credential flagged as an earlier open item was provisioned. A real order landed in the live store on the first attempt, confirming the root cause diagnosed earlier was the actual, and only, blocker.</span></li>
+          </ul>
+
+          <p class="case-subhead">Result</p>
+          <p>Provisioned real WhatsApp Cloud API credentials and proved the full round trip against a live phone, not a mock: a real inbound message routed through the LLM, fell back to semantic search on a non-exact product match, priced it against the live WooCommerce catalogue, and came back as a real image-plus-price reply on WhatsApp. Also found and worked around a real platform constraint along the way: Meta withholds real inbound webhook delivery entirely from an unpublished app, confirmed by direct A/B test rather than assumed from docs.</p>
           <div class="metric-row">
             <div class="metric">Output: <b>structured JSON</b>, not raw model text</div>
             <div class="metric">Catalogue: <b>3,918 products</b>, synced live from WooCommerce</div>
-            <div class="metric">Tools: <b>8</b> — 5 read-only, 3 forming the action layer</div>
+            <div class="metric">Tools: <b>8</b>, 5 read-only, 3 forming the action layer</div>
+            <div class="metric">Tests: <b>798-passing / 29-gated</b> suite, unit, integration, and prompt regression</div>
           </div>
-          <p class="metric-note">Verified against the live repository, 16 Aug 2026. The quote/pricing path is confirmed working end to end against the real WhatsApp API and real catalogue data. Order creation is now confirmed live too: the write-scoped WooCommerce credential flagged as the open item in the previous update was provisioned, and a real order was created against the live store on the first attempt. That same live conversation surfaced a delivery-address/option contradiction and a missing cancellation path; both are fixed and covered by the current 798-passing test suite. Most recently, a live evaluator run surfaced a bare-list-reference ambiguity gap and, while closing it, a second cross-tool contract bug it exposed; both are fixed, confirmed against the full suite, and verified by the evaluator scenario passing 6/6 on repeat runs.</p>
+          <p class="metric-note">Verified against the live repository, 16 Aug 2026. The quote/pricing and order-creation paths are confirmed working end to end against the real WhatsApp API, live WooCommerce catalogue, and live store. A most recent live evaluator run surfaced a bare-list-reference ambiguity gap and a related cross-tool contract bug; both are fixed, confirmed against the full suite, and verified by the evaluator scenario passing 6/6 on repeat runs.</p>
         </div>
         <div class="case-footer">
           <span>Stack: Python · FastAPI · OpenAI Responses API · WooCommerce REST API · WhatsApp Cloud API · Khaya AI · pytest</span>
@@ -499,13 +518,118 @@
       </div>
     </section>
 
+    <!-- CASE STUDY 02: DUALPROFILE -->
+    <section id="dualprofile">
+      <div class="section-head reveal">
+        <span class="section-index">03</span>
+        <p class="section-title">Selected work: shipped &amp; owned end to end</p>
+      </div>
+
+      <div class="case reveal">
+        <div class="case-head">
+          <div>
+            <p class="case-name">DualProfile</p>
+            <p class="case-tag">Chrome extension SaaS · vivaup.org · Manifest V3 + Convex</p>
+          </div>
+          <span class="status-pill"><span class="dot"></span>Live · Chrome Web Store</span>
+        </div>
+        <div class="case-body">
+          <p class="case-intro">
+            WhatsApp Web renders one profile photo to everyone in your contact list. DualProfile lets a
+            user assign a different photo per contact, visible only to that person, with mutual
+            detection running on hashed phone-number lookup between two installs.
+          </p>
+
+          <p class="case-subhead">Problem</p>
+          <p>I don't control WhatsApp Web's DOM, and it changes under me without warning.</p>
+
+          <p class="case-subhead">System</p>
+          <ul class="log">
+            <li><span class="log-tag">Decision</span><span class="log-text"><b>MutationObserver</b> over polling to catch header re-renders live, with a polling fallback for anything the observer misses, so overlay rendering degrades gracefully instead of breaking outright.</span></li>
+            <li><span class="log-tag">Scheduled Photos</span><span class="log-text">A second delivery mechanism, built after per-contact overlays alone couldn't answer "I want everyone to see my new photo": switches the account's real WhatsApp photo by day/time, visible everywhere, mobile included, no counterparty needs anything installed. Everything else in DualProfile is a pure browser-side overlay that never touches WhatsApp's own servers.</span></li>
+          </ul>
+
+          <p class="case-subhead">Engineering decisions</p>
+          <ul class="log">
+            <li><span class="log-tag">Trade-off</span><span class="log-text">Convex over custom backend infra: accepted vendor lock-in to ship real-time sync solo, instead of over-engineering for scale I didn't have yet.</span></li>
+            <li><span class="log-tag">Monetisation</span><span class="log-text">Collapsed a four-tier Free/Pro/Annual/Lifetime structure down to <b>Free/Pro</b> after data showed the middle tiers weren't converting. Limits are still enforced inside the same <b>Convex mutation</b> that writes the assignment, not the client, so entitlement can't be bypassed by editing the extension.</span></li>
+            <li><span class="log-tag">Privacy</span><span class="log-text">Found the server held a de facto phone-number-to-contact-name map: <b>contactName</b> was written in plaintext alongside a phone-hash that's reversible by exhaustive search, contradicting the product's own privacy claim. Stopped writing it at every call site and made the schema field optional rather than deleting it outright so existing rows still pass validation. Contact names never needed to leave the client in the first place.</span></li>
+          </ul>
+
+          <p class="case-subhead">Failure &amp; what changed</p>
+          <ul class="log">
+            <li><span class="log-tag">Incident</span><span class="log-text">A <b>device-auth</b> migration silently forked live accounts: registering a device before its phone number was known created a second Convex user sharing that phone hash, orphaning existing photos and assignments. Root-caused by diffing server truth against client state across two live installs, repaired in place with a <b>dry-run-first migration</b>, then patched again when the same gap resurfaced through a second code path.</span></li>
+            <li><span class="log-tag">Automation rejected</span><span class="log-text">Scripted clicks on the Scheduled Photos final confirm step proved unreliable under real testing, including one black-photo incident before the fix, so I deliberately rejected full automation. <b>A human taps the last confirm, every time</b>, the one action that reaches WhatsApp's own servers.</span></li>
+            <li><span class="log-tag">Repricing</span><span class="log-text">Cut the single Pro tier from £29 to £9.99, reusing the existing Lemon Squeezy variant so the checkout URL, webhook mapping, and existing customers' entitlement stayed untouched. The reprice surfaced a real bug: the extension's own paywall modal had £29 hardcoded in JavaScript rather than read from config, so the live purchase flow and the landing page were quoting two different prices before this was caught and fixed.</span></li>
+            <li><span class="log-tag">Privacy fix</span><span class="log-text">Shipped a dry-run-first, re-runnable migration to scrub the plaintext contact names already stored on the server, once the schema field itself had been made optional and stopped being written to.</span></li>
+            <li><span class="log-tag">Positioning</span><span class="log-text">Rewrote the landing page after judging it "too AI generated": cut four CTA blocks that duplicated the same checkout link with no new information, replaced emoji icons and a generated mockup graphic with real product screenshots and hand-drawn SVG icons, and broke up a repeated centred-icon-grid rhythm with an asymmetric two-column layout. Translated all new and changed copy into the site's other 8 languages by hand, catching a stale hero-copy string that had silently gone untranslated in all 8 along the way.</span></li>
+          </ul>
+
+          <p class="case-subhead">Result</p>
+          <div class="metric-row">
+            <div class="metric">Region: <b>US, Russia &amp; India</b> top by installs · Ghana, Colombia &amp; US top by weekly users</div>
+            <div class="metric">Growth: <b>organic</b>, Reddit + word of mouth + ChatGPT referral</div>
+          </div>
+          <p class="metric-note">Region shifts month to month on a small install base, from real Chrome Web Store analytics, 8 Sep 2026, not a stable long-term figure</p>
+        </div>
+        <div class="case-footer">
+          <span>Stack: Manifest V3 · TypeScript (Convex) · Cloudinary · Lemon Squeezy · Next.js/React (landing)</span>
+          <a href="https://chromewebstore.google.com/detail/dualprofile/mdlhdncmaeepcejdbpnjpjlmagmmpkpc">View on Chrome Web Store →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING DECISIONS -->
+    <section id="decisions">
+      <div class="section-head reveal">
+        <span class="section-index">04</span>
+        <p class="section-title">Engineering decisions</p>
+      </div>
+      <p class="section-sub reveal">The general principle behind a few of the decisions above.</p>
+
+      <div class="reveal">
+        <div class="decision">
+          <p class="decision-principle">"The model proposes. Application code executes."</p>
+          <p class="decision-body">In KasaFlow, <b>propose_order()</b> prices an order deterministically and never touches WooCommerce. <b>confirm_order()</b> is the only function that does, and it only ever acts on whatever propose_order() already priced for that session, never on arguments of its own. It's the first tool with a real, hard-to-undo side effect, so the LLM doesn't get to own it directly.</p>
+        </div>
+        <div class="decision">
+          <p class="decision-principle">Don't retry a failed write blindly.</p>
+          <p class="decision-body">WooCommerce's REST API has no idempotency-key support. Rather than build a reconciliation job or a WooCommerce-side plugin, on a timed-out order-create the system looks the order up by a token embedded in its own metadata before deciding whether a retry is safe, instead of risking a duplicate.</p>
+        </div>
+        <div class="decision">
+          <p class="decision-principle">Treat a production failure as engineering input, not just a bug to close.</p>
+          <p class="decision-body">A DualProfile device-auth migration silently forked live accounts by registering a device before its phone number was known. It was root-caused by diffing server truth against client state across two live installs, repaired with a dry-run-first migration, then patched again when the same gap resurfaced through a second code path.</p>
+        </div>
+        <div class="decision">
+          <p class="decision-principle">Reject full automation when the failure mode is worse than the manual step.</p>
+          <p class="decision-body">Scripted clicks on DualProfile's Scheduled Photos final confirm step proved unreliable under real testing, including one black-photo incident before the fix. A human now taps that last confirm every time, the one action that reaches WhatsApp's own servers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW I WORK -->
+    <section id="how-i-work">
+      <div class="section-head reveal">
+        <span class="section-index">05</span>
+        <p class="section-title">How I work</p>
+      </div>
+      <div class="flow reveal">
+        <div class="flow-step"><div class="flow-num">01</div><div class="flow-title">Understand</div><div class="flow-desc">Start with the operator or user and understand the actual workflow.</div></div>
+        <div class="flow-step"><div class="flow-num">02</div><div class="flow-title">Model</div><div class="flow-desc">Turn the workflow into explicit system boundaries.</div></div>
+        <div class="flow-step"><div class="flow-num">03</div><div class="flow-title">Build</div><div class="flow-desc">Ship the smallest useful system.</div></div>
+        <div class="flow-step"><div class="flow-num">04</div><div class="flow-title">Deploy</div><div class="flow-desc">Put it into the environment where it actually needs to work.</div></div>
+        <div class="flow-step"><div class="flow-num">05</div><div class="flow-title">Observe</div><div class="flow-desc">Use failures, user behaviour, and operational feedback as engineering input.</div></div>
+        <div class="flow-step"><div class="flow-num">06</div><div class="flow-title">Iterate</div><div class="flow-desc">Fix the underlying system and turn lessons into reusable mechanisms.</div></div>
+      </div>
+    </section>
+
     <!-- SYSTEMS LOG: CAREER TIMELINE -->
     <section id="log">
       <div class="section-head reveal">
-        <span class="section-index">03</span>
+        <span class="section-index">06</span>
         <p class="section-title">Systems log, chronological</p>
       </div>
-      <p class="section-sub reveal">Ops discipline first, applied to software once it existed to apply it to.</p>
+      <p class="section-sub reveal">Before software, I learned operations. Ops discipline first, applied to software once it existed to apply it to.</p>
 
       <ul class="timeline reveal">
         <li>
@@ -539,32 +663,6 @@
           <div class="tl-desc">Multi-site incident resolution, coordinating technical and non-technical teams during outages.</div>
         </li>
       </ul>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-head reveal">
-        <span class="section-index">04</span>
-        <p class="section-title">Working set</p>
-      </div>
-      <div class="skill-grid reveal">
-        <div class="skill-cell">
-          <div class="skill-cat">Applied AI</div>
-          <div class="skill-list">LLM application architecture · Agentic workflow design · Prompt engineering · Structured JSON extraction · Guardrails &amp; fallback logic</div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-cat">Software Engineering</div>
-          <div class="skill-list">React · TypeScript · Node.js · Python (FastAPI) · REST APIs</div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-cat">Browser Engineering</div>
-          <div class="skill-list">Chrome Extension APIs (Manifest V3) · DOM manipulation · Mutation observers</div>
-        </div>
-        <div class="skill-cell">
-          <div class="skill-cat">Delivery &amp; Ops</div>
-          <div class="skill-list">Customer discovery · Requirements engineering · Production debugging · Post-launch iteration</div>
-        </div>
-      </div>
     </section>
 
     <footer>
