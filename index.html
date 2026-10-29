@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Justice Edwin Mensah Plange | Founder &amp; Product Engineer</title>
+<title>Justice Edwin Mensah Plange: Software Engineer &amp; Founder</title>
   
 <meta
   name="description"
@@ -163,7 +163,7 @@
   .section-sub{ color:var(--muted); font-size:14.5px; max-width:560px; margin:6px 0 32px; }
 
   /* Live demo: contact switcher */
-  .demo-section{ padding:56px 0 60px; border-bottom:1px solid var(--line); }
+  .dualprofile-demo{ margin:28px 0 30px; padding:24px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
   .demo-shell{
     display:grid; grid-template-columns:1fr; gap:32px;
     border:1px solid var(--line); border-radius:14px; background:var(--panel);
@@ -408,66 +408,6 @@
       </div>
     </section>
 
-    <!-- LIVE DEMO: CONTACT SWITCHER + SCHEDULED PHOTOS -->
-    <section class="demo-section">
-      <div class="demo-mode-tabs reveal" role="tablist" aria-label="Choose which DualProfile feature to try">
-        <button class="demo-mode-tab active" data-mode="contact" role="tab" aria-selected="true">Per-contact photos</button>
-        <button class="demo-mode-tab" data-mode="scheduled" role="tab" aria-selected="false">Scheduled Photos</button>
-      </div>
-
-      <div class="demo-shell reveal" id="demoContactShell">
-        <div>
-          <p class="demo-kicker">Try it: this is the whole product</p>
-          <p class="demo-lede">You already talk differently to your boss than your best friend.</p>
-          <p class="demo-note">Tap a contact. This is what <em>they</em> see when you message them, same you, different photo, switched automatically.</p>
-        </div>
-        <div>
-          <div class="demo-tabs" role="tablist" aria-label="Preview a contact">
-            <button class="demo-tab active" data-c="boss" role="tab" aria-selected="true">Boss</button>
-            <button class="demo-tab" data-c="friend" role="tab" aria-selected="false">Best friend</button>
-            <button class="demo-tab" data-c="mum" role="tab" aria-selected="false">Mum</button>
-          </div>
-          <div class="demo-phone">
-            <div class="demo-chat-header">
-              <div class="demo-avatar" id="demoAvatar"></div>
-              <div class="demo-chat-meta" id="demoMeta">
-                <div class="demo-chat-name" id="demoName">Boss</div>
-                <div class="demo-chat-sub" id="demoSub">sees your professional photo</div>
-              </div>
-              <div class="demo-signal"><span class="dot"></span>synced</div>
-            </div>
-            <div class="demo-bubble-row">
-              <div class="demo-bubble" id="demoBubble">Sure, I'll have the report by EOD.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="demo-shell reveal" id="demoScheduledShell" style="display:none;">
-        <div>
-          <p class="demo-kicker">Try it: the other half of the product</p>
-          <p class="demo-lede">Your real photo, on a schedule, everywhere, one tap to confirm.</p>
-          <p class="demo-note">This is the toolbar and toast a user actually sees. Step through what happens when a scheduled switch comes due, deliberately never fully automated, see why in the DualProfile case study below.</p>
-        </div>
-        <div>
-          <div class="badge-demo">
-            <div class="badge-toolbar">
-              <div class="badge-icon"><span class="badge-dot" id="badgeDot"></span></div>
-              <div class="badge-caption" id="badgeCaption">Idle · next switch at 18:00</div>
-            </div>
-            <div class="badge-toast" id="badgeToast" style="display:none;">
-              <p class="toast-title">Switch to <b>Personal</b> photo?</p>
-              <div class="toast-actions">
-                <button class="toast-btn primary" id="toastSwitch">Switch now</button>
-                <button class="toast-btn" id="toastLater">Not now</button>
-              </div>
-            </div>
-            <button class="demo-cta" id="badgeSimulate">Simulate 18:00</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CAPABILITIES -->
     <section id="capabilities">
       <div class="section-head reveal">
@@ -602,6 +542,65 @@
             user assign a different photo per contact, visible only to that person, with mutual
             detection running on hashed phone-number lookup between two installs.
           </p>
+
+          <div class="dualprofile-demo">
+          <div class="demo-mode-tabs reveal" role="tablist" aria-label="Choose which DualProfile feature to try">
+            <button class="demo-mode-tab active" data-mode="contact" role="tab" aria-selected="true">Per-contact photos</button>
+            <button class="demo-mode-tab" data-mode="scheduled" role="tab" aria-selected="false">Scheduled Photos</button>
+          </div>
+
+          <div class="demo-shell reveal" id="demoContactShell">
+            <div>
+              <p class="demo-kicker">Try it: this is the whole product</p>
+              <p class="demo-lede">You already talk differently to your boss than your best friend.</p>
+              <p class="demo-note">Tap a contact. This is what <em>they</em> see when you message them, same you, different photo, switched automatically.</p>
+            </div>
+            <div>
+              <div class="demo-tabs" role="tablist" aria-label="Preview a contact">
+                <button class="demo-tab active" data-c="boss" role="tab" aria-selected="true">Boss</button>
+                <button class="demo-tab" data-c="friend" role="tab" aria-selected="false">Best friend</button>
+                <button class="demo-tab" data-c="mum" role="tab" aria-selected="false">Mum</button>
+              </div>
+              <div class="demo-phone">
+                <div class="demo-chat-header">
+                  <div class="demo-avatar" id="demoAvatar"></div>
+                  <div class="demo-chat-meta" id="demoMeta">
+                    <div class="demo-chat-name" id="demoName">Boss</div>
+                    <div class="demo-chat-sub" id="demoSub">sees your professional photo</div>
+                  </div>
+                  <div class="demo-signal"><span class="dot"></span>synced</div>
+                </div>
+                <div class="demo-bubble-row">
+                  <div class="demo-bubble" id="demoBubble">Sure, I'll have the report by EOD.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="demo-shell reveal" id="demoScheduledShell" style="display:none;">
+            <div>
+              <p class="demo-kicker">Try it: the other half of the product</p>
+              <p class="demo-lede">Your real photo, on a schedule, everywhere, one tap to confirm.</p>
+              <p class="demo-note">This is the toolbar and toast a user actually sees. Step through what happens when a scheduled switch comes due, deliberately never fully automated, the engineering decision behind this human confirmation step is explained below.</p>
+            </div>
+            <div>
+              <div class="badge-demo">
+                <div class="badge-toolbar">
+                  <div class="badge-icon"><span class="badge-dot" id="badgeDot"></span></div>
+                  <div class="badge-caption" id="badgeCaption">Idle · next switch at 18:00</div>
+                </div>
+                <div class="badge-toast" id="badgeToast" style="display:none;">
+                  <p class="toast-title">Switch to <b>Personal</b> photo?</p>
+                  <div class="toast-actions">
+                    <button class="toast-btn primary" id="toastSwitch">Switch now</button>
+                    <button class="toast-btn" id="toastLater">Not now</button>
+                  </div>
+                </div>
+                <button class="demo-cta" id="badgeSimulate">Simulate 18:00</button>
+              </div>
+            </div>
+          </div>
+          </div>
 
           <p class="case-subhead">Problem</p>
           <p>I don't control WhatsApp Web's DOM, and it changes under me without warning.</p>
