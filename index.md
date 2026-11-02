@@ -34,12 +34,14 @@ Engineering work includes:
 
 - A modular tool registry and executor that separates model decisions from application-side execution.
 - A live WooCommerce catalogue containing 3,918 products.
-- A 46-scenario, multi-turn behavioural evaluator covering 15 categories.
+- A 46-scenario behavioural evaluator covering 15 categories (85 customer turns; 24 scenarios are multi-turn).
+- An anonymised conversation eval set replayed through the real router in a sandbox, scored on order accuracy, cost per conversation and latency, with an HTML dashboard per run. Recorded mode replays the model's original answers; live mode calls the model with repeats.
+- Guardrails enforced in code: re-pricing the quoted item before an order is written and checking the store total afterwards, blocking order writes on messages flagged as prompt injection, and handing conversations to a person on request, on repeated failures or on repeated manipulation.
 - Explicit order-proposal and order-confirmation boundaries, with deterministic pricing and a separate write path.
 - Recovery logic for timed-out order creation to reduce duplicate-order risk.
 - Regression tests based on observed failures, including product matching, stale conversation state, order corrections, and access control.
 
-The portfolio's documented snapshot reported 809 passing tests, with a further 29 gated tests. Test counts and implementation status should be interpreted against the dated source snapshot.
+As of 2 November 2026 the suite has 937 passing tests, with a further 29 gated tests that call the real model API. The eval set currently holds operator test conversations only; cost and live latency have not yet been measured. Test counts and implementation status should be interpreted against the dated source snapshot.
 
 The quote/pricing and order-creation paths were verified against the live WhatsApp API, live WooCommerce catalogue, and live store. This does not mean the complete product is publicly deployed or generally available.
 
