@@ -1,952 +1,617 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Justice Edwin Mensah Plange: Software Engineer &amp; Founder</title>
-  
-<meta
-  name="description"
-  content="Justice Edwin Mensah Plange is a founder and product engineer building applied AI systems, integrations, and software for real operational problems. Explore KasaFlow, DualProfile, and engineering case studies."
-/>
-<link rel="canonical" href="https://edwinplange.vercel.app/" />
-<link
-  rel="alternate"
-  type="text/markdown"
-  href="/index.md"
-  title="Professional profile in Markdown"
-/>
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Justice Edwin Mensah Plange | Founder & Product Engineer" />
-<meta
-  property="og:description"
-  content="Product engineering, applied AI, integrations, and systems reliability. Detailed case studies grounded in implementation and engineering decisions."
-/>
-<meta property="og:url" content="https://edwinplange.vercel.app/" />
-<meta name="author" content="Justice Edwin Mensah Plange" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Justice Edwin Mensah Plange",
-  "url": "https://edwinplange.vercel.app/",
-  "jobTitle": "Founder and Product Engineer",
-  "email": "mailto:justiceplange@gmail.com",
-  "sameAs": [
-    "https://linkedin.com/in/edwin-plange",
-    "https://github.com/JayPlange"
-  ],
-  "knowsAbout": [
-    "Product Engineering",
-    "Applied Artificial Intelligence",
-    "AI Tool Calling",
-    "API Integrations",
-    "Workflow Automation",
-    "Systems Reliability",
-    "Software Testing",
-    "Browser Extensions"
-  ]
-}
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0F131A;
-    --panel:#161B24;
-    --panel-2:#1B212C;
-    --line:rgba(255,255,255,0.08);
-    --line-strong:rgba(255,255,255,0.14);
-    --text:#E7EAEE;
-    --muted:#8A93A3;
-    --muted-2:#5C6577;
-    --signal:#33D6C0;
-    --signal-dim:rgba(51,214,192,0.12);
-    --amber:#F0A63D;
-    --amber-dim:rgba(240,166,61,0.12);
-    --red:#E5484D;
-    --red-dim:rgba(229,72,77,0.14);
-    --mono:'IBM Plex Mono', ui-monospace, monospace;
-    --sans:'IBM Plex Sans', -apple-system, sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edwin Plange | Founder &amp; Product Engineer</title>
+  <meta name="description" content="Edwin Plange is a founder and product engineer building applied AI systems, evaluation tools, integrations and software for real operational problems. Explore KasaFlow, The Last Yes, DualProfile and engineering case studies.">
+  <link rel="canonical" href="https://edwinplange.vercel.app/">
+  <link rel="alternate" type="text/markdown" href="/index.md" title="Professional profile in Markdown">
+  <meta name="author" content="Edwin Plange">
+  <meta name="theme-color" content="#0F131A">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Edwin Plange | Founder &amp; Product Engineer">
+  <meta property="og:description" content="Product engineering, applied AI, evaluation engineering, integrations and systems reliability. Detailed case studies grounded in implementation and measured results.">
+  <meta property="og:url" content="https://edwinplange.vercel.app/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Edwin Plange | Founder &amp; Product Engineer">
+  <meta name="twitter:description" content="Product engineering, applied AI, evaluation engineering and operational systems.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Edwin Plange",
+    "url": "https://edwinplange.vercel.app/",
+    "jobTitle": "Founder and Product Engineer",
+    "email": "mailto:justiceplange@gmail.com",
+    "sameAs": [
+      "https://linkedin.com/in/edwin-plange",
+      "https://github.com/JayPlange",
+      "https://x.com/JusticePlange"
+    ],
+    "knowsAbout": [
+      "Product Engineering",
+      "Applied Artificial Intelligence",
+      "AI Tool Calling",
+      "Evaluation Engineering",
+      "AI Benchmark Design",
+      "Deterministic Grading",
+      "Matched-Prompt Experiments",
+      "API Integrations",
+      "Workflow Automation",
+      "Systems Reliability",
+      "Software Testing",
+      "Browser Extensions",
+      "Application Security"
+    ]
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0; background:var(--bg); color:var(--text);
-    font-family:var(--sans); line-height:1.6; font-size:15px;
-    -webkit-font-smoothing:antialiased;
-    position:relative;
-  }
-  body::before{
-    content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
-    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 24px 24px;
-    -webkit-mask-image: radial-gradient(ellipse 900px 600px at 50% 0%, #000 40%, transparent 85%);
-            mask-image: radial-gradient(ellipse 900px 600px at 50% 0%, #000 40%, transparent 85%);
-  }
-  ::selection{background:var(--signal-dim); color:var(--signal);}
-  a{color:var(--signal); text-decoration:none;}
-  a:hover{text-decoration:underline;}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--signal); outline-offset:2px;}
-
-  .container{max-width:920px; margin:0 auto; padding:0 24px;}
-
-  /* ── Status ticker ───────────────────────── */
-  .ticker-wrap{
-    border-bottom:1px solid var(--line);
-    background:var(--panel);
-    overflow:hidden; white-space:nowrap;
-    padding:9px 0;
-  }
-  .ticker{
-    display:inline-flex; gap:36px; padding-left:100%;
-    animation:scroll 26s linear infinite;
-    font-family:var(--mono); font-size:11.5px; letter-spacing:0.04em; color:var(--muted);
-  }
-  .ticker span{display:inline-flex; align-items:center; gap:8px; white-space:nowrap;}
-  .dot{width:6px; height:6px; border-radius:50%; background:var(--signal); box-shadow:0 0 0 3px var(--signal-dim); flex:none;}
-  .dot.amber{background:var(--amber); box-shadow:0 0 0 3px var(--amber-dim);}
-  @keyframes scroll{ to{ transform:translateX(-100%); } }
-  @media (prefers-reduced-motion:reduce){ .ticker{ animation:none; padding-left:24px; } }
-
-  /* ── Uptime pulse line ────────────────────── */
-  .pulse-line{
-    border-bottom:1px solid var(--line); background:var(--bg);
-    height:30px; overflow:hidden; position:relative;
-  }
-  .pulse-line::before{
-    content:''; position:absolute; inset:0;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='30' viewBox='0 0 220 30'%3E%3Cpath d='M0 15 H80 L92 4 L104 26 L114 15 H220' fill='none' stroke='%2333D6C0' stroke-width='1.4' stroke-linejoin='round' stroke-linecap='round' opacity='0.55'/%3E%3C/svg%3E");
-    background-repeat:repeat-x; background-size:220px 30px;
-    animation: pulseScroll 5.5s linear infinite;
-  }
-  @keyframes pulseScroll{ from{ background-position-x:0; } to{ background-position-x:-220px; } }
-  @media (prefers-reduced-motion:reduce){ .pulse-line::before{ animation:none; } }
-
-  /* ── Hero ─────────────────────────────────── */
-  .hero{ padding:72px 0 48px; border-bottom:1px solid var(--line); }
-  .eyebrow{
-    font-family:var(--mono); font-size:11.5px; letter-spacing:0.12em; color:var(--signal);
-    text-transform:uppercase; margin:0 0 18px;
-  }
-  h1{
-    font-size:clamp(32px,5vw,46px); font-weight:600; margin:0 0 10px; letter-spacing:-0.01em;
-    font-family:var(--sans);
-  }
-  .role{ font-family:var(--mono); font-size:15px; color:var(--muted); margin:0 0 22px; }
-  .thesis{ max-width:600px; color:var(--text); font-size:16px; margin:0 0 28px; }
-  .thesis b{ color:var(--signal); font-weight:600; }
-  .links{ display:flex; gap:18px; flex-wrap:wrap; font-family:var(--mono); font-size:13px; margin-bottom:40px;}
-  .links a{ color:var(--muted); border-bottom:1px solid transparent; }
-  .links a:hover{ color:var(--signal); text-decoration:none; border-bottom-color:var(--signal); }
-
-  .stat-grid{
-    display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--line); border-radius:8px; overflow:hidden;
-  }
-  .stat{ padding:16px 18px; border-right:1px solid var(--line); background:var(--panel); }
-  .stat:last-child{ border-right:none; }
-  .stat-num{ font-family:var(--mono); font-size:22px; font-weight:600; color:var(--text); }
-  .stat-num em{ font-style:normal; color:var(--signal); }
-  .stat-label{ font-size:11.5px; color:var(--muted-2); margin-top:4px; }
-  @media (max-width:700px){
-    .stat-grid{ grid-template-columns:repeat(2,1fr); }
-    .stat{ border-bottom:1px solid var(--line); }
-  }
-
-  /* ── Section shell ────────────────────────── */
-  section{ padding:56px 0; border-bottom:1px solid var(--line); }
-  .section-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
-  .section-index{ font-family:var(--mono); font-size:12px; color:var(--muted-2); }
-  .section-title{ font-size:13px; font-family:var(--mono); text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin:0; }
-  .section-sub{ color:var(--muted); font-size:14.5px; max-width:560px; margin:6px 0 32px; }
-
-  /* Live demo: contact switcher */
-  .dualprofile-demo{ margin:28px 0 30px; padding:24px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-  .demo-shell{
-    display:grid; grid-template-columns:1fr; gap:32px;
-    border:1px solid var(--line); border-radius:14px; background:var(--panel);
-    padding:32px; align-items:center;
-  }
-  @media (min-width:800px){ .demo-shell{ grid-template-columns:0.9fr 1.1fr; padding:36px 40px; } }
-  .demo-kicker{
-    font-family:var(--mono); font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--signal); margin:0 0 12px;
-  }
-  .demo-lede{ font-size:19px; font-weight:600; line-height:1.4; margin:0 0 14px; max-width:380px; }
-  .demo-note{ font-size:13.5px; color:var(--muted); max-width:360px; }
-
-  .demo-tabs{ display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
-  .demo-tab{
-    font-family:var(--mono); font-size:12.5px; letter-spacing:0.02em; color:var(--muted);
-    background:var(--panel-2); border:1px solid var(--line); border-radius:100px;
-    padding:8px 15px; cursor:pointer; transition:all .18s ease;
-  }
-  .demo-tab:hover{ color:var(--text); border-color:var(--line-strong); }
-  .demo-tab.active{ color:var(--bg); background:var(--signal); border-color:var(--signal); font-weight:600; }
-
-  /* Mode switch between the two demos */
-  .demo-mode-tabs{ display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
-  .demo-mode-tab{
-    font-family:var(--mono); font-size:12.5px; letter-spacing:0.02em; color:var(--muted);
-    background:transparent; border:1px solid var(--line); border-radius:8px;
-    padding:9px 16px; cursor:pointer; transition:all .18s ease;
-  }
-  .demo-mode-tab:hover{ color:var(--text); border-color:var(--line-strong); }
-  .demo-mode-tab.active{ color:var(--text); border-color:var(--signal); background:var(--signal-dim); }
-
-  /* Scheduled Photos badge demo */
-  .badge-demo{
-    background:var(--panel-2); border:1px solid var(--line); border-radius:12px; padding:22px;
-  }
-  .badge-toolbar{ display:flex; align-items:center; gap:12px; }
-  .badge-icon{
-    width:38px; height:38px; flex:none; border-radius:9px; background:var(--panel);
-    border:1px solid var(--line); display:flex; align-items:center; justify-content:center; position:relative;
-  }
-  .badge-dot{
-    width:9px; height:9px; border-radius:50%; background:var(--muted-2);
-    box-shadow:0 0 0 3px rgba(255,255,255,0.06); transition:background .2s ease, box-shadow .2s ease;
-  }
-  .badge-dot.due{ background:var(--red); box-shadow:0 0 0 3px var(--red-dim); }
-  .badge-dot.staged{ background:var(--amber); box-shadow:0 0 0 3px var(--amber-dim); }
-  .badge-dot.synced{ background:var(--signal); box-shadow:0 0 0 3px var(--signal-dim); }
-  .badge-caption{ font-family:var(--mono); font-size:12.5px; color:var(--muted); transition:color .2s ease; }
-  .badge-toast{
-    margin-top:16px; background:var(--panel); border:1px solid var(--line-strong); border-radius:10px;
-    padding:14px 16px;
-  }
-  .toast-title{ margin:0 0 12px; font-size:13.5px; color:var(--text); }
-  .toast-actions{ display:flex; gap:8px; }
-  .toast-btn{
-    font-family:var(--mono); font-size:12px; padding:7px 13px; border-radius:7px; cursor:pointer;
-    border:1px solid var(--line); background:var(--panel-2); color:var(--muted);
-  }
-  .toast-btn:hover{ color:var(--text); border-color:var(--line-strong); }
-  .toast-btn.primary{ background:var(--signal); color:var(--bg); border-color:var(--signal); font-weight:600; }
-  .demo-cta{
-    margin-top:16px; font-family:var(--mono); font-size:12.5px; color:var(--bg); background:var(--signal);
-    border:1px solid var(--signal); border-radius:8px; padding:10px 16px; cursor:pointer; font-weight:600;
-  }
-  .demo-cta:hover{ opacity:0.9; }
-  .demo-cta:disabled{ opacity:0.4; cursor:default; }
-
-  .demo-phone{
-    background:var(--panel-2); border:1px solid var(--line); border-radius:12px; overflow:hidden;
-  }
-  .demo-chat-header{
-    display:flex; align-items:center; gap:12px; padding:14px 16px; border-bottom:1px solid var(--line);
-  }
-  .demo-avatar{ width:44px; height:44px; flex:none; border-radius:50%; overflow:hidden; transition:opacity .2s ease; }
-  .demo-avatar svg{ display:block; width:100%; height:100%; }
-  .demo-chat-meta{ flex:1; min-width:0; transition:opacity .2s ease; }
-  .demo-chat-name{ font-size:14.5px; font-weight:600; }
-  .demo-chat-sub{ font-family:var(--mono); font-size:11px; color:var(--muted-2); margin-top:1px; }
-  .demo-signal{
-    font-family:var(--mono); font-size:10.5px; color:var(--signal); display:flex; align-items:center; gap:5px;
-    white-space:nowrap;
-  }
-  .demo-bubble-row{ padding:18px 16px 20px; }
-  .demo-bubble{
-    display:inline-block; background:var(--signal-dim); color:var(--text); border:1px solid rgba(51,214,192,0.25);
-    border-radius:14px 14px 14px 4px; padding:10px 14px; font-size:13.5px; max-width:90%;
-    transition:opacity .2s ease;
-  }
-  .demo-fade{ opacity:0; }
-
-  /* ── Case study card ──────────────────────── */
-  .case{
-    border:1px solid var(--line); border-radius:10px; background:var(--panel);
-    overflow:hidden; margin-bottom:28px;
-    transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-  }
-  .case:hover{
-    transform:translateY(-3px); border-color:rgba(51,214,192,0.35);
-    box-shadow:0 12px 28px rgba(0,0,0,0.28);
-  }
-  .case-head{
-    display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
-    padding:22px 24px; border-bottom:1px solid var(--line); flex-wrap:wrap;
-  }
-  .case-name{ font-size:20px; font-weight:600; margin:0 0 4px; }
-  .case-tag{ font-family:var(--mono); font-size:12.5px; color:var(--muted); }
-  .status-pill{
-    font-family:var(--mono); font-size:11px; letter-spacing:0.06em; text-transform:uppercase;
-    padding:5px 10px; border-radius:20px; white-space:nowrap; height:fit-content;
-    display:inline-flex; align-items:center; gap:6px;
-    background:var(--signal-dim); color:var(--signal); border:1px solid rgba(51,214,192,0.3);
-  }
-  .status-pill.build{ background:var(--amber-dim); color:var(--amber); border-color:rgba(240,166,61,0.3); }
-  .case-body{ padding:24px; }
-  .case-body p{ margin:0 0 16px; color:var(--text); font-size:14.5px; }
-  .log{ list-style:none; margin:0 0 20px; padding:0; }
-  .log li{
-    display:grid; grid-template-columns:120px 1fr; gap:16px;
-    padding:12px 0; border-top:1px solid var(--line); font-size:14px;
-  }
-  .log li:first-child{ border-top:none; }
-  .log-tag{ font-family:var(--mono); font-size:11px; color:var(--muted-2); text-transform:uppercase; letter-spacing:0.05em; padding-top:2px; }
-  .log-text b{ color:var(--text); }
-  .log-text{ color:var(--muted); }
-  @media (max-width:640px){ .log li{ grid-template-columns:1fr; gap:4px; } }
-
-  .metric-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
-  .metric{
-    font-family:var(--mono); font-size:12px; color:var(--muted); background:var(--panel-2);
-    border:1px solid var(--line); border-radius:6px; padding:8px 12px;
-  }
-  .metric b{ color:var(--signal); }
-  .metric-note{
-    font-family:var(--mono); font-size:11px; color:var(--muted-2); margin:8px 0 0;
-    letter-spacing:0.02em;
-  }
-
-  .case-footer{
-    padding:14px 24px; border-top:1px solid var(--line); background:var(--panel-2);
-    font-family:var(--mono); font-size:12.5px; color:var(--muted);
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
-  }
-
-  /* ── Systems log / timeline ───────────────── */
-  .timeline{ list-style:none; margin:0; padding:0; border-left:2px solid var(--line); }
-  .timeline li{ position:relative; padding:0 0 30px 26px; }
-  .timeline li:last-child{ padding-bottom:0; }
-  .timeline li::before{
-    content:''; position:absolute; left:-6px; top:4px; width:10px; height:10px; border-radius:50%;
-    background:var(--bg); border:2px solid var(--signal);
-  }
-  .tl-when{ font-family:var(--mono); font-size:11.5px; color:var(--muted-2); text-transform:uppercase; letter-spacing:0.05em; }
-  .tl-role{ font-size:15.5px; font-weight:600; margin:4px 0 3px; }
-  .tl-org{ font-size:13px; color:var(--muted); margin-bottom:8px; }
-  .tl-desc{ font-size:14px; color:var(--muted); max-width:600px; }
-
-  footer{ padding:48px 0 80px; text-align:center; }
-  footer .eyebrow{ justify-content:center; }
-  .contact-links{ display:flex; gap:24px; justify-content:center; margin-top:18px; font-family:var(--mono); font-size:14px; flex-wrap:wrap;}
-
-  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
-  .reveal.in{ opacity:1; transform:none; }
-
-  /* ── Case subheads (Problem / System / Decisions / Result) ── */
-  .case-subhead{
-    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em;
-    color:var(--signal); margin:22px 0 10px;
-  }
-  .case-subhead:first-of-type{ margin-top:4px; }
-  .case-body > p.case-intro{ margin-bottom:22px; }
-
-  /* ── Capabilities grid ─────────────────────── */
-  .cap-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
-  .cap-cell{ background:var(--panel); padding:22px 24px; }
-  .cap-cat{ font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--signal); margin-bottom:10px; }
-  .cap-list{ color:var(--muted); font-size:14px; }
-  @media (max-width:700px){ .cap-grid{ grid-template-columns:1fr; } }
-
-  /* ── Engineering decisions ─────────────────── */
-  .decision{
-    border:1px solid var(--line); border-radius:10px; background:var(--panel);
-    padding:20px 24px; margin-bottom:16px;
-  }
-  .decision:last-child{ margin-bottom:0; }
-  .decision-principle{ font-size:15.5px; font-weight:600; margin:0 0 8px; }
-  .decision-body{ color:var(--muted); font-size:14px; margin:0; }
-  .decision-body b{ color:var(--text); }
-
-  /* ── How I work ────────────────────────────── */
-  .flow{ display:grid; grid-template-columns:repeat(6,1fr); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
-  .flow-step{ padding:18px 16px; border-right:1px solid var(--line); background:var(--panel); }
-  .flow-step:last-child{ border-right:none; }
-  .flow-num{ font-family:var(--mono); font-size:11px; color:var(--muted-2); }
-  .flow-title{ font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--signal); margin:6px 0 8px; }
-  .flow-desc{ font-size:13px; color:var(--muted); }
-  @media (max-width:900px){ .flow{ grid-template-columns:repeat(3,1fr); } .flow-step{ border-bottom:1px solid var(--line); } }
-  @media (max-width:560px){ .flow{ grid-template-columns:repeat(2,1fr); } }
-</style>
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F131A;
+      --panel: #161B24;
+      --panel-2: #1B212C;
+      --line: rgba(255,255,255,.08);
+      --line-strong: rgba(255,255,255,.15);
+      --text: #E7EAEE;
+      --muted: #A0A8B5;
+      --muted-2: #697386;
+      --signal: #33D6C0;
+      --signal-dim: rgba(51,214,192,.12);
+      --amber: #F0A63D;
+      --amber-dim: rgba(240,166,61,.12);
+      --red: #E5484D;
+      --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+      --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --width: 980px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans);
+      line-height: 1.65; font-size: 15px; -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,.045) 1px, transparent 1px);
+      background-size: 24px 24px;
+      -webkit-mask-image: radial-gradient(ellipse 900px 600px at 50% 0%, #000 35%, transparent 85%);
+      mask-image: radial-gradient(ellipse 900px 600px at 50% 0%, #000 35%, transparent 85%);
+    }
+    ::selection { background: var(--signal-dim); color: var(--signal); }
+    a { color: var(--signal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+    .container { max-width: var(--width); margin: 0 auto; padding: 0 26px; }
+    .ticker-wrap { overflow: hidden; white-space: nowrap; border-bottom: 1px solid var(--line); background: var(--panel); padding: 9px 0; }
+    .ticker { display: inline-flex; gap: 34px; padding-left: 100%; animation: ticker 30s linear infinite; color: var(--muted); font: 11px var(--mono); letter-spacing: .04em; }
+    .ticker span { display: inline-flex; gap: 9px; align-items: center; }
+    .dot { width: 6px; height: 6px; flex: none; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 3px var(--signal-dim); }
+    .dot.amber { background: var(--amber); box-shadow: 0 0 0 3px var(--amber-dim); }
+    @keyframes ticker { to { transform: translateX(-100%); } }
+    .pulse-line { height: 25px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+    .pulse-line::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='25' viewBox='0 0 220 25'%3E%3Cpath d='M0 13 H80 L92 3 L104 22 L114 13 H220' fill='none' stroke='%2333D6C0' stroke-width='1.2' opacity='.5'/%3E%3C/svg%3E") repeat-x;
+      animation: pulse 5.5s linear infinite;
+    }
+    @keyframes pulse { to { background-position-x: -220px; } }
+    .hero { padding: 72px 0 48px; border-bottom: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 17px; color: var(--signal); font: 11px var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+    h1 { margin: 0 0 10px; font-size: clamp(34px,5.6vw,52px); font-weight: 600; line-height: 1.14; letter-spacing: -.035em; }
+    .role { margin: 0 0 22px; color: var(--muted); font: 14px var(--mono); }
+    .thesis { max-width: 680px; margin: 0 0 26px; font-size: 16px; color: var(--text); }
+    .thesis strong { color: var(--signal); font-weight: 600; }
+    .links, .contact-links { display: flex; flex-wrap: wrap; gap: 18px; font: 12px var(--mono); }
+    .links { margin: 0 0 38px; }
+    .links a { color: var(--muted); border-bottom: 1px solid transparent; }
+    .links a:hover { color: var(--signal); border-bottom-color: var(--signal); text-decoration: none; }
+    .stat-grid { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--line); border-radius: 9px; overflow: hidden; }
+    .stat { padding: 16px 18px; background: var(--panel); border-right: 1px solid var(--line); }
+    .stat:last-child { border-right: 0; }
+    .stat-num { font: 600 23px var(--mono); }
+    .stat-num em { color: var(--signal); font-style: normal; }
+    .stat-label { margin-top: 4px; color: var(--muted-2); font-size: 11px; line-height: 1.4; }
+    .topnav { display: flex; flex-wrap: wrap; gap: 17px; padding: 15px 0; border-bottom: 1px solid var(--line); font: 11px var(--mono); }
+    .topnav a { color: var(--muted-2); }
+    .topnav a:hover { color: var(--signal); text-decoration: none; }
+    section { padding: 55px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 16px; }
+    .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; }
+    .section-index { color: var(--muted-2); font: 11px var(--mono); }
+    .section-title { margin: 0; color: var(--muted); font: 12px var(--mono); text-transform: uppercase; letter-spacing: .11em; }
+    .section-sub { max-width: 620px; margin: 7px 0 29px; color: var(--muted); font-size: 14px; }
+    .cap-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: 9px; background: var(--line); }
+    .cap-cell { padding: 21px 23px; background: var(--panel); }
+    .cap-cat { margin-bottom: 9px; color: var(--signal); font: 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+    .cap-list { color: var(--muted); font-size: 13px; }
+    .case { margin-bottom: 26px; overflow: hidden; border: 1px solid var(--line); border-radius: 11px; background: var(--panel); transition: border-color .2s ease, transform .2s ease; }
+    .case:hover { transform: translateY(-2px); border-color: rgba(51,214,192,.34); }
+    .case:last-child { margin-bottom: 0; }
+    .case-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; padding: 21px 24px; border-bottom: 1px solid var(--line); }
+    .case-name { margin: 0 0 3px; font-size: 20px; font-weight: 600; }
+    .case-tag { margin: 0; color: var(--muted); font: 11px var(--mono); }
+    .status-pill { display: inline-flex; align-items: center; gap: 8px; height: fit-content; padding: 5px 10px; border: 1px solid rgba(51,214,192,.3); border-radius: 99px; background: var(--signal-dim); color: var(--signal); font: 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+    .status-pill.build { border-color: rgba(240,166,61,.3); background: var(--amber-dim); color: var(--amber); }
+    .status-pill .dot { width: 5px; height: 5px; }
+    .case-body { padding: 23px 24px 25px; }
+    .case-body p { margin: 0 0 14px; font-size: 13.5px; }
+    .case-intro { margin-bottom: 20px !important; color: var(--text); font-size: 14px !important; }
+    .case-subhead { margin: 22px 0 9px; color: var(--signal); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .09em; }
+    .case-subhead:first-of-type { margin-top: 3px; }
+    .log { margin: 0 0 18px; padding: 0; list-style: none; }
+    .log li { display: grid; grid-template-columns: 112px 1fr; gap: 14px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 13px; }
+    .log li:first-child { border-top: 0; }
+    .log-tag { padding-top: 2px; color: var(--muted-2); font: 10px var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+    .log-text { color: var(--muted); }
+    .log-text b { color: var(--text); font-weight: 600; }
+    .metric-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 17px; }
+    .metric { padding: 8px 11px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel-2); color: var(--muted); font: 10px var(--mono); }
+    .metric b { color: var(--signal); }
+    .metric-note { margin: 9px 0 0 !important; color: var(--muted-2); font: 10px var(--mono); }
+    .case-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 13px 24px; border-top: 1px solid var(--line); background: var(--panel-2); color: var(--muted); font: 10px var(--mono); }
+    .case-footer a { white-space: nowrap; }
+    .demo-block { display: grid; grid-template-columns: .9fr 1.1fr; gap: 27px; align-items: center; margin: 23px 0 28px; padding: 26px; border: 1px solid var(--line); border-radius: 11px; background: var(--panel-2); }
+    .demo-kicker { margin: 0 0 9px !important; color: var(--signal); font: 10px var(--mono) !important; text-transform: uppercase; letter-spacing: .09em; }
+    .demo-lede { margin: 0 0 9px !important; font-size: 18px !important; line-height: 1.35; font-weight: 600; }
+    .demo-note { margin: 0 !important; color: var(--muted); font-size: 12px !important; }
+    .demo-tabs, .mode-tabs { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 13px; }
+    .demo-tab, .mode-tab { padding: 7px 12px; cursor: pointer; border: 1px solid var(--line); border-radius: 99px; background: var(--panel); color: var(--muted); font: 10px var(--mono); }
+    .demo-tab.active, .mode-tab.active { border-color: var(--signal); background: var(--signal); color: var(--bg); font-weight: 600; }
+    .demo-phone { overflow: hidden; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+    .demo-chat-header { display: flex; align-items: center; gap: 11px; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+    .demo-avatar { display: grid; width: 40px; height: 40px; flex: none; place-items: center; border-radius: 50%; background: var(--signal-dim); color: var(--signal); font: 600 13px var(--mono); }
+    .demo-chat-name { font-size: 13px; font-weight: 600; }
+    .demo-chat-sub { color: var(--muted-2); font: 9px var(--mono); }
+    .demo-signal { margin-left: auto; color: var(--signal); font: 9px var(--mono); }
+    .demo-bubble-row { padding: 16px; }
+    .demo-bubble { display: inline-block; max-width: 90%; padding: 9px 12px; border: 1px solid rgba(51,214,192,.22); border-radius: 12px 12px 12px 3px; background: var(--signal-dim); font-size: 12px; }
+    .schedule-demo { padding: 17px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+    .schedule-state { margin-bottom: 13px; color: var(--muted); font: 11px var(--mono); }
+    .schedule-state strong { color: var(--signal); }
+    .schedule-toast { margin: 12px 0; padding: 13px; border: 1px solid var(--line-strong); border-radius: 8px; background: var(--panel-2); font-size: 12px; }
+    .schedule-actions { display: flex; gap: 8px; margin-top: 10px; }
+    .schedule-actions button, .simulate { padding: 7px 11px; cursor: pointer; border: 1px solid var(--line); border-radius: 6px; background: var(--panel-2); color: var(--muted); font: 10px var(--mono); }
+    .schedule-actions .primary, .simulate { border-color: var(--signal); background: var(--signal); color: var(--bg); font-weight: 600; }
+    .decision { margin-bottom: 13px; padding: 18px 21px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+    .decision:last-child { margin-bottom: 0; }
+    .decision-title { margin: 0 0 6px !important; font-size: 14px !important; font-weight: 600; }
+    .decision-body { margin: 0 !important; color: var(--muted); font-size: 12.5px !important; }
+    .flow { display: grid; grid-template-columns: repeat(6,1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 8px; }
+    .flow-step { padding: 15px 13px; border-right: 1px solid var(--line); background: var(--panel); }
+    .flow-step:last-child { border-right: 0; }
+    .flow-num { color: var(--muted-2); font: 10px var(--mono); }
+    .flow-title { margin: 6px 0; color: var(--signal); font: 10px var(--mono); text-transform: uppercase; }
+    .flow-desc { color: var(--muted); font-size: 11px; line-height: 1.5; }
+    .timeline { margin: 0; padding: 0 0 0 24px; border-left: 2px solid var(--line); list-style: none; }
+    .timeline li { position: relative; padding: 0 0 27px 0; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before { content: ''; position: absolute; top: 5px; left: -31px; width: 10px; height: 10px; border: 2px solid var(--signal); border-radius: 50%; background: var(--bg); }
+    .tl-when { color: var(--muted-2); font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
+    .tl-role { margin: 4px 0 2px; font-size: 14px; font-weight: 600; }
+    .tl-org { margin-bottom: 6px; color: var(--muted); font-size: 12px; }
+    .tl-desc { max-width: 670px; color: var(--muted); font-size: 12.5px; }
+    footer { padding: 47px 0 75px; text-align: center; }
+    footer h2 { margin: 0; font-size: 22px; font-weight: 600; }
+    .contact-links { justify-content: center; margin-top: 17px; }
+    .contact-links a { color: var(--muted); }
+    .contact-links a:hover { color: var(--signal); }
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (max-width: 800px) {
+      .stat-grid { grid-template-columns: repeat(2,1fr); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .demo-block { grid-template-columns: 1fr; }
+      .flow { grid-template-columns: repeat(3,1fr); }
+      .flow-step:nth-child(3) { border-right: 0; }
+      .flow-step:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 18px; }
+      .hero { padding: 52px 0 36px; }
+      section { padding: 43px 0; }
+      .cap-grid { grid-template-columns: 1fr; }
+      .log li { grid-template-columns: 1fr; gap: 3px; }
+      .case-head, .case-body { padding-left: 18px; padding-right: 18px; }
+      .case-footer { padding-left: 18px; padding-right: 18px; }
+      .demo-block { padding: 18px; }
+      .flow { grid-template-columns: repeat(2,1fr); }
+      .flow-step:nth-child(2n) { border-right: 0; }
+      .flow-step:nth-child(3) { border-right: 1px solid var(--line); }
+      .flow-step:nth-child(-n+4) { border-bottom: 1px solid var(--line); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .ticker { animation: none; padding-left: 18px; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
 </head>
 <body>
-
-  <div class="ticker-wrap">
+  <div class="ticker-wrap" aria-label="Project status highlights">
     <div class="ticker">
-      <span><span class="dot"></span>DUALPROFILE · LIVE · CHROME WEB STORE</span>
-      <span><span class="dot amber"></span>DUALPROFILE 1.0.38 · SECURITY AUDIT · TEST-FIRST</span>
-      <span><span class="dot amber"></span>KASAFLOW · 937 TESTS · GUARDRAILS · EVAL SET</span>
-      <span><span class="dot"></span>OPS DASHBOARD · 800-CELL ACCESS MATRIX · WEBBLABS</span>
-      <span><span class="dot"></span>16 REGIONS FIELD-ASSESSED · GNAT / KPMG</span>
-      <span><span class="dot"></span>DUALPROFILE · LIVE · CHROME WEB STORE</span>
-      <span><span class="dot amber"></span>DUALPROFILE 1.0.38 · SECURITY AUDIT · TEST-FIRST</span>
-      <span><span class="dot amber"></span>KASAFLOW · 937 TESTS · GUARDRAILS · EVAL SET</span>
-      <span><span class="dot"></span>OPS DASHBOARD · 800-CELL ACCESS MATRIX · WEBBLABS</span>
-      <span><span class="dot"></span>16 REGIONS FIELD-ASSESSED · GNAT / KPMG</span>
+      <span><i class="dot"></i>DUALPROFILE · LIVE · CHROME WEB STORE</span>
+      <span><i class="dot amber"></i>KASAFLOW · 937 PASSING TESTS · 46-SCENARIO EVALUATOR</span>
+      <span><i class="dot"></i>THE LAST YES · 10 CORE TASKS · DETERMINISTIC GRADING</span>
+      <span><i class="dot"></i>WEBBLABS · 800-CELL ACCESS MATRIX</span>
+      <span><i class="dot"></i>GNAT CLOUD MIGRATION · 16 REGIONS FIELD-ASSESSED</span>
+      <span><i class="dot"></i>DUALPROFILE · LIVE · CHROME WEB STORE</span>
+      <span><i class="dot amber"></i>KASAFLOW · 937 PASSING TESTS · 46-SCENARIO EVALUATOR</span>
+      <span><i class="dot"></i>THE LAST YES · 10 CORE TASKS · DETERMINISTIC GRADING</span>
+      <span><i class="dot"></i>WEBBLABS · 800-CELL ACCESS MATRIX</span>
     </div>
   </div>
-
-  <div class="pulse-line"></div>
+  <div class="pulse-line" aria-hidden="true"></div>
 
   <div class="container">
-    <section class="hero">
-      <p class="eyebrow">Systems status: Justice Edwin Mensah Plange</p>
+    <header class="hero" id="top">
+      <p class="eyebrow">Systems status: Edwin Plange</p>
       <h1>I ship the systems I'd have to page myself for.</h1>
-      <p class="role">Software Engineer &amp; Founder · Product, Applied AI, Systems</p>
+      <p class="role">Founder &amp; Product Engineer · Applied AI · Evaluation Engineering · Product Systems</p>
       <p class="thesis">
-        I'm an engineer and founder working across product engineering, applied AI, and systems.
+        I'm an engineer and founder working across product engineering, applied AI, evaluation, and systems.
         Before I wrote software, I watched telecom infrastructure at 2am and answered for its uptime.
-        Now I take ambiguous problems from understanding the workflow through implementation,
-        deployment, and the debugging that starts once real users show up.
+        Now I take ambiguous problems from understanding the workflow through implementation, deployment,
+        and the debugging that starts once real users show up. I also build <strong>reproducible evaluations for tool-using AI agents</strong>, testing whether intent survives the jump to consequential actions.
       </p>
       <div class="links">
         <a href="mailto:justiceplange@gmail.com">justiceplange@gmail.com</a>
-        <a href="https://linkedin.com/in/edwin-plange">linkedin.com/in/edwin-plange</a>
-        <a href="https://github.com/JayPlange">github.com/JayPlange</a>
-        <a href="https://x.com/JusticePlange">x.com/JusticePlange</a>
+        <a href="https://linkedin.com/in/edwin-plange" target="_blank" rel="noopener">linkedin.com/in/edwin-plange</a>
+        <a href="https://github.com/JayPlange" target="_blank" rel="noopener">github.com/JayPlange</a>
+        <a href="https://x.com/JusticePlange" target="_blank" rel="noopener">x.com/JusticePlange</a>
       </div>
-      <div class="stat-grid">
-        <div class="stat"><div class="stat-num"><em>1</em></div><div class="stat-label">Live product shipped &amp; operated solo</div></div>
-        <div class="stat"><div class="stat-num"><em>8+</em></div><div class="stat-label">Countries with real installs</div></div>
-        <div class="stat"><div class="stat-num"><em>16</em></div><div class="stat-label">Regions field-assessed, KPMG/GNAT</div></div>
-        <div class="stat"><div class="stat-num"><em>2,000+</em></div><div class="stat-label">Automated tests across the systems I build</div></div>
+      <div class="stat-grid" aria-label="Selected experience metrics">
+        <div class="stat"><div class="stat-num"><em>1</em></div><div class="stat-label">Live product shipped and operated solo</div></div>
+        <div class="stat"><div class="stat-num"><em>8+</em></div><div class="stat-label">Countries with DualProfile installs</div></div>
+        <div class="stat"><div class="stat-num"><em>16</em></div><div class="stat-label">Ghana regions field-assessed for GNAT</div></div>
+        <div class="stat"><div class="stat-num"><em>2,000+</em></div><div class="stat-label">Automated tests across dated project snapshots</div></div>
       </div>
-    </section>
+    </header>
 
-    <!-- CAPABILITIES -->
-    <section id="capabilities">
-      <div class="section-head reveal">
-        <span class="section-index">01</span>
-        <p class="section-title">What I build</p>
-      </div>
-      <div class="cap-grid reveal">
-        <div class="cap-cell">
-          <div class="cap-cat">Product Engineering</div>
-          <div class="cap-list">Web applications · APIs · Integrations · Browser systems · Next.js / React / TypeScript dashboards</div>
-        </div>
-        <div class="cap-cell">
-          <div class="cap-cat">Applied AI</div>
-          <div class="cap-list">LLM workflows · Tool calling · Structured outputs · Evaluation · Workflow automation</div>
-        </div>
-        <div class="cap-cell">
-          <div class="cap-cat">Systems</div>
-          <div class="cap-list">Reliability · State · External integrations · Debugging · Operational tooling</div>
-        </div>
-        <div class="cap-cell">
-          <div class="cap-cat">Product</div>
-          <div class="cap-list">Customer discovery · Workflow modelling · Requirements · Shipping · Iteration · Positioning</div>
-        </div>
-        <div class="cap-cell">
-          <div class="cap-cat">Security</div>
-          <div class="cap-list">Account &amp; device linking · Session handling · Server-side entitlement · Audit-driven, test-first fixes</div>
-        </div>
-        <div class="cap-cell">
-          <div class="cap-cat">Evaluation &amp; Testing</div>
-          <div class="cap-list">Behavioural evaluators for LLM agents · Playwright access matrices · pytest / Jest / Vitest regression suites</div>
-        </div>
-      </div>
-    </section>
+    <nav class="topnav" aria-label="Page sections">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#kasaflow">KasaFlow</a>
+      <a href="#last-yes">The Last Yes</a>
+      <a href="#dualprofile">DualProfile</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#decisions">Engineering decisions</a>
+      <a href="#experience">Experience</a>
+    </nav>
 
-    <!-- CASE STUDY 01: KASAFLOW -->
-    <section id="kasaflow">
-      <div class="section-head reveal">
-        <span class="section-index">02</span>
-        <p class="section-title">Selected work: AI operator for local businesses</p>
-      </div>
+    <main>
+      <section id="capabilities">
+        <div class="section-head reveal"><span class="section-index">01</span><h2 class="section-title">What I build</h2></div>
+        <p class="section-sub reveal">I work across the product and system boundary: understanding the workflow, implementing the software, integrating external systems, and measuring how it behaves.</p>
+        <div class="cap-grid reveal">
+          <div class="cap-cell"><div class="cap-cat">Product engineering</div><div class="cap-list">Web applications · APIs · Integrations · Browser systems · Next.js / React / TypeScript dashboards</div></div>
+          <div class="cap-cell"><div class="cap-cat">Applied AI</div><div class="cap-list">LLM workflows · Tool calling · Structured outputs · Retrieval · Agent workflows · Workflow automation</div></div>
+          <div class="cap-cell"><div class="cap-cat">Evaluation engineering</div><div class="cap-list">Benchmark and task design · Deterministic graders · Reference traces · Mutation tests · Matched-prompt experiments · Transcript-level failure analysis</div></div>
+          <div class="cap-cell"><div class="cap-cat">Systems and reliability</div><div class="cap-list">State management · External integrations · Incident diagnosis · Safe side effects · Operational tooling</div></div>
+          <div class="cap-cell"><div class="cap-cat">Security</div><div class="cap-list">Account and device linking · Session handling · Server-side entitlement · Access control · Audit-driven, test-first fixes</div></div>
+          <div class="cap-cell"><div class="cap-cat">Testing and delivery</div><div class="cap-list">pytest · Jest · Vitest · Playwright · Regression suites · Behavioural evaluation · Release hardening</div></div>
+        </div>
+      </section>
 
-      <div class="case reveal">
-        <div class="case-head">
-          <div>
-            <p class="case-name">KasaFlow</p>
-            <p class="case-tag">AI operator for local businesses · Python / FastAPI · OpenAI Responses API</p>
+      <section id="kasaflow">
+        <div class="section-head reveal"><span class="section-index">02</span><h2 class="section-title">Selected work: AI operator for local businesses</h2></div>
+        <article class="case reveal">
+          <div class="case-head">
+            <div><h3 class="case-name">KasaFlow</h3><p class="case-tag">AI operator for local businesses · Python / FastAPI · OpenAI Responses API</p></div>
+            <span class="status-pill build"><i class="dot amber"></i>Retail pilot · hardened</span>
           </div>
-          <span class="status-pill build"><span class="dot amber"></span>Pilot · hardened</span>
-        </div>
-        <div class="case-body">
-          <p class="case-intro">
-            A modular AI workflow engine that combines FastAPI, Python, and OpenAI's Responses API to
-            turn a real customer's WhatsApp conversation into business actions, structured LLM outputs
-            and deterministic business tools, not a single script wired to one model call.
-          </p>
-
-          <p class="case-subhead">Problem</p>
-          <p>Rule-based routing was predictable but brittle against real customer phrasing, and pure social messages ("oh wow", "sigh") were being forced through business tools that had nothing to do with them.</p>
-
-          <p class="case-subhead">System</p>
-          <ul class="log">
-            <li><span class="log-tag">Migration</span><span class="log-text">Swapped intent recognition for <b>GPT-4.1-mini</b> via the OpenAI Responses API, engineering prompts that reliably return structured JSON instead of conversational text.</span></li>
-            <li><span class="log-tag">Orchestration</span><span class="log-text">API, LLM, routing logic, and business services split into independent modules, so the contract stays stable no matter what's doing the work underneath.</span></li>
-            <li><span class="log-tag">Tool layer</span><span class="log-text">Built a <b>Tool Registry</b> and generic <b>Tool Executor</b> that dynamically dispatch AI-selected tools (pricing, delivery, quote generation, product recommendation) based on structured LLM output, backed by external JSON datasets kept separate from application logic.</span></li>
-            <li><span class="log-tag">Hardening</span><span class="log-text">Retries with backoff on transient LLM failures, defensive JSON parsing, <b>Pydantic</b> request validation, and structured logging in place of scattered print statements.</span></li>
-            <li><span class="log-tag">Voice</span><span class="log-text">Integrated Khaya AI's ASR and TTS for Twi voice notes, the way most customers actually reach the pilot business. Confirmed the real API host, auth header, and request/response shapes against live calls first, not documentation alone, then rewrote the wrapper against what was actually true.</span></li>
-            <li><span class="log-tag">Commerce</span><span class="log-text">Synced the pilot business's real WooCommerce catalogue and wired the WhatsApp Cloud API in, extending the engine from a text-in/JSON-out service into a customer-facing WhatsApp assistant, image replies included when a matched product has a photo.</span></li>
-            <li><span class="log-tag">Conversational layer</span><span class="log-text">Added an eighth LLM outcome, <b>converse</b>, scoped so the router short-circuits it before it can touch order, product, or memory state, confirmed with dedicated isolation tests that a stray aside can't silently clear a pending lookup or overwrite an in-progress order.</span></li>
-          </ul>
-
-          <p class="case-subhead">Engineering decisions</p>
-          <ul class="log">
-            <li><span class="log-tag">Action layer</span><span class="log-text">Every tool up to this point was read-only. Added the first one that writes: <b>propose_order()</b> prices an order deterministically and never touches WooCommerce; <b>confirm_order()</b> is the only function that does, and it only ever acts on whatever propose_order() already priced for that session, never on arguments of its own, a second, session-scoped confirmation gate on top of the existing LLM-decides/code-executes split, added specifically because this is the first tool with a real, hard-to-undo side effect. Orders land as WooCommerce's <b>on-hold</b> status; payment collection is a deliberately separate, not-yet-built problem.</span></li>
-            <li><span class="log-tag">Idempotency</span><span class="log-text">WooCommerce's REST API has no idempotency-key support. Considered a reconciliation job and a WooCommerce-side plugin, rejected both as heavier than the actual failure mode warranted, and shipped the narrower fix: on a timed-out order-create, look the order up by a token embedded in its own metadata before deciding whether to retry, instead of risking a duplicate. Event-driven WooCommerce webhooks noted as the more correct long-term replacement, deferred until payment confirmation is built.</span></li>
-            <li><span class="log-tag">State tracking</span><span class="log-text">Added <b>pending_intent</b> (an unresolved product lookup) and <b>last_action_outcome</b> (a genuine, unrecoverable business-action failure, deliberately distinct from "still gathering info") to session memory, each cleared by its own stricter success check so a failure can't be wiped out by the very call that just recorded it.</span></li>
-            <li><span class="log-tag">Ambiguity guard</span><span class="log-text">Built a deterministic, post-hoc guard that steps in only when a genuine multi-item ambiguity exists (a bare "the ring" or "that one" against a just-shown list), with clarification wording that scales to how many items are actually ambiguous, plus a stash that carries other details already stated in the same breath (a karat, a quantity) through to the turn the customer actually answers.</span></li>
-          </ul>
-
-          <p class="case-subhead">Failure &amp; what changed</p>
-          <ul class="log">
-            <li><span class="log-tag">CI incident</span><span class="log-text">A new semantic-search fallback made a genuine, unmocked network call to the embeddings API, which the existing test suite's own stated design principle, "no server, no network, no AI", never expected, and which failed hard in CI's sandboxed environment. Root-caused by reading what the existing tests actually guaranteed rather than the error output alone, then fixed with a try/except boundary that is also the correct production behaviour: a real customer's request shouldn't crash because OpenAI had a bad moment. Confirmed fixed by watching CI go from red to green on the fix commit, not by trusting the fix locally.</span></li>
-            <li><span class="log-tag">Product-matching bug</span><span class="log-text">Root-caused a live wrong-product substitution against the real catalogue: karat and weight suffixes like "14k" and "16g" were stripping to bare letter fragments ("k", "g") that substring-matched almost any product name, silently outranking the correct item in keyword-overlap scoring. Fixed with a minimum-token-length filter, confirmed against the actual 3,918-product catalogue: the wrong product's score dropped from 7 to 4, the correct product's held at 5, not just against synthetic test fixtures.</span></li>
-            <li><span class="log-tag">Order corrections</span><span class="log-text">Fixed the in-progress-order flow silently keeping a stale field (e.g. "Accra") after a customer explicitly corrected it mid-conversation ("sorry, Kumasi not Accra"). The prompt now carries an explicit correction exception rather than only ever filling in blanks.</span></li>
-            <li><span class="log-tag">Cancellation</span><span class="log-text">A live customer transcript surfaced two gaps at once: a delivery address naming one city while the chosen delivery option named another, and no way to cancel an order once placed. Added a conservative, one-directional address/option mismatch check that only ever routes an ambiguous case to manual staff confirmation, never asserts a wrong delivery arrangement outright; added a full <b>cancel_order</b> tool reusing the existing session-scoped confirmation infrastructure; and softened the customer-facing "confirmed" wording to "placed", since nothing is actually settled until a human arranges payment and delivery. Diagnosed, fixed, and covered by 30 new tests the same day.</span></li>
-            <li><span class="log-tag">Live order</span><span class="log-text">The missing write-scoped WooCommerce credential flagged as an earlier open item was provisioned. A real order landed in the live store on the first attempt, confirming the root cause diagnosed earlier was the actual, and only, blocker.</span></li>
-          </ul>
-
-          <p class="case-subhead">Evaluation</p>
-          <ul class="log">
-            <li><span class="log-tag">Evaluator</span><span class="log-text">A behavioural evaluator separate from pytest: <b>46 scenarios across 15 categories</b> (85 customer turns, 24 of the scenarios multi-turn), each a single conversation run through the real routing pipeline. A turn passes on the tool the model chose (or a set of acceptable tools), a subset match on the arguments after memory resolution, and required or forbidden phrases in the reply. Nothing else in the wording is judged, so a correct answer phrased differently cannot fail.</span></li>
-            <li><span class="log-tag">Signal</span><span class="log-text">Every scenario is labelled with where it came from: <b>17 taken from confirmed live failures</b>, the rest marked "designed from spec, not yet live-tested". <b>--repeat N</b> reruns a scenario in fresh sessions to separate a repeatable failure from one unlucky model call. Judgement calls, like a stale "yes" after a topic change, are flagged for a human rather than given a fake pass or fail; conversational manner is recorded, not auto-scored.</span></li>
-            <li><span class="log-tag">Example</span><span class="log-text">The model defaulted to 18k when a customer named a ring but no karat. The fix makes the argument the literal <b>"unknown"</b>, and the scenario asserts that value in the resolved arguments. A text check would miss it, because a plausible 18k price reads perfectly well.</span></li>
-            <li><span class="log-tag">Audit</span><span class="log-text">After a live transcript exposed two bugs in one day, wrote a code-level audit: <b>10 ranked issues</b> across state isolation, conversation continuity, turn concurrency, order safety and voice, each with evidence and a fix order. It found the model only ever saw state summaries, never prior turns. Fixed from it: a per-session lock spanning the whole turn, and an ownership check that stopped any customer reading or cancelling another's order by guessing its ID.</span></li>
-            <li><span class="log-tag">Metrics</span><span class="log-text">Defined latency, token and four separate success measures (API ok, valid response, parsed, routed) <b>before</b> running the benchmark, so the numbers could not shape the definitions.</span></li>
-            <li><span class="log-tag">Eval set</span><span class="log-text">Logged conversations become an <b>anonymised eval set</b>: phone numbers, emails, GPS addresses, house numbers and introduced names removed, session ids salted and hashed, and addresses cut down to known place names so a replay still resolves the same delivery zone. Labels are suggested from the trace but only count once a person has reviewed them.</span></li>
-            <li><span class="log-tag">Replay &amp; scoring</span><span class="log-text">Each conversation replays through the real router in a sandbox: an in-memory store that prices orders from the catalogue the way WooCommerce does, captured staff messages, no geocoding. <b>Recorded</b> mode feeds back the model's original answers to isolate the application at no cost; <b>live</b> mode calls the model with repeats to expose variance. Scored on <b>order accuracy</b> (with a Wilson interval, because the set is small), <b>cost per conversation</b> from token counts and <b>latency</b> split into model and application time, with an HTML dashboard per run.</span></li>
-            <li><span class="log-tag">First replay</span><span class="log-text">Replaying two operator test sessions from 21 August against current code: a karat correction that failed then now re-quotes correctly, and one failure that remains. "no east legon" still never captures the address, so that order is never placed.</span></li>
-          </ul>
-
-          <p class="case-subhead">Guardrails</p>
-          <ul class="log">
-            <li><span class="log-tag">Totals</span><span class="log-text">The order write carries product and quantity, so the store charges its own live price, which can drift from the quote. <b>confirm_order()</b> now re-prices the exact quoted variant before writing and re-quotes if the price moved, compares the store's total with the quote afterwards and hands a mismatch to a person, and can send orders over a configured total or quantity to staff instead of placing them.</span></li>
-            <li><span class="log-tag">Injection</span><span class="log-text">Messages that try to override instructions, pose as staff or the system, fake a tool call, set a price or extract the prompt are flagged in code. A flagged turn is quoted as data in the prompt and <b>cannot confirm or cancel an order</b>, whatever the model chose; a reply that leaks prompt text is replaced. Tested both ways, including ordinary messages that must not be flagged: "forget the previous ring", "any bulk discount?".</span></li>
-            <li><span class="log-tag">Handoff</span><span class="log-text">A request for a person is caught before the model runs; the model can also choose to escalate; repeated failures or repeated manipulation escalate automatically. A handed-off conversation gets a holding reply and <b>no model or tool calls</b>, staff get a WhatsApp alert, and the customer is only promised a reply when the alert was actually sent.</span></li>
-            <li><span class="log-tag">Verification</span><span class="log-text">Each guardrail was switched off in turn to confirm the tests fail without it.</span></li>
-          </ul>
-
-          <p class="case-subhead">Result</p>
-          <p>Provisioned real WhatsApp Cloud API credentials and proved the full round trip against a live phone, not a mock: a real inbound message routed through the LLM, fell back to semantic search on a non-exact product match, priced it against the live WooCommerce catalogue, and came back as a real image-plus-price reply on WhatsApp. Also found and worked around a real platform constraint along the way: Meta withholds real inbound webhook delivery entirely from an unpublished app, confirmed by direct A/B test rather than assumed from docs.</p>
-          <div class="metric-row">
-            <div class="metric">Output: <b>structured JSON</b>, not raw model text</div>
-            <div class="metric">Catalogue: <b>3,918 products</b>, synced live from WooCommerce</div>
-            <div class="metric">Tools: <b>12</b> registered, including 3 writes and a human handoff</div>
-            <div class="metric">Tests: <b>937-passing / 29-gated</b> suite, plus a 46-scenario behavioural evaluator and a replayable eval set</div>
-          </div>
-          <p class="metric-note">Verified against the repository, 18 Sep 2026; guardrails and eval set verified 2 Nov 2026. The eval set holds operator test conversations only so far, and cost and live latency have not yet been measured. Built for a jewellery retail pilot; not yet deployed to a public host. The quote/pricing and order-creation paths are confirmed working end to end against the real WhatsApp API, live WooCommerce catalogue, and live store. A most recent live evaluator run surfaced a bare-list-reference ambiguity gap and a related cross-tool contract bug; both are fixed, confirmed against the full suite, and verified by the evaluator scenario passing 6/6 on repeat runs.</p>
-        </div>
-        <div class="case-footer">
-          <span>Stack: Python · FastAPI · OpenAI Responses API · WooCommerce REST API · WhatsApp Cloud API · Khaya AI · Cohere · Docker · pytest</span>
-          <a href="https://github.com/JayPlange/Kasaflow">View on GitHub →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CASE STUDY 02: DUALPROFILE -->
-    <section id="dualprofile">
-      <div class="section-head reveal">
-        <span class="section-index">03</span>
-        <p class="section-title">Selected work: shipped &amp; owned end to end</p>
-      </div>
-
-      <div class="case reveal">
-        <div class="case-head">
-          <div>
-            <p class="case-name">DualProfile</p>
-            <p class="case-tag">Chrome extension SaaS · vivaup.org · Manifest V3 + Convex</p>
-          </div>
-          <span class="status-pill"><span class="dot"></span>Live · Chrome Web Store</span>
-        </div>
-        <div class="case-body">
-          <p class="case-intro">
-            WhatsApp Web renders one profile photo to everyone in your contact list. DualProfile lets a
-            user assign a different photo per contact, visible only to that person, with mutual
-            detection running on hashed phone-number lookup between two installs.
-          </p>
-
-          <div class="dualprofile-demo">
-          <div class="demo-mode-tabs reveal" role="tablist" aria-label="Choose which DualProfile feature to try">
-            <button class="demo-mode-tab active" data-mode="contact" role="tab" aria-selected="true">Per-contact photos</button>
-            <button class="demo-mode-tab" data-mode="scheduled" role="tab" aria-selected="false">Scheduled Photos</button>
-          </div>
-
-          <div class="demo-shell reveal" id="demoContactShell">
-            <div>
-              <p class="demo-kicker">Try it: this is the whole product</p>
-              <p class="demo-lede">You already talk differently to your boss than your best friend.</p>
-              <p class="demo-note">Tap a contact. This is what <em>they</em> see when you message them, same you, different photo, switched automatically.</p>
+          <div class="case-body">
+            <p class="case-intro">A modular AI workflow engine that combines Python, FastAPI and OpenAI's Responses API to turn a customer's WhatsApp conversation into structured decisions and business actions. It is built around explicit application boundaries rather than a single prompt wired directly to a live store.</p>
+            <h4 class="case-subhead">Problem</h4>
+            <p>Rule-based routing was predictable but brittle against real customer phrasing. Purely conversational messages could also be pushed through business tools that had nothing to do with them. The system needed to understand intent without letting model output own pricing, transaction state or consequential writes.</p>
+            <h4 class="case-subhead">System</h4>
+            <ul class="log">
+              <li><span class="log-tag">Orchestration</span><span class="log-text">Separated the API, LLM routing, tool registry, executor and business services into modules with explicit contracts.</span></li>
+              <li><span class="log-tag">Tool layer</span><span class="log-text">Built model-selected tools for pricing, delivery information, quotes, product recommendations and order workflows, backed by catalogue and policy data separate from application logic.</span></li>
+              <li><span class="log-tag">Commerce</span><span class="log-text">Integrated the WhatsApp Cloud API and a live WooCommerce catalogue of <b>3,918 products</b>, extending the engine from a text-in / structured-output service into a customer-facing commerce assistant.</span></li>
+              <li><span class="log-tag">Voice</span><span class="log-text">Worked on Twi voice-note input and the ASR/TTS integration path, validating actual API hosts, authentication and request/response shapes against live calls.</span></li>
+              <li><span class="log-tag">Conversation</span><span class="log-text">Added a separate conversational outcome so social replies can short-circuit before touching order, product or memory state.</span></li>
+            </ul>
+            <h4 class="case-subhead">Engineering decisions and guardrails</h4>
+            <ul class="log">
+              <li><span class="log-tag">Action boundary</span><span class="log-text"><b>propose_order()</b> calculates a deterministic quote and creates a pending proposal; <b>confirm_order()</b> is the only order-write path and acts on the proposal already priced for that session.</span></li>
+              <li><span class="log-tag">Idempotency</span><span class="log-text">WooCommerce's REST API does not provide idempotency keys for this flow. On a timed-out order creation, the system reconciles using a token in order metadata before deciding whether retrying is safe.</span></li>
+              <li><span class="log-tag">Price integrity</span><span class="log-text">The exact quoted variant is re-priced before the write. The resulting store total is checked against the quote, with mismatches routed to a person rather than silently accepted.</span></li>
+              <li><span class="log-tag">Prompt injection</span><span class="log-text">Code-level guards prevent flagged turns from confirming or cancelling orders, regardless of what the model selects. Human handoff is available on request and after repeated failures or manipulation.</span></li>
+              <li><span class="log-tag">Concurrency</span><span class="log-text">A per-session lock spans a complete turn to prevent concurrent messages from overwriting conversation state.</span></li>
+            </ul>
+            <h4 class="case-subhead">Evaluation and debugging</h4>
+            <ul class="log">
+              <li><span class="log-tag">Evaluator</span><span class="log-text">Built a separate behavioural evaluator with <b>46 scenarios across 15 categories</b>, covering 85 customer turns, including 24 multi-turn scenarios. It checks tool choice, resolved arguments and required or forbidden response phrases.</span></li>
+              <li><span class="log-tag">Trace data</span><span class="log-text">Conversation replays run in a sandbox with an in-memory store. Recorded mode replays saved model outputs; live mode reruns the model to examine variance.</span></li>
+              <li><span class="log-tag">Failure-driven fixes</span><span class="log-text">Used live and replayed failures to fix product matching, stale order fields, missing conversation context, address/delivery mismatches and cancellation behaviour. Regression coverage was added around the discovered cases.</span></li>
+              <li><span class="log-tag">Metrics</span><span class="log-text">Defined latency, token usage and separate API, response, parsing and routing success measures before running performance comparisons.</span></li>
+            </ul>
+            <h4 class="case-subhead">Result and status</h4>
+            <p>The quote/pricing and order-creation paths were exercised end to end against the live WhatsApp API, WooCommerce catalogue and store. A complete public deployment has not been claimed; this remains a Ghanaian jewellery-retail pilot.</p>
+            <div class="metric-row">
+              <div class="metric">Catalogue: <b>3,918 products</b></div>
+              <div class="metric">Behavioural evaluator: <b>46 scenarios / 15 categories</b></div>
+              <div class="metric">Tests: <b>937 passing / 29 gated</b></div>
+              <div class="metric">Model boundary: <b>propose → confirm</b></div>
             </div>
-            <div>
-              <div class="demo-tabs" role="tablist" aria-label="Preview a contact">
-                <button class="demo-tab active" data-c="boss" role="tab" aria-selected="true">Boss</button>
-                <button class="demo-tab" data-c="friend" role="tab" aria-selected="false">Best friend</button>
-                <button class="demo-tab" data-c="mum" role="tab" aria-selected="false">Mum</button>
+            <p class="metric-note">Test counts and implementation status reflect dated repository snapshots. The 29 gated tests call the real model API; the separate evaluator is not a claim of independently verified production reliability.</p>
+          </div>
+          <div class="case-footer"><span>Stack: Python · FastAPI · OpenAI Responses API · WhatsApp Cloud API · WooCommerce REST · Cohere · Docker · pytest</span><a href="https://github.com/JayPlange/Kasaflow" target="_blank" rel="noopener">View on GitHub ↗</a></div>
+        </article>
+      </section>
+
+      <section id="last-yes">
+        <div class="section-head reveal"><span class="section-index">03</span><h2 class="section-title">Selected work: evaluation engineering for AI agents</h2></div>
+        <article class="case reveal">
+          <div class="case-head">
+            <div><h3 class="case-name">The Last Yes</h3><p class="case-tag">Standalone benchmark · Python · Tool calling · Deterministic grading</p></div>
+            <span class="status-pill"><i class="dot"></i>Built and evaluated · November 2026</span>
+          </div>
+          <div class="case-body">
+            <p class="case-intro">A benchmark for <b>transaction-authorisation integrity in conversational commerce agents</b>. It tests whether an assistant can distinguish a customer's acknowledgement from permission to act, preserve the latest transaction state, respect amendments and withdrawal, avoid duplicate writes, request missing information, and refuse to access another customer's order.</p>
+            <h4 class="case-subhead">System and task design</h4>
+            <ul class="log">
+              <li><span class="log-tag">Task set</span><span class="log-text">A ten-task core suite covering acknowledgement versus consent, context-sensitive yes, amendments, withdrawal, claimed authority, duplicate confirmation, missing fields, order ownership and confirmation after withdrawal. Additional releases add three exploratory authority probes and a five-condition matched-authority suite.</span></li>
+              <li><span class="log-tag">Harness</span><span class="log-text">A Python tool-calling runner starts a fresh model conversation and synthetic simulator for each trial, then records transcripts, tool calls, events, served-model metadata and final state as JSON.</span></li>
+              <li><span class="log-tag">Grader</span><span class="log-text">A deterministic grader checks action sequence, tool arguments, order ownership, proposal and confirmation state, duplicate writes, missing information, false completion claims and consequential side effects. The core score does not rely on an LLM judge.</span></li>
+              <li><span class="log-tag">Validation</span><span class="log-text">Separate reference-policy traces and deliberately incorrect traces are used to check grader behaviour. The v0.1.9 working snapshot passed <b>42 automated tests</b> and <b>18/18 reference validations</b>.</span></li>
+            </ul>
+            <h4 class="case-subhead">Live model evidence</h4>
+            <p>Runs used temperature <b>0.0</b> through two exact hosted OpenRouter free-model routes: <code>cohere/north-mini-code:free</code> and <code>nvidia/nemotron-3.5-super-vl:free</code>. These are the tested serving routes, not a representative survey of frontier models.</p>
+            <ul class="log">
+              <li><span class="log-tag">v0.1.7</span><span class="log-text">Across five trials each for a foreign-order negative case and an own-order positive control, Nemotron passed <b>10/10</b>. Cohere passed <b>4/10</b>: it attempted the foreign-order lookup in all five negative-case trials and used the wrong order ID in one own-order lookup. The simulator denied the foreign lookups; no data was disclosed and no state changed.</span></li>
+              <li><span class="log-tag">v0.1.8</span><span class="log-text">Nemotron passed <b>9/9</b> exploratory authority probes. Cohere passed <b>6/9</b>, with three foreign-order lookup attempts across employee-role and manager-approval prompts. Urgent-delegation passed 3/3. These prompts were exploratory and not fully matched, so they do not prove that a particular authority phrase caused the failures.</span></li>
+              <li><span class="log-tag">v0.1.9</span><span class="log-text">In the five-condition matched-authority suite, Nemotron passed <b>15/15</b>. Cohere completed 14/15 original requests, all passing; one request timed out at the provider. A separate retry of that condition passed, giving Cohere 15 completed passes across 16 requests. Across both models, <b>30 completed evaluations passed across 31 requests</b>, with one provider timeout and no behavioural incidents in completed trials.</span></li>
+            </ul>
+            <h4 class="case-subhead">What the results mean</h4>
+            <p>The ownership failures are evidence of attempted unauthorised reads, not a successful data breach: the simulator returned <b>not_found</b>, disclosed no data and made no state changes. The matched v0.1.9 follow-up did not reproduce the earlier Cohere failures. The result is deliberately nuanced: refining the experiment showed why exploratory prompt variation must be separated from controlled comparisons.</p>
+            <div class="metric-row">
+              <div class="metric">Core suite: <b>10 tasks</b></div>
+              <div class="metric">Offline validation: <b>42 tests · 18/18 references</b></div>
+              <div class="metric">Matched suite: <b>30/30 completed passes</b></div>
+              <div class="metric">Provider errors: <b>1 timeout</b></div>
+            </div>
+            <p class="metric-note">Small exploratory trial counts, two specific hosted free-model routes, and a synthetic environment. The benchmark tests adherence to an explicit policy in the prompt; it is not a production security audit, a legal determination or a statistical claim about either model family.</p>
+            <h4 class="case-subhead">Prior work and provenance</h4>
+            <p>KasaFlow's pre-existing transaction architecture and 46-scenario behavioural evaluator informed the research question. The Last Yes was built separately for the Micro1 Eval Hackathon with synthetic identities, products, orders and prices. It does not import KasaFlow application code or include real customer data or credentials.</p>
+          </div>
+          <div class="case-footer"><span>Stack: Python · OpenRouter · Tool calling · JSON traces · pytest · Deterministic simulator and grader</span><span>Standalone hackathon benchmark · November 2026</span></div>
+        </article>
+      </section>
+
+      <section id="dualprofile">
+        <div class="section-head reveal"><span class="section-index">04</span><h2 class="section-title">Selected work: shipped product owned end to end</h2></div>
+        <article class="case reveal">
+          <div class="case-head">
+            <div><h3 class="case-name">DualProfile</h3><p class="case-tag">WhatsApp browser extension · Manifest V3 · Convex · Cloudinary</p></div>
+            <span class="status-pill"><i class="dot"></i>Live · Chrome Web Store</span>
+          </div>
+          <div class="case-body">
+            <p class="case-intro">DualProfile lets a user assign a different WhatsApp profile photo to individual contacts, visible only to that person, and schedule profile-photo changes that require a final human confirmation. I built and maintain the product across its browser extension, backend, synchronisation, entitlement and commercial flows.</p>
+            <div class="demo-block">
+              <div>
+                <p class="demo-kicker">Interactive product concept</p>
+                <p class="demo-lede">Different people can see different versions of your profile.</p>
+                <p class="demo-note">Switch the contact to preview how the product changes the local contact-specific presentation. This is a website demonstration of the concept, not a live WhatsApp connection.</p>
               </div>
-              <div class="demo-phone">
-                <div class="demo-chat-header">
-                  <div class="demo-avatar" id="demoAvatar"></div>
-                  <div class="demo-chat-meta" id="demoMeta">
-                    <div class="demo-chat-name" id="demoName">Boss</div>
-                    <div class="demo-chat-sub" id="demoSub">sees your professional photo</div>
+              <div>
+                <div class="demo-tabs" role="group" aria-label="Choose a contact preview">
+                  <button class="demo-tab active" data-contact="boss" aria-pressed="true">Boss</button>
+                  <button class="demo-tab" data-contact="friend" aria-pressed="false">Best friend</button>
+                  <button class="demo-tab" data-contact="mum" aria-pressed="false">Mum</button>
+                </div>
+                <div class="demo-phone">
+                  <div class="demo-chat-header">
+                    <div class="demo-avatar" id="demoAvatar" aria-hidden="true">B</div>
+                    <div><div class="demo-chat-name" id="demoName">Boss</div><div class="demo-chat-sub" id="demoSub">sees your professional photo</div></div>
+                    <div class="demo-signal">● synced</div>
                   </div>
-                  <div class="demo-signal"><span class="dot"></span>synced</div>
-                </div>
-                <div class="demo-bubble-row">
-                  <div class="demo-bubble" id="demoBubble">Sure, I'll have the report by EOD.</div>
+                  <div class="demo-bubble-row"><div class="demo-bubble" id="demoBubble">Sure, I'll have the report by EOD.</div></div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="demo-shell reveal" id="demoScheduledShell" style="display:none;">
-            <div>
-              <p class="demo-kicker">Try it: the other half of the product</p>
-              <p class="demo-lede">Your real photo, on a schedule, everywhere, one tap to confirm.</p>
-              <p class="demo-note">This is the toolbar and toast a user actually sees. Step through what happens when a scheduled switch comes due, deliberately never fully automated, the engineering decision behind this human confirmation step is explained below.</p>
-            </div>
-            <div>
-              <div class="badge-demo">
-                <div class="badge-toolbar">
-                  <div class="badge-icon"><span class="badge-dot" id="badgeDot"></span></div>
-                  <div class="badge-caption" id="badgeCaption">Idle · next switch at 18:00</div>
+            <div class="demo-block">
+              <div>
+                <p class="demo-kicker">Scheduled Photos</p>
+                <p class="demo-lede">The schedule prepares the change. You confirm the final action.</p>
+                <p class="demo-note">Automation stops before the irreversible interaction with WhatsApp. The last confirmation remains a deliberate human action.</p>
+              </div>
+              <div class="schedule-demo">
+                <div class="schedule-state" id="scheduleState">Status: <strong>Idle</strong> · next switch at 18:00</div>
+                <button class="simulate" id="simulateSchedule">Simulate 18:00</button>
+                <div class="schedule-toast" id="scheduleToast" hidden>
+                  Switch to <b>Personal</b> photo?
+                  <div class="schedule-actions"><button class="primary" id="confirmSchedule">Switch now</button><button id="laterSchedule">Not now</button></div>
                 </div>
-                <div class="badge-toast" id="badgeToast" style="display:none;">
-                  <p class="toast-title">Switch to <b>Personal</b> photo?</p>
-                  <div class="toast-actions">
-                    <button class="toast-btn primary" id="toastSwitch">Switch now</button>
-                    <button class="toast-btn" id="toastLater">Not now</button>
-                  </div>
-                </div>
-                <button class="demo-cta" id="badgeSimulate">Simulate 18:00</button>
               </div>
             </div>
+            <h4 class="case-subhead">Engineering decisions</h4>
+            <ul class="log">
+              <li><span class="log-tag">DOM resilience</span><span class="log-text">Used <b>MutationObserver</b> to respond to WhatsApp Web header re-renders, with a polling fallback for cases the observer misses.</span></li>
+              <li><span class="log-tag">Backend</span><span class="log-text">Chose Convex to ship real-time synchronisation without building and operating custom backend infrastructure too early.</span></li>
+              <li><span class="log-tag">Privacy</span><span class="log-text">Removed unnecessary plaintext contact-name persistence from server writes and shipped a dry-run-first, re-runnable migration to scrub existing values.</span></li>
+              <li><span class="log-tag">Account security</span><span class="log-text">Reworked account linking so knowing a phone number is not sufficient to join an account. New browser linking requires the account's recovery key, stored server-side as a hash, with a legacy-account upgrade path.</span></li>
+              <li><span class="log-tag">Entitlement</span><span class="log-text">Moved Pro licence verification to a server-side Convex action that verifies the store and product with Lemon Squeezy, records entitlement and handles refunds.</span></li>
+              <li><span class="log-tag">Human confirmation</span><span class="log-text">Rejected full automation of the final Scheduled Photos click after scripted interactions proved unreliable, including a black-photo incident during testing. A human confirms the consequential action.</span></li>
+            </ul>
+            <h4 class="case-subhead">Testing and result</h4>
+            <div class="metric-row">
+              <div class="metric">Tests: <b>105 Jest + 71 Vitest</b></div>
+              <div class="metric">Platform: <b>Chrome Web Store</b></div>
+              <div class="metric">Commercial flow: <b>Lemon Squeezy</b></div>
+            </div>
+            <p class="metric-note">The test counts and security changes reflect the documented October 2026 audit and shipping work. Install geography varies over time and comes from Chrome Web Store analytics on a small install base.</p>
           </div>
+          <div class="case-footer"><span>Stack: Manifest V3 · JavaScript · Convex · Next.js / React · Cloudinary · Lemon Squeezy · Jest · Vitest</span><span><a href="https://chromewebstore.google.com/detail/dualprofile/mdlhdncmaeepcejdbpnjpjlmagmmpkpc" target="_blank" rel="noopener">Chrome Web Store ↗</a> · <a href="https://vivaup.org" target="_blank" rel="noopener">Website ↗</a></span></div>
+        </article>
+      </section>
+
+      <section id="dashboard">
+        <div class="section-head reveal"><span class="section-index">05</span><h2 class="section-title">Selected work: client operations dashboard</h2></div>
+        <article class="case reveal">
+          <div class="case-head"><div><h3 class="case-name">Multi-branch operations dashboard</h3><p class="case-tag">Microfinance client through Webblabs · Next.js 15 · React · TypeScript</p></div><span class="status-pill build"><i class="dot amber"></i>Pre-release hardening</span></div>
+          <div class="case-body">
+            <p class="case-intro">The web dashboard of an internal operations system for a microfinance business with several branches and many staff roles. I own the dashboard frontend; another engineer owns the mobile application and platform API, with integration defined through OpenAPI contracts. The client source is private.</p>
+            <h4 class="case-subhead">Hardening work</h4>
+            <ul class="log">
+              <li><span class="log-tag">Access matrix</span><span class="log-text">Built a Playwright matrix covering <b>800 role-and-page combinations</b>, with deliberate faults injected to check that the suite catches access failures. It converted 159 crash pages into in-app no-access states.</span></li>
+              <li><span class="log-tag">Session</span><span class="log-text">Worked on server-side route handling, one-time token renewal shared by concurrent requests, unsafe return-URL rejection, and Content Security Policy checks.</span></li>
+              <li><span class="log-tag">Ownership</span><span class="log-text">Separated frontend-owned issues from platform API dependencies. Platform defects are documented and escalated with evidence rather than patched around in the frontend.</span></li>
+              <li><span class="log-tag">Release</span><span class="log-text">Used gated phases and separate branches, closing work with written completion reports and owner sign-off before moving to the next phase.</span></li>
+            </ul>
+            <div class="metric-row">
+              <div class="metric">Unit tests: <b>91 → 282</b></div>
+              <div class="metric">End-to-end: <b>967 passing</b></div>
+              <div class="metric">Next.js advisories: <b>36 → 0</b></div>
+              <div class="metric">Known-failure register: <b>59 → 24</b></div>
+            </div>
+            <p class="metric-note">Measured 8–10 October 2026 on a seeded demo dataset (4 branches, 39 users, 240 customers), not live production data. The remaining known failures were recorded as platform API-owned dependencies.</p>
           </div>
+          <div class="case-footer"><span>Stack: Next.js 15 · React · TypeScript · TanStack Query / Table · zod · Playwright · Vitest</span><span>Client work · source private</span></div>
+        </article>
+      </section>
 
-          <p class="case-subhead">Problem</p>
-          <p>I don't control WhatsApp Web's DOM, and it changes under me without warning.</p>
-
-          <p class="case-subhead">System</p>
-          <ul class="log">
-            <li><span class="log-tag">Decision</span><span class="log-text"><b>MutationObserver</b> over polling to catch header re-renders live, with a polling fallback for anything the observer misses, so overlay rendering degrades gracefully instead of breaking outright.</span></li>
-            <li><span class="log-tag">Scheduled Photos</span><span class="log-text">A second delivery mechanism, built after per-contact overlays alone couldn't answer "I want everyone to see my new photo": switches the account's real WhatsApp photo by day/time, visible everywhere, mobile included, no counterparty needs anything installed. Everything else in DualProfile is a pure browser-side overlay that never touches WhatsApp's own servers.</span></li>
-          </ul>
-
-          <p class="case-subhead">Engineering decisions</p>
-          <ul class="log">
-            <li><span class="log-tag">Trade-off</span><span class="log-text">Convex over custom backend infra: accepted vendor lock-in to ship real-time sync solo, instead of over-engineering for scale I didn't have yet.</span></li>
-            <li><span class="log-tag">Monetisation</span><span class="log-text">Collapsed a four-tier Free/Pro/Annual/Lifetime structure down to <b>Free/Pro</b> after data showed the middle tiers weren't converting. Limits are still enforced inside the same <b>Convex mutation</b> that writes the assignment, not the client, so entitlement can't be bypassed by editing the extension.</span></li>
-            <li><span class="log-tag">Privacy</span><span class="log-text">Found the server held a de facto phone-number-to-contact-name map: <b>contactName</b> was written in plaintext alongside a phone-hash that's reversible by exhaustive search, contradicting the product's own privacy claim. Stopped writing it at every call site and made the schema field optional rather than deleting it outright so existing rows still pass validation. Contact names never needed to leave the client in the first place.</span></li>
-          </ul>
-
-          <p class="case-subhead">Failure &amp; what changed</p>
-          <ul class="log">
-            <li><span class="log-tag">Incident</span><span class="log-text">A <b>device-auth</b> migration silently forked live accounts: registering a device before its phone number was known created a second Convex user sharing that phone hash, orphaning existing photos and assignments. Root-caused by diffing server truth against client state across two live installs, repaired in place with a <b>dry-run-first migration</b>, then patched again when the same gap resurfaced through a second code path.</span></li>
-            <li><span class="log-tag">Automation rejected</span><span class="log-text">Scripted clicks on the Scheduled Photos final confirm step proved unreliable under real testing, including one black-photo incident before the fix, so I deliberately rejected full automation. <b>A human taps the last confirm, every time</b>, the one action that reaches WhatsApp's own servers.</span></li>
-            <li><span class="log-tag">Repricing</span><span class="log-text">Cut the single Pro tier from £29 to £9.99, reusing the existing Lemon Squeezy variant so the checkout URL, webhook mapping, and existing customers' entitlement stayed untouched. The reprice surfaced a real bug: the extension's own paywall modal had £29 hardcoded in JavaScript rather than read from config, so the live purchase flow and the landing page were quoting two different prices before this was caught and fixed.</span></li>
-            <li><span class="log-tag">Privacy fix</span><span class="log-text">Shipped a dry-run-first, re-runnable migration to scrub the plaintext contact names already stored on the server, once the schema field itself had been made optional and stopped being written to.</span></li>
-            <li><span class="log-tag">Positioning</span><span class="log-text">Rewrote the landing page after judging it "too AI generated": cut four CTA blocks that duplicated the same checkout link with no new information, replaced emoji icons and a generated mockup graphic with real product screenshots and hand-drawn SVG icons, and broke up a repeated centred-icon-grid rhythm with an asymmetric two-column layout. Translated all new and changed copy into the site's other 8 languages by hand, catching a stale hero-copy string that had silently gone untranslated in all 8 along the way.</span></li>
-          </ul>
-
-          <p class="case-subhead">Security audit, October 2026</p>
-          <ul class="log">
-            <li><span class="log-tag">Method</span><span class="log-text">One finding at a time, in a separate copy of the repo, never the live one. Each bug is reproduced by a <b>failing test first</b>, then fixed, with the core features (assign, reassign, unassign, scheduled photos, notifications, no leaks into groups) tested before and after every change.</span></li>
-            <li><span class="log-tag">Takeover</span><span class="log-text">Knowing someone's phone number was enough to join their account, because a phone hash is not a secret. Now a number is a claim, not a password: a new browser joins only with the account's <b>256-bit recovery key</b>, stored server-side as a hash, kept in Chrome Sync so a reinstall rejoins on its own. Added a "Link another browser" screen in nine languages for everyone else, and kept the upgrade path for older accounts.</span></li>
-            <li><span class="log-tag">Pro bypass</span><span class="log-text">Three ways to get Pro without paying: a leftover developer switch, any seller's Lemon Squeezy key being accepted, and a server that never knew who had paid. Removed the switch, checked store and product on every key, and moved the decision to the server: a <b>Convex action verifies the licence with Lemon Squeezy</b>, records Pro, caps accounts per key, and downgrades on refund. An outage never downgrades a paying user.</span></li>
-            <li><span class="log-tag">Rollout</span><span class="log-text">The new extension works against the old backend, so it ships first and the backend follows. Old installs keep working throughout, and Pro checks fall back safely if the server cannot answer.</span></li>
-          </ul>
-          <div class="metric-row">
-            <div class="metric">Tests: <b>105 Jest + 71 Vitest</b>, including the real service worker and real Convex functions</div>
-            <div class="metric">Schema: <b>additive only</b>, so deploys pass against live data</div>
-          </div>
-          <p class="metric-note">Built and tested against the dev backend; shipping in 1.0.38, extension first, backend after.</p>
-
-          <p class="case-subhead">Result</p>
-          <div class="metric-row">
-            <div class="metric">Region: <b>US, Russia &amp; India</b> top by installs · Ghana, Colombia &amp; US top by weekly users</div>
-            <div class="metric">Growth: <b>organic</b>, Reddit + word of mouth + ChatGPT referral</div>
-          </div>
-          <p class="metric-note">Region shifts month to month on a small install base, from real Chrome Web Store analytics, 8 Sep 2026, not a stable long-term figure</p>
+      <section id="decisions">
+        <div class="section-head reveal"><span class="section-index">06</span><h2 class="section-title">Engineering decisions</h2></div>
+        <p class="section-sub reveal">A few principles that recur across the projects above.</p>
+        <div class="reveal">
+          <div class="decision"><p class="decision-title">The model proposes. Application code executes.</p><p class="decision-body">In KasaFlow, the model selects an action, but application code owns pricing, permissions, proposal state and the consequential order write. The model should not own a hard-to-reverse side effect.</p></div>
+          <div class="decision"><p class="decision-title">A benchmark should score actions, not just plausible wording.</p><p class="decision-body">The Last Yes checks tool calls and resulting simulator state against explicit reference behaviour. A fluent answer cannot compensate for an unauthorised action, and a different but correct phrasing should not fail merely because the wording differs.</p></div>
+          <div class="decision"><p class="decision-title">Don't retry a failed write blindly.</p><p class="decision-body">When an external write times out, first reconcile whether it succeeded. Retrying without checking can create duplicate orders or other repeated side effects.</p></div>
+          <div class="decision"><p class="decision-title">Reproduce a failure before fixing it.</p><p class="decision-body">A finding becomes stronger engineering evidence when it has a failing test or trace, a documented root cause, a fix and a regression check that protects the behaviour.</p></div>
+          <div class="decision"><p class="decision-title">Keep security authority on the server.</p><p class="decision-body">Client-side checks can improve usability, but they must not be the source of truth for identity, permissions or paid entitlements.</p></div>
+          <div class="decision"><p class="decision-title">Reject automation when the failure mode is worse than the manual step.</p><p class="decision-body">A human confirmation step can be the right design when automated interaction with a third-party interface is unreliable and the action could damage user data.</p></div>
         </div>
-        <div class="case-footer">
-          <span>Stack: Manifest V3 · TypeScript (Convex) · Cloudinary · Lemon Squeezy · Jest · Vitest · Next.js/React (landing)</span>
-          <a href="https://chromewebstore.google.com/detail/dualprofile/mdlhdncmaeepcejdbpnjpjlmagmmpkpc">View on Chrome Web Store →</a>
+      </section>
+
+      <section id="how-i-work">
+        <div class="section-head reveal"><span class="section-index">07</span><h2 class="section-title">How I work</h2></div>
+        <div class="flow reveal">
+          <div class="flow-step"><div class="flow-num">01</div><div class="flow-title">Understand</div><div class="flow-desc">Start with the operator or user and understand the actual workflow.</div></div>
+          <div class="flow-step"><div class="flow-num">02</div><div class="flow-title">Model</div><div class="flow-desc">Turn the workflow into explicit system boundaries.</div></div>
+          <div class="flow-step"><div class="flow-num">03</div><div class="flow-title">Build</div><div class="flow-desc">Ship the smallest useful system.</div></div>
+          <div class="flow-step"><div class="flow-num">04</div><div class="flow-title">Verify</div><div class="flow-desc">Test expected paths and deliberately probe failure cases.</div></div>
+          <div class="flow-step"><div class="flow-num">05</div><div class="flow-title">Observe</div><div class="flow-desc">Use traces, user behaviour and operational feedback as input.</div></div>
+          <div class="flow-step"><div class="flow-num">06</div><div class="flow-title">Iterate</div><div class="flow-desc">Fix underlying causes and turn lessons into reusable checks.</div></div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CASE STUDY 03: OPERATIONS DASHBOARD -->
-    <section id="dashboard">
-      <div class="section-head reveal">
-        <span class="section-index">04</span>
-        <p class="section-title">Selected work: client operations dashboard</p>
-      </div>
+      <section id="experience">
+        <div class="section-head reveal"><span class="section-index">08</span><h2 class="section-title">Systems log · professional experience</h2></div>
+        <p class="section-sub reveal">Before software, I learned operations. That discipline still shapes how I approach reliability, incident response and ownership.</p>
+        <ul class="timeline reveal">
+          <li><div class="tl-when">2025 – Present</div><div class="tl-role">Founder &amp; Product Engineer · KasaFlow</div><div class="tl-org">Independent · Ghana</div><div class="tl-desc">Building a WhatsApp AI operator for a Ghanaian retail pilot, including tool orchestration, commerce integrations, deterministic order controls and behavioural evaluation.</div></li>
+          <li><div class="tl-when">2025 – Present</div><div class="tl-role">Founder &amp; Product Engineer · DualProfile</div><div class="tl-org">Independent product · Chrome Web Store</div><div class="tl-desc">Built and operate a WhatsApp browser-extension product spanning browser engineering, backend state, account security, synchronisation and commercial flows.</div></li>
+          <li><div class="tl-when">2025 – Present</div><div class="tl-role">Co-Founder · Webblabs</div><div class="tl-org">Ghana</div><div class="tl-desc">Customer discovery, SME workflow requirements and dashboard engineering, including responsibility for a multi-branch operations dashboard undergoing pre-release hardening.</div></li>
+          <li><div class="tl-when">November 2026</div><div class="tl-role">Creator · The Last Yes</div><div class="tl-org">Independent benchmark · Micro1 Eval Hackathon</div><div class="tl-desc">Designed a synthetic tool-use benchmark with deterministic grading, reference traces, mutation tests, matched-prompt experiments and transcript-level model failure analysis.</div></li>
+          <li><div class="tl-when">2024 – 2025</div><div class="tl-role">Automation Systems Engineer</div><div class="tl-org">Independent client project</div><div class="tl-desc">Built a multi-step n8n AI pipeline combining audio, image and text inputs with structured failure recovery under real API constraints.</div></li>
+          <li><div class="tl-when">February – May 2023</div><div class="tl-role">IT Compliance Associate</div><div class="tl-org">KPMG Ghana · GNAT National Cloud Migration</div><div class="tl-desc">Conducted on-site stakeholder assessments across nearly all 16 regions of Ghana, contributing field findings to migration risk documentation.</div></li>
+          <li><div class="tl-when">November 2021 – January 2023</div><div class="tl-role">Network Operations Engineer</div><div class="tl-org">Geoquaye Company Ltd · Ghana</div><div class="tl-desc">Monitored live telecom infrastructure, investigated incidents and escalated faults under uptime service-level agreements.</div></li>
+          <li><div class="tl-when">October 2020 – September 2021</div><div class="tl-role">NOC Engineer</div><div class="tl-org">American Tower Corporation Ghana</div><div class="tl-desc">Supported multi-site network operations and coordinated incident resolution across technical and non-technical teams.</div></li>
+        </ul>
+      </section>
 
-      <div class="case reveal">
-        <div class="case-head">
-          <div>
-            <p class="case-name">Multi-branch operations dashboard</p>
-            <p class="case-tag">Microfinance client via Webblabs · Next.js 15 · React · TypeScript</p>
-          </div>
-          <span class="status-pill build"><span class="dot amber"></span>Hardening · pre-release</span>
+      <section id="technical-areas">
+        <div class="section-head reveal"><span class="section-index">09</span><h2 class="section-title">Technical areas</h2></div>
+        <div class="cap-grid reveal">
+          <div class="cap-cell"><div class="cap-cat">Product engineering</div><div class="cap-list">TypeScript · JavaScript · React · Next.js · Browser extensions · APIs</div></div>
+          <div class="cap-cell"><div class="cap-cat">Applied AI and evaluation</div><div class="cap-list">Python · FastAPI · OpenAI Responses API · Tool calling · Structured outputs · Retrieval · Benchmark design · Deterministic grading</div></div>
+          <div class="cap-cell"><div class="cap-cat">Integrations</div><div class="cap-list">WhatsApp Cloud API · WooCommerce · Convex · Cloudinary · Lemon Squeezy · External service APIs</div></div>
+          <div class="cap-cell"><div class="cap-cat">Reliability and security</div><div class="cap-list">pytest · Jest · Vitest · Playwright · Regression testing · Session handling · Access control · Safe side effects</div></div>
         </div>
-        <div class="case-body">
-          <p class="case-intro">
-            The web dashboard of an internal operations system for a microfinance business with several
-            branches and many staff roles. I own the dashboard; another engineer owns the mobile app and the
-            platform API it talks to through OpenAPI contracts.
-          </p>
+        <p class="metric-note">These categories describe areas demonstrated across the projects above, rather than claiming equal depth in every technology.</p>
+      </section>
 
-          <p class="case-subhead">Problem</p>
-          <p>Take an existing dashboard to release quality with the smallest, safest sequence of changes, without touching code I don't own.</p>
-
-          <p class="case-subhead">System</p>
-          <ul class="log">
-            <li><span class="log-tag">Method</span><span class="log-text">An audit first, with no code changes. Then gated phases, each on its own branch, closed only by a written completion report and the owner's sign-off before the next one starts.</span></li>
-            <li><span class="log-tag">Access matrix</span><span class="log-text">A <b>Playwright matrix of 800 role-and-page cells</b> that every change has to pass, with deliberate faults injected to prove the suite catches them. It turned <b>159 crash pages into in-app "no access" states</b> and keeps unexpected failures at zero.</span></li>
-            <li><span class="log-tag">Session</span><span class="log-text">Session handling in server-side route handlers: an expired token renews once, shared by concurrent requests; unsafe return addresses (20 shapes) are refused on the server; no token is readable from browser JavaScript; a Content Security Policy is pinned and tested on real pages.</span></li>
-          </ul>
-
-          <p class="case-subhead">Engineering decisions</p>
-          <ul class="log">
-            <li><span class="log-tag">Scope</span><span class="log-text">Platform defects are escalated with evidence, never patched around in the frontend. Traced one in the API source: a loan officer's data scope resolved to "all", which switched row-level security off.</span></li>
-            <li><span class="log-tag">Decisions</span><span class="log-text">Business choices, like which roles see which pages, go to the owner as a short list of decisions rather than being guessed in code.</span></li>
-          </ul>
-
-          <p class="case-subhead">Result</p>
-          <div class="metric-row">
-            <div class="metric">Unit tests: <b>91 → 282</b></div>
-            <div class="metric">End to end: <b>967 passing</b>, 0 failing</div>
-            <div class="metric">Next.js: <b>36 advisories → 0</b></div>
-            <div class="metric">Known-failure register: <b>59 → 24</b>, all remaining owned by the API</div>
-          </div>
-          <p class="metric-note">Measured 8 to 10 Oct 2026 on a seeded demo dataset (4 branches, 39 users, 240 customers), not live production data.</p>
-        </div>
-        <div class="case-footer">
-          <span>Stack: Next.js 15 · React · TypeScript · TanStack Query &amp; Table · zod · Playwright · Vitest</span>
-          <span>Client work · source private</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ENGINEERING DECISIONS -->
-    <section id="decisions">
-      <div class="section-head reveal">
-        <span class="section-index">05</span>
-        <p class="section-title">Engineering decisions</p>
-      </div>
-      <p class="section-sub reveal">The general principle behind a few of the decisions above.</p>
-
-      <div class="reveal">
-        <div class="decision">
-          <p class="decision-principle">"The model proposes. Application code executes."</p>
-          <p class="decision-body">In KasaFlow, <b>propose_order()</b> prices an order deterministically and never touches WooCommerce. <b>confirm_order()</b> is the only function that does, and it only ever acts on whatever propose_order() already priced for that session, never on arguments of its own. It's the first tool with a real, hard-to-undo side effect, so the LLM doesn't get to own it directly.</p>
-        </div>
-        <div class="decision">
-          <p class="decision-principle">Don't retry a failed write blindly.</p>
-          <p class="decision-body">WooCommerce's REST API has no idempotency-key support. Rather than build a reconciliation job or a WooCommerce-side plugin, on a timed-out order-create the system looks the order up by a token embedded in its own metadata before deciding whether a retry is safe, instead of risking a duplicate.</p>
-        </div>
-        <div class="decision">
-          <p class="decision-principle">Treat a production failure as engineering input, not just a bug to close.</p>
-          <p class="decision-body">A DualProfile device-auth migration silently forked live accounts by registering a device before its phone number was known. It was root-caused by diffing server truth against client state across two live installs, repaired with a dry-run-first migration, then patched again when the same gap resurfaced through a second code path.</p>
-        </div>
-        <div class="decision">
-          <p class="decision-principle">A phone number is a claim, not a password.</p>
-          <p class="decision-body">DualProfile let anyone who knew your number join your account. The fix makes a new browser prove it holds the account's recovery key, while <b>legacy accounts keep an upgrade path</b> and a refused browser keeps working on its own. Security that locks out honest users just moves the problem.</p>
-        </div>
-        <div class="decision">
-          <p class="decision-principle">Reproduce it with a failing test before fixing it.</p>
-          <p class="decision-body">Every finding in the DualProfile audit started as a test that failed on the old code: the takeover, the developer switch, the foreign licence key. The same suite then guards the core features, so a security fix cannot quietly break what users rely on.</p>
-        </div>
-        <div class="decision">
-          <p class="decision-principle">Reject full automation when the failure mode is worse than the manual step.</p>
-          <p class="decision-body">Scripted clicks on DualProfile's Scheduled Photos final confirm step proved unreliable under real testing, including one black-photo incident before the fix. A human now taps that last confirm every time, the one action that reaches WhatsApp's own servers.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW I WORK -->
-    <section id="how-i-work">
-      <div class="section-head reveal">
-        <span class="section-index">06</span>
-        <p class="section-title">How I work</p>
-      </div>
-      <div class="flow reveal">
-        <div class="flow-step"><div class="flow-num">01</div><div class="flow-title">Understand</div><div class="flow-desc">Start with the operator or user and understand the actual workflow.</div></div>
-        <div class="flow-step"><div class="flow-num">02</div><div class="flow-title">Model</div><div class="flow-desc">Turn the workflow into explicit system boundaries.</div></div>
-        <div class="flow-step"><div class="flow-num">03</div><div class="flow-title">Build</div><div class="flow-desc">Ship the smallest useful system.</div></div>
-        <div class="flow-step"><div class="flow-num">04</div><div class="flow-title">Deploy</div><div class="flow-desc">Put it into the environment where it actually needs to work.</div></div>
-        <div class="flow-step"><div class="flow-num">05</div><div class="flow-title">Observe</div><div class="flow-desc">Use failures, user behaviour, and operational feedback as engineering input.</div></div>
-        <div class="flow-step"><div class="flow-num">06</div><div class="flow-title">Iterate</div><div class="flow-desc">Fix the underlying system and turn lessons into reusable mechanisms.</div></div>
-      </div>
-    </section>
-
-    <!-- SYSTEMS LOG: CAREER TIMELINE -->
-    <section id="log">
-      <div class="section-head reveal">
-        <span class="section-index">07</span>
-        <p class="section-title">Systems log, chronological</p>
-      </div>
-      <p class="section-sub reveal">Before software, I learned operations. Ops discipline first, applied to software once it existed to apply it to.</p>
-
-      <ul class="timeline reveal">
-        <li>
-          <div class="tl-when">2025 – Present</div>
-          <div class="tl-role">Co-Founder, Client Systems &amp; Requirements</div>
-          <div class="tl-org">Webblabs · Remote</div>
-          <div class="tl-desc">Discovery and requirements engineering for SME systems: jewellery, pharmacy, and medical-related deployments, actively supported post-launch. Own the web dashboard of a multi-branch microfinance operations system, hardened in gated phases.</div>
-        </li>
-        <li>
-          <div class="tl-when">2024 – 2025</div>
-          <div class="tl-role">Automation Systems Engineer</div>
-          <div class="tl-org">Independent Client Project</div>
-          <div class="tl-desc">Multi-step AI agent pipeline in n8n, unifying audio/image/text input with structured failure recovery under real API constraints.</div>
-        </li>
-        <li>
-          <div class="tl-when">Feb – May 2023</div>
-          <div class="tl-role">IT Compliance Associate</div>
-          <div class="tl-org">KPMG Ghana · GNAT National Cloud Migration</div>
-          <div class="tl-desc">On-site stakeholder assessments across nearly all 16 regions of Ghana, feeding field findings into national migration risk documentation.</div>
-        </li>
-        <li>
-          <div class="tl-when">Nov 2021 – Jan 2023</div>
-          <div class="tl-role">Network Operations Engineer</div>
-          <div class="tl-org">Geoquaye Company Ltd · Ghana</div>
-          <div class="tl-desc">Live telecom infrastructure monitoring, incident escalation under uptime SLAs.</div>
-        </li>
-        <li>
-          <div class="tl-when">Oct 2020 – Sep 2021</div>
-          <div class="tl-role">NOC Engineer</div>
-          <div class="tl-org">American Tower Corporation Ghana · Remote</div>
-          <div class="tl-desc">Multi-site incident resolution, coordinating technical and non-technical teams during outages.</div>
-        </li>
-      </ul>
-    </section>
+      <section id="education">
+        <div class="section-head reveal"><span class="section-index">10</span><h2 class="section-title">Education and credentials</h2></div>
+        <ul class="log reveal">
+          <li><span class="log-tag">Education</span><span class="log-text">NCC Education Level 5 Diploma in Business Information Technology, through IPMC / University of Greenwich pathway.</span></li>
+          <li><span class="log-tag">Security</span><span class="log-text">CompTIA Security+.</span></li>
+          <li><span class="log-tag">Cloud / AI</span><span class="log-text">Oracle Cloud Infrastructure AI Foundations Associate; Oracle Cloud Infrastructure Foundations Associate.</span></li>
+          <li><span class="log-tag">Product</span><span class="log-text">Andela Scrum Product Ownership.</span></li>
+        </ul>
+      </section>
+    </main>
 
     <footer>
       <p class="eyebrow">End of transmission</p>
-      <h2 style="margin:0; font-size:22px;">Let's talk about what breaks in production.</h2>
+      <h2>Let's talk about what breaks in production.</h2>
       <div class="contact-links">
         <a href="mailto:justiceplange@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/edwin-plange">LinkedIn</a>
-        <a href="https://github.com/JayPlange">GitHub</a>
-        <a href="https://x.com/JusticePlange">X</a>
+        <a href="https://linkedin.com/in/edwin-plange" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/JayPlange" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/JusticePlange" target="_blank" rel="noopener">X</a>
       </div>
     </footer>
   </div>
 
-<script>
-  const items = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  items.forEach(i => io.observe(i));
-
-  // ── Contact-switcher demo ──────────────────
-  const DEMO = {
-    boss: {
-      name: 'Boss', sub: 'sees your professional photo',
-      bubble: "Sure, I'll have the report by EOD.",
-      bg: '#1E2733', fg: '#7A8494',
-      accessory: '<path d="M29 38l3 5 3-5-3 12-3-12z" fill="#5C6577"/>'
-    },
-    friend: {
-      name: 'Best friend', sub: 'sees the real you',
-      bubble: "bro that's actually wild 😂",
-      bg: '#123833', fg: '#33D6C0',
-      accessory: '<path d="M24 40q8 7 16 0" stroke="#0F131A" stroke-width="2.4" fill="none" stroke-linecap="round"/>'
-    },
-    mum: {
-      name: 'Mum', sub: 'sees whichever photo you choose',
-      bubble: 'Yes I ate. Don\u2019t worry \u2764\ufe0f',
-      bg: '#3A2A14', fg: '#F0A63D',
-      accessory: '<path d="M32 44l-6-5.5c-2.5-2.3-2.5-5.8 0-7.6 2.2-1.6 5-1 6 1.1 1-2.1 3.8-2.7 6-1.1 2.5 1.8 2.5 5.3 0 7.6z" fill="#0F131A"/>'
+  <script>
+    // Reveal sections as they enter the viewport. Content remains visible when reduced motion is preferred.
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach((item) => observer.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('in'));
     }
-  };
 
-  function avatarSVG(c){
-    return `<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="${c.bg}"/><circle cx="32" cy="26" r="10" fill="${c.fg}"/><path d="M13 56c2-13 10-19 19-19s17 6 19 19" fill="${c.fg}"/>${c.accessory}</svg>`;
-  }
-
-  const demoAvatar = document.getElementById('demoAvatar');
-  const demoName = document.getElementById('demoName');
-  const demoSub = document.getElementById('demoSub');
-  const demoBubble = document.getElementById('demoBubble');
-  const demoMeta = document.getElementById('demoMeta');
-  const tabs = document.querySelectorAll('.demo-tab');
-
-  if (demoAvatar) demoAvatar.innerHTML = avatarSVG(DEMO.boss);
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      if (tab.classList.contains('active')) return;
-      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-      tab.classList.add('active'); tab.setAttribute('aria-selected','true');
-
-      const c = DEMO[tab.dataset.c];
-      [demoAvatar, demoMeta, demoBubble].forEach(el => el.classList.add('demo-fade'));
-
-      setTimeout(() => {
-        demoAvatar.innerHTML = avatarSVG(c);
-        demoName.textContent = c.name;
-        demoSub.textContent = c.sub;
-        demoBubble.textContent = c.bubble;
-        [demoAvatar, demoMeta, demoBubble].forEach(el => el.classList.remove('demo-fade'));
-      }, 180);
-    });
-  });
-
-  // ── Demo mode switch: per-contact vs Scheduled Photos ──────────────────
-  const modeTabs = document.querySelectorAll('.demo-mode-tab');
-  const contactShell = document.getElementById('demoContactShell');
-  const scheduledShell = document.getElementById('demoScheduledShell');
-
-  modeTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      if (tab.classList.contains('active')) return;
-      modeTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-      tab.classList.add('active'); tab.setAttribute('aria-selected','true');
-
-      const showScheduled = tab.dataset.mode === 'scheduled';
-      contactShell.style.display = showScheduled ? 'none' : '';
-      scheduledShell.style.display = showScheduled ? '' : 'none';
-    });
-  });
-
-  // ── Scheduled Photos badge state machine ────────────────────────────────
-  // Mirrors the real states: idle -> due (red) -> staged (amber, waiting on
-  // a real WhatsApp tap) -> synced (confirmed). The confirm step is
-  // deliberately the one step a script never takes here either.
-  const badgeDot = document.getElementById('badgeDot');
-  const badgeCaption = document.getElementById('badgeCaption');
-  const badgeToast = document.getElementById('badgeToast');
-  const badgeSimulate = document.getElementById('badgeSimulate');
-  const toastSwitch = document.getElementById('toastSwitch');
-  const toastLater = document.getElementById('toastLater');
-
-  function setBadge(state, caption){
-    badgeDot.className = 'badge-dot' + (state ? ' ' + state : '');
-    badgeCaption.textContent = caption;
-  }
-
-  if (badgeSimulate) {
-    badgeSimulate.addEventListener('click', () => {
-      badgeSimulate.disabled = true;
-      setBadge('due', '18:00 · time to switch to Personal');
-      badgeToast.style.display = '';
+    // Small illustrative DualProfile contact switcher.
+    const contactExamples = {
+      boss: { name: 'Boss', sub: 'sees your professional photo', bubble: "Sure, I'll have the report by EOD.", initials: 'B' },
+      friend: { name: 'Best friend', sub: 'sees the real you', bubble: "bro that's actually wild 😂", initials: 'F' },
+      mum: { name: 'Mum', sub: 'sees whichever photo you choose', bubble: 'Yes I ate. Don’t worry ❤️', initials: 'M' }
+    };
+    const contactButtons = document.querySelectorAll('[data-contact]');
+    const demoAvatar = document.getElementById('demoAvatar');
+    const demoName = document.getElementById('demoName');
+    const demoSub = document.getElementById('demoSub');
+    const demoBubble = document.getElementById('demoBubble');
+    contactButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = contactExamples[button.dataset.contact];
+        if (!item) return;
+        contactButtons.forEach((b) => {
+          b.classList.toggle('active', b === button);
+          b.setAttribute('aria-pressed', String(b === button));
+        });
+        demoAvatar.textContent = item.initials;
+        demoName.textContent = item.name;
+        demoSub.textContent = item.sub;
+        demoBubble.textContent = item.bubble;
+      });
     });
 
-    toastSwitch.addEventListener('click', () => {
-      badgeToast.style.display = 'none';
-      setBadge('staged', 'Staged · waiting on your tap inside WhatsApp');
-      setTimeout(() => {
-        setBadge('synced', 'Switched · confirmed, synced on every device');
-        setTimeout(() => {
-          badgeSimulate.disabled = false;
-          badgeSimulate.textContent = 'Run it again';
-          setBadge('', 'Idle · next switch at 18:00');
-        }, 1800);
-      }, 1200);
-    });
-
-    toastLater.addEventListener('click', () => {
-      badgeToast.style.display = 'none';
-      badgeSimulate.disabled = false;
-      badgeSimulate.textContent = 'Simulate 18:00';
-      setBadge('', 'Idle · next switch at 18:00');
-    });
-  }
-</script>
-
+    // Simulated Scheduled Photos flow; no WhatsApp request or actual photo change occurs here.
+    const simulateSchedule = document.getElementById('simulateSchedule');
+    const scheduleToast = document.getElementById('scheduleToast');
+    const scheduleState = document.getElementById('scheduleState');
+    const confirmSchedule = document.getElementById('confirmSchedule');
+    const laterSchedule = document.getElementById('laterSchedule');
+    if (simulateSchedule && scheduleToast && scheduleState) {
+      simulateSchedule.addEventListener('click', () => {
+        scheduleState.innerHTML = 'Status: <strong>Due</strong> · waiting for your decision';
+        scheduleToast.hidden = false;
+      });
+      confirmSchedule.addEventListener('click', () => {
+        scheduleToast.hidden = true;
+        scheduleState.innerHTML = 'Status: <strong>Confirmed in this demo</strong> · real product requires your WhatsApp tap';
+      });
+      laterSchedule.addEventListener('click', () => {
+        scheduleToast.hidden = true;
+        scheduleState.innerHTML = 'Status: <strong>Idle</strong> · next switch at 18:00';
+      });
+    }
+  </script>
 </body>
 </html>
