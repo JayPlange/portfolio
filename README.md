@@ -1,4 +1,4 @@
-# Justice Edwin Mensah Plange — Portfolio
+# Edwin Plange — Portfolio
 
 Single-page portfolio site. Static HTML, no build step, no dependencies.
 
