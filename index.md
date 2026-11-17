@@ -176,7 +176,7 @@ Built a multi-step n8n AI pipeline combining audio, image, and text inputs with 
 ### KPMG Ghana
 **IT Compliance Associate | February–May 2023**
 
-Conducted on-site stakeholder assessments across nearly all 16 regions of Ghana for the GNAT national cloud migration, contributing field findings to migration risk documentation.
+Supported GNAT's national cloud migration, conducting IT infrastructure assessments across nearly all 16 regions of Ghana and contributing field findings to migration risk documentation.
 
 ### Geoquaye Company Ltd
 **Network Operations Engineer | November 2021–January 2023**
