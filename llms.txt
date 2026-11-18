@@ -1,0 +1,41 @@
+# Edwin Plange
+
+> Founder and product engineer in Accra, Ghana. I build AI-powered products, agent workflows, and software that connects model reasoning to real business operations.
+
+Website: https://edwinplange.vercel.app/
+GitHub: https://github.com/JayPlange
+
+## Projects
+
+### KasaFlow
+WhatsApp AI ordering operator for a jewellery retailer. Connects WhatsApp Cloud API, OpenAI, WooCommerce, and Google Geocoding. Uses controlled tool execution, deterministic checks, and explicit confirmation before order creation.
+https://edwinplange.vercel.app/
+
+### The Last Yes
+A benchmark for testing transaction-authorisation integrity in tool-using conversational agents. Uses a Python simulator and deterministic grading to test consent, authority, and execution boundaries.
+https://github.com/JayPlange
+
+### DualProfile
+A Chrome extension for scheduled WhatsApp profile photos and per-contact photo sharing.
+https://github.com/JayPlange/DualProfile
+
+### Stall to Store
+A prototype that turns short product videos and spoken descriptions into structured, reviewable product listings using Meta AI tools.
+https://edwinplange.vercel.app/
+
+### Webblabs
+Multi-branch operations dashboard for microfinance workflows, with frontend engineering, workflow discovery, and extensive automated testing.
+https://edwinplange.vercel.app/
+
+## Areas of Work
+
+- Applied AI and agentic workflows
+- API integrations and automation
+- Product engineering
+- Conversational commerce
+- Transaction safety and tool-use evaluation
+- Frontend engineering and testing
+
+## Background
+
+I have worked in product development, IT compliance, and network operations. My approach is to understand real workflows, build working systems, and test how they behave under failure and uncertainty.
