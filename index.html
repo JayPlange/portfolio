@@ -23,6 +23,44 @@
 :root{--bg:#0F131A;--panel:#161B24;--panel2:#1B212C;--line:rgba(255,255,255,.09);--text:#E7EAEE;--muted:#A0A8B5;--dim:#7B8493;--signal:#33D6C0;--amber:#F0A63D;--mono:'IBM Plex Mono',monospace;--sans:'IBM Plex Sans',sans-serif;--width:980px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 var(--sans);-webkit-font-smoothing:antialiased}a{color:var(--signal);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:var(--width);padding:0 26px;margin:auto}.ticker{overflow:hidden;white-space:nowrap;background:var(--panel);border-bottom:1px solid var(--line);padding:9px 0;color:var(--muted);font:11px var(--mono);letter-spacing:.04em}.ticker div{display:inline-block;padding-left:100%;animation:scroll 34s linear infinite}.ticker span{margin-right:34px}@keyframes scroll{to{transform:translateX(-100%)}}.hero{padding:72px 0 48px;border-bottom:1px solid var(--line)}.eyebrow,.section-title,.tag,.when,.cat{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em}.eyebrow{color:var(--signal);font-size:11px;margin:0 0 17px}h1{max-width:780px;margin:0 0 12px;font-size:clamp(34px,5.6vw,54px);line-height:1.12;letter-spacing:-.04em;font-weight:600}.role{font:13px var(--mono);color:var(--muted);margin:0 0 22px}.intro{max-width:720px;font-size:16px;margin:0 0 25px}.intro strong{color:var(--signal)}.links,.contact{display:flex;flex-wrap:wrap;gap:18px;font:12px var(--mono)}.links{margin-bottom:38px}.links a,.contact a{color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:9px;overflow:hidden}.stat{background:var(--panel);padding:16px 18px;border-right:1px solid var(--line)}.stat:last-child{border:0}.num{font:600 22px var(--mono);color:var(--signal)}.label{font-size:11px;color:var(--dim);line-height:1.4;margin-top:4px}.nav{display:flex;flex-wrap:wrap;gap:17px;padding:15px 0;border-bottom:1px solid var(--line);font:11px var(--mono)}.nav a{color:var(--dim)}section{padding:52px 0;border-bottom:1px solid var(--line);scroll-margin-top:15px}.section-title{font-size:12px;color:var(--muted);margin:0}.sub{max-width:700px;color:var(--muted);font-size:14px;margin:9px 0 27px}.caps{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:9px;overflow:hidden}.cap{background:var(--panel);padding:20px 22px}.cat{font-size:10px;color:var(--signal);margin-bottom:8px}.cap p{font-size:13px;color:var(--muted);margin:0}.case{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);margin:0 0 24px}.case:last-child{margin-bottom:0}.casehead{padding:20px 23px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.case h3{font-size:20px;margin:0 0 3px}.tag{font-size:10px;color:var(--muted);margin:0}.status{font:10px var(--mono);text-transform:uppercase;color:var(--signal);border:1px solid rgba(51,214,192,.3);background:rgba(51,214,192,.1);border-radius:30px;padding:5px 10px;height:max-content}.status.pilot{color:var(--amber);border-color:rgba(240,166,61,.3);background:rgba(240,166,61,.1)}.casebody{padding:22px 23px}.casebody p{font-size:13.5px;margin:0 0 13px}.casebody .lead{font-size:14px;color:var(--text)}.casebody h4{font:10px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--signal);margin:21px 0 8px}.casebody ul{padding-left:19px;margin:0 0 15px;color:var(--muted);font-size:13px}.casebody li{padding:3px 0}.metrics{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0 8px}.metric{font:10px var(--mono);color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:7px 9px}.metric b{color:var(--signal)}.note{font:10px var(--mono)!important;color:var(--dim)!important}.foot{padding:12px 22px;border-top:1px solid var(--line);background:var(--panel2);font:10px var(--mono);color:var(--muted)}.timeline{border-left:2px solid var(--line);padding-left:23px;margin:0 0 0 7px}.job{position:relative;padding:0 0 24px}.job:last-child{padding-bottom:0}.job:before{content:"";position:absolute;left:-30px;top:5px;width:9px;height:9px;border:2px solid var(--signal);border-radius:50%;background:var(--bg)}.when{font-size:10px;color:var(--dim)}.job h3{font-size:14px;margin:4px 0 2px}.org{font-size:12px;color:var(--muted)}.desc{font-size:12.5px;color:var(--muted);max-width:720px;margin-top:5px}.principle{padding:15px 0;border-top:1px solid var(--line)}.principle:first-child{border-top:0}.principle h3{font-size:14px;margin:0 0 4px}.principle p{font-size:13px;color:var(--muted);margin:0}footer{text-align:center;padding:48px 0 70px}footer h2{font-size:22px;margin:0}.contact{justify-content:center;margin-top:17px}@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.caps{grid-template-columns:1fr}}@media(max-width:600px){.wrap{padding:0 18px}.hero{padding:50px 0 35px}section{padding:40px 0}.casehead,.casebody{padding-left:17px;padding-right:17px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker div{animation:none;padding-left:15px}}
 </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://edwinplange.vercel.app/#person",
+      "name": "Edwin Plange",
+      "url": "https://edwinplange.vercel.app/",
+      "jobTitle": "Founder & Product Engineer",
+      "description": "Founder and product engineer building applied AI systems, agent workflows, integrations and customer-facing software.",
+      "sameAs": [
+        "https://linkedin.com/in/edwin-plange",
+        "https://github.com/JayPlange",
+        "https://x.com/JusticePlange"
+      ],
+      "knowsAbout": [
+        "Applied AI",
+        "AI Agent Engineering",
+        "Product Engineering",
+        "API Integrations",
+        "Conversational Commerce",
+        "Software Testing",
+        "Workflow Automation"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://edwinplange.vercel.app/#website",
+      "name": "Edwin Plange",
+      "url": "https://edwinplange.vercel.app/",
+      "publisher": {
+        "@id": "https://edwinplange.vercel.app/#person"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="ticker"><div><span>● DUALPROFILE · LIVE CHROME WEB STORE</span><span>● KASAFLOW · RETAIL PILOT · 46-SCENARIO EVALUATOR</span><span>● THE LAST YES · DETERMINISTIC TOOL-USE EVALUATION</span><span>● WEBBLABS · 800-CELL ACCESS MATRIX</span><span>● KPMG GHANA · GNAT NATIONAL CLOUD MIGRATION · NEARLY ALL 16 REGIONS</span><span>● STALL TO STORE · HACKATHON PROTOTYPE</span></div></div>
